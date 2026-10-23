@@ -1,3 +1,4 @@
+import importlib.metadata
 import shutil
 from typing import Optional
 from backend.tools.registry import ToolExecutionResult
@@ -9,19 +10,26 @@ class VolatilityAdapter:
 
     def _check_python_module(self):
         self.has_module = False
+        self.version_str = "Volatility 3 Framework"
         try:
             import volatility3
             self.has_module = True
+            try:
+                ver = importlib.metadata.version("volatility3")
+                self.version_str = f"Volatility 3 v{ver} (Native Python Engine)"
+            except Exception:
+                self.version_str = "Volatility 3 (Native Python Engine)"
         except ImportError:
             self.has_module = False
 
     def is_available(self) -> bool:
+        self._check_python_module()
         return self.vol_path is not None or self.has_module
 
     def get_version(self) -> Optional[str]:
         if not self.is_available():
             return None
-        return "Volatility 3 Framework"
+        return self.version_str
 
     def analyze_memory(self, memory_dump_path: str, plugin: str = "windows.pslist") -> ToolExecutionResult:
         if not self.is_available():

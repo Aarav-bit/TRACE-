@@ -35,6 +35,7 @@ LLM_MODEL = os.getenv("LLM_MODEL", "gemini-1.5-flash")
 
 # Demo / Failure Injection state
 ALLOW_DEMO_FAILURE_INJECTION = True
+ENABLE_EXTERNAL_TOOL_MOCKS = os.getenv("ENABLE_EXTERNAL_TOOL_MOCKS", "true").lower() in ("true", "1", "yes")
 
 def update_runtime_config(
     provider: str = None,

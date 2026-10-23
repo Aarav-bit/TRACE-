@@ -228,3 +228,9 @@ export async function testNvidiaConnection(payload: { api_key?: string; model?: 
   });
   return res.json();
 }
+
+export async function toggleToolsBridge(): Promise<{ bridge_enabled: boolean; mode: string }> {
+  const res = await fetch(`${API_BASE}/tools/toggle-bridge`, { method: "POST" });
+  if (!res.ok) throw new Error("Failed to toggle tools bridge");
+  return res.json();
+}
