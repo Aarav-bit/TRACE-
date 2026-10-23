@@ -301,11 +301,11 @@ export default function LiveInvestigationCenter() {
           )}
 
           {activeTab === "graph" && (
-            <div className="p-4 sm:p-6 h-full">
+            <div className="p-2 sm:p-4 w-full h-[660px]">
               <EvidenceGraph
                 graphData={evidenceGraphData}
                 onSelectNode={(node) => {
-                  if (node.id) handleSelectEvidenceId(node.id);
+                  if (node?.id) handleSelectEvidenceId(node.id);
                 }}
               />
             </div>

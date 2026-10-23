@@ -145,6 +145,27 @@ async def upload_artifacts(
             )
             db.add(ev)
 
+        db.flush()
+
+        # Automatically evaluate all newly uploaded events with ML Forensic Triage
+        try:
+            from backend.ml.triage_engine import get_triage_engine
+            triage_engine = get_triage_engine()
+            for ev in db.query(EvidenceEvent).filter(EvidenceEvent.artifact_id == artifact.id).all():
+                feats = triage_engine.extract_features_from_evidence_event(ev)
+                tr = triage_engine.full_triage(feats)
+                norm = dict(ev.normalized_fields or {})
+                norm["ml_triage"] = {
+                    "scenario": tr["scenario"],
+                    "risk_tier": tr["risk_tier"],
+                    "risk_score": tr["risk_score"],
+                    "flagged": tr["flagged"],
+                    "risk_factors": tr["risk_factors"],
+                }
+                ev.normalized_fields = norm
+        except Exception as e:
+            pass
+
         add_audit_entry(
             db,
             case_id=case.id,

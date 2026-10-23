@@ -104,6 +104,25 @@ def run_investigation_loop(investigation_id: str):
             max_steps=inv.max_steps,
         )
 
+        # Automated Pre-Investigation ML Triage
+        try:
+            from backend.ml.triage_engine import get_triage_engine
+            triage_engine = get_triage_engine()
+            ev_list = db.query(EvidenceEvent).filter(EvidenceEvent.case_id == case.id).all()
+            if ev_list:
+                scen_counts = {}
+                max_score = 0.0
+                for e in ev_list:
+                    f = triage_engine.extract_features_from_evidence_event(e)
+                    r = triage_engine.full_triage(f)
+                    scen_counts[r["scenario"]] = scen_counts.get(r["scenario"], 0) + 1
+                    max_score = max(max_score, r["risk_score"])
+                primary_scen = max(scen_counts.items(), key=lambda x: x[1])[0]
+                inv.current_hypothesis = f"Automated ML Triage classified initial attack vector as '{primary_scen}' (Risk Score: {max_score}/100)."
+                db.commit()
+        except Exception:
+            pass
+
         planner = LLMPlanner() if inv.mode == "ai" else DeterministicPlanner()
         is_degraded = bool(case.is_demo and case.demo_type == "degraded")
 

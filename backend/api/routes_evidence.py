@@ -177,7 +177,7 @@ def get_evidence_graph(case_id: str, db: Session = Depends(get_db)):
                 target_node = f"Process:{target_proc}[PID {target_pid}]" if target_proc and target_pid else None
                 if target_node and target_node in seen_nodes:
                     edges.append({
-                        "id": f"e-find-{f.id[:6]}-{ev.id[:6]}",
+                        "id": f"e-find-{f.id[:6]}-{ev.id[:6]}-{len(edges)}",
                         "source": f_node_id,
                         "target": target_node,
                         "label": l.relationship_type,

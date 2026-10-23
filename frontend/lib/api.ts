@@ -240,3 +240,116 @@ export async function toggleToolsBridge(): Promise<{ bridge_enabled: boolean; mo
   if (!res.ok) throw new Error("Failed to toggle tools bridge");
   return res.json();
 }
+
+export interface MLModelItem {
+  task: string;
+  algorithm: string;
+  available: boolean;
+  file_path: string | null;
+}
+
+export interface MLBenchmark {
+  task: string;
+  model: string;
+  train_accuracy: number;
+  test_accuracy: number;
+  train_macro_f1: number;
+  test_macro_f1: number;
+  test_macro_precision: number;
+  test_macro_recall: number;
+}
+
+export interface MLModelsInfo {
+  models: MLModelItem[];
+  benchmarks: MLBenchmark[];
+  tasks: string[];
+  default_scenario_model: string;
+  default_triage_model: string;
+}
+
+export interface MLPredictRequest {
+  hour_of_day: number;
+  usb_connected: number;
+  bytes_transferred: number;
+  failed_logins_24h: number;
+  deleted_after_activity: number;
+  artifact_type: string;
+  action: string;
+  file_extension: string;
+  external_destination: string;
+  scenario?: string;
+  scenario_algorithm?: string;
+  triage_algorithm?: string;
+}
+
+export interface MLPredictResponse {
+  scenario: string;
+  scenario_confidence: number;
+  scenario_probabilities: Record<string, number>;
+  flagged: boolean;
+  risk_tier: string;
+  risk_score: number;
+  probability_flagged: number;
+  risk_factors: string[];
+  algorithms: {
+    scenario: string;
+    triage: string;
+  };
+}
+
+export interface MLCaseTriageResponse {
+  case_id: string;
+  case_name: string;
+  total_events: number;
+  flagged_count: number;
+  case_risk_tier: string;
+  average_risk_score: number;
+  max_risk_score: number;
+  primary_scenario: string;
+  scenario_distribution: Record<string, number>;
+  ranked_events: Array<{
+    event_id: string;
+    source_record_id: string;
+    timestamp: string;
+    event_type: string;
+    extracted_features: Record<string, any>;
+    scenario: string;
+    scenario_confidence: number;
+    flagged: boolean;
+    risk_tier: string;
+    risk_score: number;
+    probability_flagged: number;
+    risk_factors: string[];
+    description: string;
+  }>;
+}
+
+export async function fetchMLModels(): Promise<MLModelsInfo> {
+  const res = await fetch(`${API_BASE}/ml/models`, { cache: "no-store" });
+  if (!res.ok) throw new Error("Failed to fetch ML models info");
+  return res.json();
+}
+
+export async function predictMLEvent(data: MLPredictRequest): Promise<MLPredictResponse> {
+  const res = await fetch(`${API_BASE}/ml/predict`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(data),
+  });
+  if (!res.ok) throw new Error("Failed to execute ML prediction");
+  return res.json();
+}
+
+export async function triageCaseEvents(
+  caseId: string,
+  scenarioAlgo: string = "tfidf_logistic_regression",
+  triageAlgo: string = "random_forest"
+): Promise<MLCaseTriageResponse> {
+  const res = await fetch(
+    `${API_BASE}/ml/triage-case/${caseId}?scenario_algo=${scenarioAlgo}&triage_algo=${triageAlgo}`,
+    { method: "POST" }
+  );
+  if (!res.ok) throw new Error("Failed to run case ML triage");
+  return res.json();
+}
+

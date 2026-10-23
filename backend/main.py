@@ -14,6 +14,7 @@ from backend.api.routes_evidence import router as evidence_router
 from backend.api.routes_tools import router as tools_router
 from backend.api.routes_reports import router as reports_router
 from backend.api.routes_settings import router as settings_router
+from backend.api.routes_ml import router as ml_router
 
 # Setup logging
 logging.basicConfig(
@@ -59,6 +60,7 @@ app.include_router(evidence_router)
 app.include_router(tools_router)
 app.include_router(reports_router)
 app.include_router(settings_router)
+app.include_router(ml_router)
 
 @app.get("/health")
 def health_check():

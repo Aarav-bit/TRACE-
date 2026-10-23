@@ -17,6 +17,7 @@ const NAV_LINKS = [
   { label: "Overview", href: "/" },
   { label: "Case Intake", href: "/investigations" },
   { label: "Evidence", href: "/evidence" },
+  { label: "ML Triage", href: "/triage" },
   { label: "History", href: "/history" },
   { label: "Tools", href: "/tools" },
   { label: "Settings", href: "/settings" },

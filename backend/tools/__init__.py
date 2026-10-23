@@ -7,3 +7,4 @@ import backend.tools.correlate_artifacts
 import backend.tools.verify_claim
 import backend.tools.tool_tsk
 import backend.tools.tool_autopsy
+import backend.tools.tool_ml_triage
