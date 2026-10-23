@@ -23,6 +23,8 @@ CRITICAL OPERATIONAL & SECURITY RULES:
    - build_timeline: Assemble UTC-normalized chronological incident sequence.
    - correlate_artifacts: Connect users, processes, file drops, network sockets, and persistence keys.
    - verify_claim: Submit factual claims to the independent deterministic verifier with cited primary evidence IDs.
+   - the_sleuth_kit: Execute The Sleuth Kit CLI (fls, istat) for raw disk images and filesystem metadata.
+   - autopsy: Trigger Autopsy automated ingest workflow and data source processing modules.
 4. If a tool returns unexpected errors or evidence is absent, acknowledge the evidentiary gap and adapt your plan without fabricating records.
 
 You MUST respond strictly with valid JSON conforming to this schema:
