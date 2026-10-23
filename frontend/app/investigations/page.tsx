@@ -142,7 +142,7 @@ export default function CreateInvestigationPage() {
             <button
               onClick={handleStartInvestigation}
               disabled={isStartingInv}
-              className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-[#111317] hover:bg-black text-white text-xs font-bold shadow-lg hover:scale-105 active:scale-95 transition-all disabled:opacity-50 cursor-pointer"
+              className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-slate-900 hover:bg-slate-800 text-white text-xs font-bold shadow-sm hover:scale-105 active:scale-95 transition-all disabled:opacity-50 cursor-pointer"
             >
               <Play className="w-4 h-4 fill-lime-400 text-lime-400" />
               <span>{isStartingInv ? "Starting Investigation..." : "Launch Autonomous Investigation"}</span>
@@ -428,7 +428,7 @@ export default function CreateInvestigationPage() {
           <button
             type="submit"
             disabled={isSubmitting}
-            className="px-8 py-3 rounded-full bg-[#111317] hover:bg-black text-white text-xs font-bold shadow-lg hover:scale-105 active:scale-95 transition-all disabled:opacity-50 flex items-center gap-2 cursor-pointer"
+            className="px-8 py-3 rounded-full bg-slate-900 hover:bg-slate-800 text-white text-xs font-bold shadow-sm hover:scale-105 active:scale-95 transition-all disabled:opacity-50 flex items-center gap-2 cursor-pointer"
           >
             <span>{isSubmitting ? "Ingesting & Hashing..." : "Create Case & Hash Manifest"}</span>
             <ArrowRight className="w-4 h-4 text-lime-400" />

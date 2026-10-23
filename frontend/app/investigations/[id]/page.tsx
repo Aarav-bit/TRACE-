@@ -191,7 +191,7 @@ export default function LiveInvestigationCenter() {
             onClick={() => setActiveTab("trace")}
             className={`px-3.5 py-1.5 rounded-full text-xs font-semibold flex items-center gap-1.5 transition-all cursor-pointer ${
               activeTab === "trace"
-                ? "bg-[#111317] text-white shadow-sm"
+                ? "bg-slate-900 text-white shadow-sm"
                 : "bg-slate-100 hover:bg-slate-200 text-slate-600"
             }`}
           >
@@ -203,7 +203,7 @@ export default function LiveInvestigationCenter() {
             onClick={() => setActiveTab("timeline")}
             className={`px-3.5 py-1.5 rounded-full text-xs font-semibold flex items-center gap-1.5 transition-all cursor-pointer ${
               activeTab === "timeline"
-                ? "bg-[#111317] text-white shadow-sm"
+                ? "bg-slate-900 text-white shadow-sm"
                 : "bg-slate-100 hover:bg-slate-200 text-slate-600"
             }`}
           >
@@ -215,7 +215,7 @@ export default function LiveInvestigationCenter() {
             onClick={() => setActiveTab("process")}
             className={`px-3.5 py-1.5 rounded-full text-xs font-semibold flex items-center gap-1.5 transition-all cursor-pointer ${
               activeTab === "process"
-                ? "bg-[#111317] text-white shadow-sm"
+                ? "bg-slate-900 text-white shadow-sm"
                 : "bg-slate-100 hover:bg-slate-200 text-slate-600"
             }`}
           >
@@ -227,7 +227,7 @@ export default function LiveInvestigationCenter() {
             onClick={() => setActiveTab("graph")}
             className={`px-3.5 py-1.5 rounded-full text-xs font-semibold flex items-center gap-1.5 transition-all cursor-pointer ${
               activeTab === "graph"
-                ? "bg-[#111317] text-white shadow-sm"
+                ? "bg-slate-900 text-white shadow-sm"
                 : "bg-slate-100 hover:bg-slate-200 text-slate-600"
             }`}
           >
@@ -239,7 +239,7 @@ export default function LiveInvestigationCenter() {
             onClick={() => setActiveTab("findings")}
             className={`px-3.5 py-1.5 rounded-full text-xs font-semibold flex items-center gap-1.5 transition-all cursor-pointer ${
               activeTab === "findings"
-                ? "bg-[#111317] text-white shadow-sm"
+                ? "bg-slate-900 text-white shadow-sm"
                 : "bg-slate-100 hover:bg-slate-200 text-slate-600"
             }`}
           >

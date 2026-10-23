@@ -137,7 +137,7 @@ function EvidenceExplorerContent() {
           onClick={() => setActiveTab("timeline")}
           className={`px-4 py-2 rounded-full text-xs font-semibold flex items-center gap-2 transition-all cursor-pointer whitespace-nowrap ${
             activeTab === "timeline"
-              ? "bg-[#111317] text-white shadow-md scale-[1.02]"
+              ? "bg-slate-900 text-white shadow-sm scale-[1.02]"
               : "bg-white hover:bg-slate-100 text-slate-600 border border-slate-200/80 shadow-sm"
           }`}
         >
@@ -152,7 +152,7 @@ function EvidenceExplorerContent() {
           onClick={() => setActiveTab("process")}
           className={`px-4 py-2 rounded-full text-xs font-semibold flex items-center gap-2 transition-all cursor-pointer whitespace-nowrap ${
             activeTab === "process"
-              ? "bg-[#111317] text-white shadow-md scale-[1.02]"
+              ? "bg-slate-900 text-white shadow-sm scale-[1.02]"
               : "bg-white hover:bg-slate-100 text-slate-600 border border-slate-200/80 shadow-sm"
           }`}
         >
@@ -167,7 +167,7 @@ function EvidenceExplorerContent() {
           onClick={() => setActiveTab("graph")}
           className={`px-4 py-2 rounded-full text-xs font-semibold flex items-center gap-2 transition-all cursor-pointer whitespace-nowrap ${
             activeTab === "graph"
-              ? "bg-[#111317] text-white shadow-md scale-[1.02]"
+              ? "bg-slate-900 text-white shadow-sm scale-[1.02]"
               : "bg-white hover:bg-slate-100 text-slate-600 border border-slate-200/80 shadow-sm"
           }`}
         >
@@ -182,7 +182,7 @@ function EvidenceExplorerContent() {
           onClick={() => setActiveTab("findings")}
           className={`px-4 py-2 rounded-full text-xs font-semibold flex items-center gap-2 transition-all cursor-pointer whitespace-nowrap ${
             activeTab === "findings"
-              ? "bg-[#111317] text-white shadow-md scale-[1.02]"
+              ? "bg-slate-900 text-white shadow-sm scale-[1.02]"
               : "bg-white hover:bg-slate-100 text-slate-600 border border-slate-200/80 shadow-sm"
           }`}
         >

@@ -2,116 +2,122 @@
 
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import {
-  FolderOpen,
+  Shield,
   Plus,
-  Search,
-  Sparkles,
+  FolderOpen,
   ChevronDown,
+  Sparkles,
 } from "lucide-react";
 import { fetchCases } from "@/lib/api";
 import { Case } from "@/lib/types";
 
-interface TopBarProps {
-  currentTitle?: string;
-  activeCaseId?: string;
-  onCaseChange?: (caseId: string) => void;
-}
+const NAV_LINKS = [
+  { label: "Overview", href: "/" },
+  { label: "Case Intake", href: "/investigations" },
+  { label: "Evidence", href: "/evidence" },
+  { label: "History", href: "/history" },
+  { label: "Tools", href: "/tools" },
+  { label: "Settings", href: "/settings" },
+];
 
-export const TopBar: React.FC<TopBarProps> = ({
-  currentTitle = "Dashboard",
-  activeCaseId,
-  onCaseChange,
-}) => {
+export const TopBar: React.FC = () => {
+  const pathname = usePathname();
   const [cases, setCases] = useState<Case[]>([]);
-  const [selectedCase, setSelectedCase] = useState<string>(activeCaseId || "");
-  const [searchQuery, setSearchQuery] = useState("");
+  const [selectedCase, setSelectedCase] = useState<string>("");
 
   useEffect(() => {
     fetchCases()
       .then((data) => {
         setCases(data);
-        if (!selectedCase && data.length > 0) {
-          const defaultCase = data[0];
-          setSelectedCase(defaultCase.id);
-          if (onCaseChange) onCaseChange(defaultCase.id);
+        if (data.length > 0) {
+          setSelectedCase(data[0].id);
         }
       })
       .catch(() => {});
   }, []);
 
-  const handleCaseSelect = (caseId: string) => {
-    setSelectedCase(caseId);
-    if (onCaseChange) onCaseChange(caseId);
-  };
-
   return (
-    <header className="h-16 px-6 sm:px-8 flex items-center justify-between shrink-0 select-none border-b border-slate-200/70 bg-white/70 backdrop-blur-md sticky top-0 z-20">
-      {/* Left: Section Title & Breadcrumb */}
-      <div className="flex items-center gap-3">
-        <div className="flex items-center gap-2">
-          <span className="w-2.5 h-2.5 rounded-full bg-lime-400 border border-lime-500 shadow-sm" />
-          <span className="text-sm font-bold tracking-tight text-slate-900 font-sans">
-            TRACE
-          </span>
-        </div>
-        <span className="text-slate-300 font-mono text-sm">/</span>
-        <h1 className="text-sm font-semibold text-slate-700 capitalize">
-          {currentTitle}
-        </h1>
-      </div>
-
-      {/* Center: Search Pill (Inspired by Image 1, 2, 3) */}
-      <div className="hidden md:flex items-center flex-1 max-w-md mx-6">
-        <div className="relative w-full">
-          <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
-          <input
-            type="text"
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-            placeholder="Search processes, hashes, MITRE techniques..."
-            className="w-full pl-10 pr-4 py-2 text-xs rounded-full bg-slate-100/80 border border-slate-200/80 focus:bg-white focus:border-slate-400 focus:outline-none transition-all placeholder:text-slate-400 text-slate-700 shadow-inner"
-          />
-        </div>
-      </div>
-
-      {/* Right: Actions, Case Switcher & New Case Button */}
-      <div className="flex items-center gap-3">
-        {/* Active Case Dropdown Pill */}
-        <div className="relative flex items-center">
-          <FolderOpen className="absolute left-3 w-3.5 h-3.5 text-slate-400 pointer-events-none" />
-          <select
-            value={selectedCase}
-            onChange={(e) => handleCaseSelect(e.target.value)}
-            className="pl-8 pr-7 py-1.5 text-xs font-medium rounded-full bg-slate-100/90 border border-slate-200/80 text-slate-700 hover:border-slate-300 focus:outline-none focus:ring-1 focus:ring-slate-400 transition-all cursor-pointer appearance-none shadow-sm"
-          >
-            {cases.length === 0 ? (
-              <option value="">No Active Cases</option>
-            ) : (
-              cases.map((c) => (
-                <option key={c.id} value={c.id}>
-                  {c.name} ({c.event_count || 0} events)
-                </option>
-              ))
-            )}
-          </select>
-          <ChevronDown className="absolute right-2.5 w-3 h-3 text-slate-400 pointer-events-none" />
-        </div>
-
-        {/* Engine Badge */}
-        <div className="hidden lg:flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-lime-50 border border-lime-200/80 text-[11px] font-medium text-lime-900 shadow-sm">
-          <Sparkles className="w-3.5 h-3.5 text-lime-600" />
-          <span>Nemotron 120B Ready</span>
-        </div>
-
-        {/* + Start New Case Pill Button */}
-        <Link
-          href="/investigations"
-          className="flex items-center gap-1.5 px-4 py-2 rounded-full bg-[#111317] text-white text-xs font-semibold hover:bg-black hover:scale-105 active:scale-95 transition-all duration-200 shadow-md shadow-slate-900/10"
-        >
-          <Plus className="w-3.5 h-3.5" />
-          <span>New Case</span>
+    <header className="w-full bg-white/90 backdrop-blur-md border-b border-slate-200/80 sticky top-0 z-30 select-none">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
+        {/* Left: Brand Logo & Title (Matching Uploaded Image) */}
+        <Link href="/" className="flex items-center gap-2.5 group shrink-0">
+          <div className="w-9 h-9 rounded-xl bg-indigo-50 border border-indigo-200/80 flex items-center justify-center text-indigo-600 shadow-sm group-hover:scale-105 transition-all">
+            <Shield className="w-4 h-4 fill-indigo-600/20 stroke-indigo-600" />
+          </div>
+          <div>
+            <div className="flex items-center gap-1.5">
+              <span className="font-extrabold text-sm tracking-tight text-slate-900 font-sans">
+                TRACE
+              </span>
+              <span className="text-[10px] font-mono font-bold px-1.5 py-0.2 rounded-full bg-indigo-100 text-indigo-700 border border-indigo-200">
+                DFIR
+              </span>
+            </div>
+            <p className="text-[10px] text-slate-400 font-medium leading-none">
+              Autonomous Forensics
+            </p>
+          </div>
         </Link>
+
+        {/* Center: Floating Pill Navigation Bar (Matching Uploaded Image) */}
+        <nav className="hidden md:flex items-center p-1 rounded-full bg-slate-100/90 border border-slate-200/80 shadow-inner">
+          {NAV_LINKS.map((link) => {
+            const isActive =
+              link.href === "/"
+                ? pathname === "/"
+                : pathname === link.href || pathname?.startsWith(link.href);
+
+            return (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={`relative px-4 py-1.5 rounded-full text-xs font-semibold transition-all duration-200 flex items-center gap-1.5 ${
+                  isActive
+                    ? "bg-indigo-600 text-white shadow-sm shadow-indigo-600/30 scale-100"
+                    : "text-slate-600 hover:text-slate-900 hover:bg-white/70"
+                }`}
+              >
+                {isActive && <span className="w-1.5 h-1.5 rounded-full bg-white" />}
+                <span>{link.label}</span>
+              </Link>
+            );
+          })}
+        </nav>
+
+        {/* Right: Active Case Dropdown & + New Case Pill (Matching Uploaded Image) */}
+        <div className="flex items-center gap-2.5 shrink-0">
+          {/* Active Case Selector Pill */}
+          <div className="relative flex items-center">
+            <FolderOpen className="absolute left-3 w-3.5 h-3.5 text-slate-400 pointer-events-none" />
+            <select
+              value={selectedCase}
+              onChange={(e) => setSelectedCase(e.target.value)}
+              className="pl-8 pr-7 py-1.5 text-xs font-medium rounded-full bg-slate-100/90 border border-slate-200 text-slate-700 hover:border-slate-300 focus:outline-none cursor-pointer appearance-none shadow-sm max-w-[150px] sm:max-w-[180px] truncate"
+            >
+              {cases.length === 0 ? (
+                <option value="">No Active Cases</option>
+              ) : (
+                cases.map((c) => (
+                  <option key={c.id} value={c.id}>
+                    {c.name}
+                  </option>
+                ))
+              )}
+            </select>
+            <ChevronDown className="absolute right-2.5 w-3 h-3 text-slate-400 pointer-events-none" />
+          </div>
+
+          {/* + New Case Button (Matching Royal Indigo in Uploaded Image) */}
+          <Link
+            href="/investigations"
+            className="flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-semibold shadow-sm shadow-indigo-600/30 hover:scale-105 active:scale-95 transition-all duration-200"
+          >
+            <Plus className="w-3.5 h-3.5" />
+            <span>+ New Case</span>
+          </Link>
+        </div>
       </div>
     </header>
   );
