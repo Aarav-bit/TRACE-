@@ -58,6 +58,20 @@ export const PlanPanel: React.FC<PlanPanelProps> = ({
             Budget: {stepsUsed}/{maxSteps} steps
           </span>
         </div>
+        <div className="flex items-center gap-2 mb-2">
+          <span className="text-[10px] font-mono uppercase tracking-wider text-cyber-dim">Engine:</span>
+          {investigation.mode === "ai" ? (
+            <span className="text-[10px] font-mono font-bold px-2 py-0.5 rounded bg-emerald-950 text-emerald-300 border border-emerald-700/60 flex items-center gap-1">
+              <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+              NVIDIA Nemotron 120B (Adaptive AI)
+            </span>
+          ) : (
+            <span className="text-[10px] font-mono font-bold px-2 py-0.5 rounded bg-sky-950 text-sky-300 border border-sky-800 flex items-center gap-1">
+              <span className="w-1.5 h-1.5 rounded-full bg-sky-400"></span>
+              Deterministic DFIR Engine
+            </span>
+          )}
+        </div>
         <h2 className="text-sm font-bold text-cyber-text tracking-wide mb-1">
           Objective
         </h2>

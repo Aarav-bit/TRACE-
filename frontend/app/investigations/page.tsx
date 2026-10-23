@@ -303,20 +303,20 @@ export default function CreateInvestigationPage() {
               onClick={() => setMode("ai")}
               className={`p-3.5 rounded-lg border cursor-pointer transition-colors ${
                 mode === "ai"
-                  ? "bg-sky-950/40 border-sky-500 text-cyber-text"
+                  ? "bg-emerald-950/30 border-emerald-500 text-cyber-text"
                   : "bg-cyber-card border-cyber-border text-cyber-muted hover:border-cyber-borderLight"
               }`}
             >
               <div className="flex items-center justify-between mb-1">
                 <span className="font-bold text-xs text-cyber-text">
-                  Adaptive AI Mode (LLM)
+                  Adaptive AI Mode (NVIDIA Nemotron 120B)
                 </span>
-                <span className="text-[10px] font-mono px-1.5 py-0.2 rounded bg-sky-950 text-sky-400 border border-sky-800">
-                  GEMINI / OPENAI
+                <span className="text-[10px] font-mono px-1.5 py-0.2 rounded bg-emerald-950 text-emerald-400 border border-emerald-800">
+                  NVIDIA NIM / 120B
                 </span>
               </div>
               <p className="text-[11px] text-cyber-dim leading-normal">
-                Uses configured LLM with structured tool calling for hypothesis generation; falls back to deterministic planning automatically.
+                Dispatches structured tool calls to <code className="text-emerald-400">nvidia/nemotron-3.5-super-vl-120b-a12b</code> for multi-step forensic hypothesis testing. Seamlessly falls back to local engine if offline.
               </p>
             </div>
           </div>

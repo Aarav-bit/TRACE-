@@ -52,3 +52,28 @@ def test_tools_status():
     tools = resp.json()
     assert len(tools) >= 6
     assert any(t["name"] == "inspect_case" for t in tools)
+
+def test_settings_endpoints():
+    # Test GET settings
+    resp = client.get("/api/settings")
+    assert resp.status_code == 200
+    data = resp.json()
+    assert "nvidia_model" in data
+    assert "llm_provider" in data
+
+    # Test POST update settings
+    update_payload = {
+        "llm_provider": "nvidia",
+        "nvidia_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+        "max_investigation_steps": 20,
+    }
+    update_resp = client.post("/api/settings", json=update_payload)
+    assert update_resp.status_code == 200
+    updated_data = update_resp.json()
+    assert updated_data["llm_provider"] == "nvidia"
+    assert updated_data["nvidia_model"] == "nvidia/nemotron-3.5-super-vl-120b-a12b"
+    assert updated_data["max_investigation_steps"] == 20
+
+    # Test test-nvidia validation with empty key
+    test_resp = client.post("/api/settings/test-nvidia", json={"api_key": ""})
+    assert test_resp.status_code in [200, 400]

@@ -177,3 +177,54 @@ export function getInvestigationEventsUrl(investigationId: string): string {
 export function getSampleEvidenceDownloadUrl(): string {
   return `${API_BASE}/sample-evidence/download`;
 }
+
+export interface SettingsData {
+  llm_provider: string;
+  nvidia_model: string;
+  nvidia_api_key_configured: boolean;
+  nvidia_api_key_masked: string;
+  gemini_api_key_configured: boolean;
+  openai_api_key_configured: boolean;
+  max_investigation_steps: number;
+  tool_timeout_seconds: number;
+}
+
+export async function fetchSettings(): Promise<SettingsData> {
+  const res = await fetch(`${API_BASE}/settings`, { cache: "no-store" });
+  if (!res.ok) throw new Error("Failed to fetch settings");
+  return res.json();
+}
+
+export async function updateSettings(data: Partial<{
+  llm_provider: string;
+  nvidia_api_key: string;
+  nvidia_model: string;
+  gemini_api_key: string;
+  openai_api_key: string;
+  max_investigation_steps: number;
+  tool_timeout_seconds: number;
+}>): Promise<SettingsData> {
+  const res = await fetch(`${API_BASE}/settings`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(data),
+  });
+  if (!res.ok) throw new Error("Failed to update settings");
+  return res.json();
+}
+
+export async function testNvidiaConnection(payload: { api_key?: string; model?: string }): Promise<{
+  success: boolean;
+  message?: string;
+  error?: string;
+  status_code?: number;
+  model?: string;
+  sample_response?: string;
+}> {
+  const res = await fetch(`${API_BASE}/settings/test-nvidia`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(payload),
+  });
+  return res.json();
+}
