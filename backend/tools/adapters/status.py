@@ -72,9 +72,9 @@ def get_all_tool_statuses() -> List[ToolStatusItem]:
             category="External Disk Analysis",
             installed=tsk_adapter.is_available(),
             version=tsk_adapter.get_version(),
-            supported_operations=["fls file listing", "istat inode inspection", "mactime timeline generation"],
-            last_health_check="Available" if tsk_adapter.is_available() else "Unavailable (Not on PATH)",
-            configuration_guidance="Install 'sleuthkit' via package manager or download binaries from sleuthkit.org and add to system PATH.",
+            supported_operations=tsk_adapter.available_operations(),
+            last_health_check="Available" if tsk_adapter.is_available() else "Unavailable (not configured)",
+            configuration_guidance="Set TSK_BIN_DIR to the Sleuth Kit bin directory or add supported binaries to PATH. TRACE runs only mmls, fsstat, fls, istat, and icat against case-owned artifacts.",
         ),
         ToolStatusItem(
             name="autopsy",

@@ -43,7 +43,7 @@ export const PlanPanel: React.FC<PlanPanelProps> = ({
   onOpenFailureInjection,
 }) => {
   const stepsUsed = investigation.steps_used || 0;
-  const maxSteps = investigation.max_steps || 15;
+  const maxSteps = investigation.max_steps || 12;
   const isRunning = investigation.status === "running";
 
   return (

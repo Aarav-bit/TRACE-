@@ -9,6 +9,13 @@ def test_health_endpoint():
     assert resp.status_code == 200
     assert resp.json()["status"] == "healthy"
 
+def test_configuration_status_never_returns_nvidia_secret():
+    resp = client.get("/api/config/status")
+    assert resp.status_code == 200
+    payload = resp.json()
+    assert "configured" in payload["nvidia"]
+    assert "NVIDIA_API_KEY" not in str(payload)
+
 def test_list_cases():
     resp = client.get("/api/cases")
     assert resp.status_code == 200

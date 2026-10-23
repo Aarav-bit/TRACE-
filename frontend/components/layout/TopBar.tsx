@@ -109,7 +109,7 @@ export const TopBar: React.FC<TopBarProps> = ({
         {/* Engine Status Pill */}
         <div className="hidden lg:flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-cyber-surface border border-cyber-border text-[11px] font-mono text-cyber-muted">
           <Activity className="w-3.5 h-3.5 text-sky-400" />
-          <span>Forensic Engine · 6 Built-in</span>
+          <span>Forensic Engine · Typed Registry</span>
         </div>
 
         {/* Offline Demo Status */}

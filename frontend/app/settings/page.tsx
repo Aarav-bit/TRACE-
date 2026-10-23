@@ -6,8 +6,7 @@ import { resetDemoEnvironment } from "@/lib/api";
 
 export default function SettingsPage() {
   const [llmProvider, setLlmProvider] = useState<string>("deterministic");
-  const [geminiKey, setGeminiKey] = useState<string>("");
-  const [maxSteps, setMaxSteps] = useState<number>(15);
+  const [maxSteps, setMaxSteps] = useState<number>(12);
   const [toolTimeout, setToolTimeout] = useState<number>(15);
   const [isSaved, setIsSaved] = useState(false);
   const [isResetting, setIsResetting] = useState(false);
@@ -77,7 +76,7 @@ export default function SettingsPage() {
 
             <label
               className={`p-4 rounded-lg border cursor-pointer transition-colors ${
-                llmProvider === "gemini"
+                llmProvider === "nvidia"
                   ? "bg-sky-950/40 border-sky-500 text-cyber-text"
                   : "bg-cyber-surface border-cyber-border text-cyber-muted"
               }`}
@@ -86,11 +85,11 @@ export default function SettingsPage() {
                 <input
                   type="radio"
                   name="provider"
-                  value="gemini"
-                  checked={llmProvider === "gemini"}
-                  onChange={() => setLlmProvider("gemini")}
+                  value="nvidia"
+                  checked={llmProvider === "nvidia"}
+                  onChange={() => setLlmProvider("nvidia")}
                 />
-                <span className="font-bold text-xs">Adaptive AI Mode (Gemini / OpenAI)</span>
+                <span className="font-bold text-xs">Adaptive AI Mode (NVIDIA Nemotron)</span>
               </div>
               <p className="text-[11px] text-cyber-dim leading-relaxed ml-5">
                 Uses structured LLM tool calling to hypothesize and replan dynamically.
@@ -100,25 +99,23 @@ export default function SettingsPage() {
         </div>
 
         {/* API Credentials */}
-        {llmProvider === "gemini" && (
+        {llmProvider === "nvidia" && (
           <div className="p-5 rounded-lg bg-cyber-card border border-cyber-border space-y-3">
             <div className="flex items-center gap-2 text-sm font-bold text-cyber-text">
               <Key className="w-4 h-4 text-amber-400" />
-              <span>LLM Provider Credentials (Optional)</span>
+              <span>Server-side NVIDIA Configuration</span>
             </div>
             <p className="text-xs text-cyber-dim font-mono">
-              Never committed to source control. Stored locally in process memory.
+              Configure the backend environment; credentials are never accepted or stored by this browser screen.
             </p>
             <div>
               <label className="block text-xs font-mono text-cyber-muted mb-1">
-                Google Gemini API Key
+                NVIDIA API Key Environment Variable
               </label>
               <input
-                type="password"
-                placeholder="AIzaSy..."
-                value={geminiKey}
-                onChange={(e) => setGeminiKey(e.target.value)}
-                className="w-full bg-cyber-surface border border-cyber-border rounded px-3 py-2 text-xs font-mono text-cyber-text focus:outline-none focus:border-sky-500"
+                readOnly
+                value="NVIDIA_API_KEY (set in backend .env)"
+                className="w-full bg-cyber-surface border border-cyber-border rounded px-3 py-2 text-xs font-mono text-cyber-dim focus:outline-none"
               />
             </div>
           </div>
@@ -139,7 +136,7 @@ export default function SettingsPage() {
               <input
                 type="number"
                 min={5}
-                max={30}
+                max={12}
                 value={maxSteps}
                 onChange={(e) => setMaxSteps(Number(e.target.value))}
                 className="w-full bg-cyber-surface border border-cyber-border rounded px-3 py-2 text-xs font-mono text-cyber-text focus:outline-none focus:border-sky-500"
@@ -192,17 +189,14 @@ export default function SettingsPage() {
 
         {/* Save Button */}
         <div className="flex justify-end gap-3 pt-4 border-t border-cyber-border">
-          <button
-            type="submit"
-            className="px-5 py-2 rounded-lg bg-sky-500 hover:bg-sky-400 text-black font-bold text-xs flex items-center gap-1.5 transition-colors shadow-sm"
-          >
+          <button type="submit" className="px-5 py-2 rounded-lg bg-sky-500 hover:bg-sky-400 text-black font-bold text-xs flex items-center gap-1.5 transition-colors shadow-sm">
             {isSaved ? (
               <>
                 <Check className="w-4 h-4" />
-                <span>Saved Successfully</span>
+                <span>Local Display Updated</span>
               </>
             ) : (
-              <span>Save Configuration</span>
+              <span>Update Display</span>
             )}
           </button>
         </div>

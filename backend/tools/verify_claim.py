@@ -105,10 +105,12 @@ registry.register(
         category="verification",
         handler=verify_claim_handler,
         parameters_schema={
-            "title": {"type": "string", "description": "Concise finding title"},
-            "claim": {"type": "string", "description": "Specific factual claim text"},
-            "supporting_evidence_ids": {"type": "array", "items": {"type": "string"}, "description": "List of primary evidence UUIDs"},
+            "title": {"type": "string", "description": "Concise finding title", "required": True},
+            "claim": {"type": "string", "description": "Specific factual claim text", "required": True},
+            "supporting_evidence_ids": {"type": "array", "items": {"type": "string"}, "description": "List of primary evidence UUIDs", "required": True},
             "contradictory_evidence_ids": {"type": "array", "items": {"type": "string"}, "description": "List of contradictory evidence UUIDs"},
+            "required_event_types": {"type": "array", "items": {"type": "string"}, "description": "Event types required for support"},
+            "required_keywords": {"type": "array", "items": {"type": "string"}, "description": "Factual terms required in cited evidence"},
         },
     )
 )

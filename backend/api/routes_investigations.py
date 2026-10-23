@@ -30,7 +30,7 @@ def start_investigation(
         raise HTTPException(status_code=404, detail="Case not found")
 
     mode = payload.mode if payload else "deterministic"
-    max_steps = payload.max_steps if payload else 15
+    max_steps = payload.max_steps if payload else 12
     obj = payload.objective if payload and payload.objective else case.objective
 
     investigation = Investigation(

@@ -62,8 +62,8 @@ class EvidenceEventResponse(BaseModel):
 # Investigation schemas
 class InvestigationCreate(BaseModel):
     objective: Optional[str] = None
-    mode: str = "deterministic"
-    max_steps: int = 15
+    mode: str = Field(default="deterministic", pattern="^(deterministic|ai)$")
+    max_steps: int = Field(default=12, ge=1, le=12)
 
 class InvestigationActionResponse(BaseModel):
     model_config = ConfigDict(from_attributes=True)
@@ -93,7 +93,7 @@ class InvestigationResponse(BaseModel):
     current_hypothesis: Optional[str] = None
     mode: str
     steps_used: int = 0
-    max_steps: int = 15
+    max_steps: int = 12
     termination_reason: Optional[str] = None
     simulated_failure: Optional[str] = None
     started_at: Optional[datetime] = None

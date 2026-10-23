@@ -104,7 +104,7 @@ class Investigation(Base):
     mode = Column(String(50), default="deterministic")  # deterministic, ai
     state_json = Column(Text, default="{}")
     steps_used = Column(Integer, default=0)
-    max_steps = Column(Integer, default=15)
+    max_steps = Column(Integer, default=12)
     termination_reason = Column(Text, nullable=True)
     simulated_failure = Column(String(100), nullable=True)  # Demo failure injection trigger
     started_at = Column(DateTime(timezone=True), nullable=True)

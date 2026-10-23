@@ -65,7 +65,7 @@ registry.register(
         parameters_schema={
             "event_type": {"type": "string", "description": "Optional event type filter"},
             "user": {"type": "string", "description": "Optional user filter"},
-            "limit": {"type": "integer", "description": "Maximum timeline events to return", "default": 100},
+            "limit": {"type": "integer", "description": "Maximum timeline events to return", "default": 100, "minimum": 1, "maximum": 500},
         },
     )
 )

@@ -47,6 +47,57 @@ class ToolDefinition:
         self.handler = handler
         self.parameters_schema = parameters_schema
 
+    @property
+    def json_schema(self) -> Dict[str, Any]:
+        """OpenAI-compatible schema exposed to the model, never an execution surface."""
+        properties = {}
+        for name, definition in self.parameters_schema.items():
+            properties[name] = {
+                key: value for key, value in definition.items()
+                if key in {"type", "items", "description", "default", "enum", "minimum", "maximum"}
+            }
+        return {"type": "object", "properties": properties, "additionalProperties": False}
+
+    def validate(self, parameters: Dict[str, Any]) -> Dict[str, Any]:
+        """Validate narrow tool arguments before a handler can observe them."""
+        if not isinstance(parameters, dict):
+            raise ValueError("Tool arguments must be a JSON object")
+        unknown = set(parameters) - set(self.parameters_schema)
+        if unknown:
+            raise ValueError(f"Unsupported argument(s): {', '.join(sorted(unknown))}")
+
+        validated: Dict[str, Any] = {}
+        for name, definition in self.parameters_schema.items():
+            if name not in parameters:
+                if definition.get("required"):
+                    raise ValueError(f"Missing required argument: '{name}'")
+                if "default" in definition:
+                    validated[name] = definition["default"]
+                continue
+            value = parameters[name]
+            field_type = definition.get("type")
+            if field_type == "string" and (not isinstance(value, str) or len(value) > 2_000):
+                raise ValueError(f"'{name}' must be a string no longer than 2000 characters")
+            if field_type == "integer" and (not isinstance(value, int) or isinstance(value, bool)):
+                raise ValueError(f"'{name}' must be an integer")
+            if field_type == "boolean" and not isinstance(value, bool):
+                raise ValueError(f"'{name}' must be a boolean")
+            if field_type == "array":
+                if not isinstance(value, list) or len(value) > 100:
+                    raise ValueError(f"'{name}' must be an array containing at most 100 items")
+                if definition.get("items", {}).get("type") == "string" and any(
+                    not isinstance(item, str) or len(item) > 2_000 for item in value
+                ):
+                    raise ValueError(f"'{name}' must contain strings no longer than 2000 characters")
+            if "minimum" in definition and value < definition["minimum"]:
+                raise ValueError(f"'{name}' is below the permitted minimum")
+            if "maximum" in definition and value > definition["maximum"]:
+                raise ValueError(f"'{name}' exceeds the permitted maximum")
+            if definition.get("enum") and value not in definition["enum"]:
+                raise ValueError(f"'{name}' is not an approved value")
+            validated[name] = value
+        return validated
+
 class ToolRegistry:
     def __init__(self):
         self._tools: Dict[str, ToolDefinition] = {}
@@ -59,6 +110,12 @@ class ToolRegistry:
 
     def list_tools(self) -> List[ToolDefinition]:
         return list(self._tools.values())
+
+    def validate_tool_arguments(self, tool_name: str, parameters: Dict[str, Any]) -> Dict[str, Any]:
+        tool_def = self.get_tool(tool_name)
+        if not tool_def:
+            raise ValueError(f"Tool '{tool_name}' is not in the approved registry")
+        return tool_def.validate(parameters)
 
     def execute_tool(
         self,
@@ -78,6 +135,16 @@ class ToolRegistry:
                 summary=f"Unrecognized tool: {tool_name}",
                 data={},
                 error=f"Tool '{tool_name}' is not in the approved security tool registry.",
+            )
+
+        try:
+            validated_parameters = tool_def.validate(parameters)
+        except ValueError as exc:
+            return ToolExecutionResult(
+                success=False,
+                summary=f"Rejected invalid arguments for approved tool '{tool_name}'.",
+                data={"tool": tool_name, "validation_error": str(exc)},
+                error=str(exc),
             )
 
         start_time = time.time()
@@ -106,7 +173,7 @@ class ToolRegistry:
                 )
 
         try:
-            result = tool_def.handler(db=db, case_id=case_id, **parameters)
+            result = tool_def.handler(db=db, case_id=case_id, **validated_parameters)
             result.duration_ms = round((time.time() - start_time) * 1000, 2)
             return result
         except Exception as e:

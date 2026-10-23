@@ -38,7 +38,7 @@ A **single adaptive investigation agent** that coordinates deterministic forensi
 
 - **Frontend**: Next.js 14 App Router, TypeScript (Strict Mode), Tailwind CSS, Lucide icons, React Flow (`reactflow`), Recharts.
 - **Backend**: Python 3.12+, FastAPI, SQLAlchemy, SQLite (WAL mode), Pydantic v2, Server-Sent Events (SSE).
-- **Forensics Engine**: Native Windows EVTX parser (`python-evtx`), Sysmon JSON/CSV parsers, safe ZIP extractor, and optional adapters for The Sleuth Kit (TSK), Autopsy, and Volatility 3.
+- **Forensics Engine**: JSON/CSV event normalization, optional EVTX parsing, safe ZIP extraction, real constrained adapters for The Sleuth Kit (TSK), and an import-first Autopsy workflow.
 - **Testing**: Pytest test suite covering parsers, tools, verifier, agent state, and API endpoints.
 
 ---
@@ -58,7 +58,10 @@ python -m venv venv
 # source venv/bin/activate  # On Linux / macOS
 
 # 2. Install dependencies
-pip install fastapi "uvicorn[standard]" pydantic sqlalchemy pytest httpx python-multipart python-dateutil python-evtx
+pip install -r backend\requirements.txt
+
+# 3. Copy configuration (the deterministic demo needs no API key)
+Copy-Item .env.example .env
 ```
 
 ### Setup Frontend
@@ -96,12 +99,12 @@ npm run start
 
 ## 6. Running the Automated Test Suite
 
-Run all 19 unit, integration, and agent loop tests:
+Run the backend unit, integration, and agent-loop tests:
 ```powershell
 .\venv\Scripts\pytest backend\tests -v
 ```
 
-All 19 tests pass:
+The test suite covers:
 - `test_parsers.py`: Timestamp normalization, JSON/CSV parsing, Zip-Slip traversal defense.
 - `test_tools.py`: Audited tool registry, event querying, process ancestry reconstruction, timeline UTC ordering, correlation.
 - `test_verifier.py`: Independent deterministic verification (supported claims, rejection of fabricated IDs, contradiction detection, degraded evidence handling).
@@ -167,8 +170,37 @@ Return to `/` and click **"Run Degraded Evidence Demo (Case B)"**.
 - **Prompt Injection Defense**: All evidence contents are treated as untrusted data strings.
 - **Read-Only Storage**: Uploaded originals are marked read-only on disk (`chmod & ~S_IWRITE`).
 - **Zip-Slip Defense**: Archive extractions verify destination boundaries before writing files.
+- **Typed tool boundary**: Every agent and model action is validated against the approved registry before a tool handler runs. Arbitrary executable names, shell syntax, artifact-supplied instructions, and path arguments are rejected.
+- **Disk-image actions**: `mmls`, `fsstat`, `fls`, `istat`, and `icat` are only run through fixed configured Sleuth Kit binaries against a case-owned artifact ID. `icat` additionally requires `I_CONFIRM_RECOVERY` and writes only under `data/storage/work/<case-id>`.
+
+## 9. NVIDIA and Forensic Tool Configuration
+
+TRACE defaults to deterministic mode and never requires an API key for the two synthetic demos. To use AI planning, set these server-side values in `.env` and select **Adaptive AI Mode**:
+
+```powershell
+$env:NVIDIA_API_KEY = "your-key"
+$env:NVIDIA_MODEL = "nvidia/nemotron-3.5-super-vl-120b-a12b"
+$env:NVIDIA_BASE_URL = "https://integrate.api.nvidia.com/v1"
+```
+
+The backend sends only the current objective, bounded agent state, concise prior tool result, and the typed approved-tool definitions to NVIDIA's OpenAI-compatible `/chat/completions` endpoint. If no key is configured, AI mode is explicitly blocked; choose deterministic mode instead. TRACE does not silently substitute another provider or model.
+
+For disk images, install The Sleuth Kit for Windows and configure its binary directory before startup:
+
+```powershell
+$env:TSK_BIN_DIR = "C:\tools\sleuthkit\bin"
+```
+
+Autopsy desktop versions differ in automation support. TRACE reports Autopsy availability but does not claim automatic ingest ran. Run your configured Autopsy ingest workflow, export supported artifacts (CSV/JSON/EVTX), and import those exports into TRACE. Check `GET /api/config/status` or the Tools page for the actual configured capability state.
+
+## 10. Supported Inputs and Limits
+
+- Supported normalized imports: JSON, JSONL, CSV, ZIP bundles containing those formats, and EVTX when an optional compatible parser is installed.
+- Files outside a supported structured format are retained as raw evidence with an explicit parser warning; TRACE does not fabricate records from them.
+- Original uploads are preserved read-only and source hashes are recorded. Timestamps retain the original value and timezone metadata; missing timezone information remains an explicit limitation.
+- Default limits: 50 MB per upload, 10 files per request, 12 agent actions, 15-second external-tool timeout, and 100 MB maximum recovered file size.
 
 ---
 
-## 9. License & Team
+## 11. License & Team
 Built for hackathon demonstration. TRACE is open for incident response, digital forensics research, and autonomous cyber analysis.

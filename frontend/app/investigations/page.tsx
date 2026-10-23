@@ -306,11 +306,11 @@ export default function CreateInvestigationPage() {
                   Adaptive AI Mode
                 </span>
                 <span className="text-[10px] font-mono px-1.5 py-0.2 rounded bg-sky-950 text-sky-400 border border-sky-800">
-                  GEMINI / LLM
+                  NVIDIA NEMOTRON
                 </span>
               </div>
               <p className="text-[11px] text-cyber-dim leading-normal">
-                Uses configured LLM with structured tool calling; falls back to deterministic planning automatically.
+                Uses server-configured NVIDIA Nemotron tool calling. If no NVIDIA key is configured, the investigation is explicitly blocked rather than silently switching providers.
               </p>
             </div>
           </div>

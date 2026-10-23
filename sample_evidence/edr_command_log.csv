@@ -1,0 +1,9 @@
+record_id,timestamp,user,event_id,event_type,process_name,pid,parent_process_name,ppid,command_line,source_ip,dest_ip,dest_port,file_path
+REC-2001,2026-10-23T11:20:00Z,SYSTEM_ADMIN,4624,user_logon,,,,,,192.168.1.50,,,
+REC-2002,2026-10-23T11:21:10Z,SYSTEM_ADMIN,4688,process_creation,cmd.exe,2240,explorer.exe,1120,C:\Windows\System32\cmd.exe,,,,
+REC-2003,2026-10-23T11:21:40Z,SYSTEM_ADMIN,4688,process_creation,powershell.exe,3380,cmd.exe,2240,powershell.exe -ExecutionPolicy Bypass -Command "Get-Process -IncludeUserName",,,,
+REC-2004,2026-10-23T11:22:15Z,SYSTEM_ADMIN,4688,process_creation,schtasks.exe,4120,powershell.exe,3380,"schtasks.exe /create /tn ""SecurityTelemetryAgent"" /tr ""C:\ProgramData\telemetry_svc.exe"" /sc onlogon /ru SYSTEM",,,,
+REC-2005,2026-10-23T11:22:45Z,SYSTEM_ADMIN,11,file_activity,powershell.exe,3380,,,,,,,C:\ProgramData\telemetry_svc.exe
+REC-2006,2026-10-23T11:23:05Z,SYSTEM_ADMIN,4688,process_creation,procdump.exe,5590,powershell.exe,3380,"procdump64.exe -accepteula -ma lsass.exe C:\ProgramData\lsass.dmp",,,,
+REC-2007,2026-10-23T11:23:25Z,SYSTEM_ADMIN,11,file_activity,procdump.exe,5590,,,,,,,C:\ProgramData\lsass.dmp
+REC-2008,2026-10-23T11:24:00Z,SYSTEM_ADMIN,3,network_connection,telemetry_svc.exe,6180,,,192.168.1.50,203.0.113.88,8443,

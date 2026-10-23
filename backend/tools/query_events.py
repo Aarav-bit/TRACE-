@@ -79,7 +79,7 @@ registry.register(
             "process_name": {"type": "string", "description": "Filter by executable filename"},
             "pid": {"type": "string", "description": "Filter by Process ID"},
             "search_term": {"type": "string", "description": "Keyword search across command line and paths"},
-            "limit": {"type": "integer", "description": "Maximum records to return", "default": 50},
+            "limit": {"type": "integer", "description": "Maximum records to return", "default": 50, "minimum": 1, "maximum": 500},
         },
     )
 )

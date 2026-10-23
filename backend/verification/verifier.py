@@ -56,6 +56,7 @@ def verify_finding(
     contradictory_evidence_ids = contradictory_evidence_ids or []
     required_event_types = required_event_types or []
     required_keywords = required_keywords or []
+    supporting_evidence_ids = list(dict.fromkeys(supporting_evidence_ids or []))
 
     # Check 1: Must provide at least one supporting evidence ID
     if not supporting_evidence_ids:

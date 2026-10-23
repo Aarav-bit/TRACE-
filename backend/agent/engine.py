@@ -20,6 +20,7 @@ from backend.database.models import (
 from backend.database.session import SessionLocal
 from backend.forensic.integrity import add_audit_entry
 from backend.tools.registry import registry, ToolExecutionResult
+from backend.config import NVIDIA_API_KEY
 
 logger = logging.getLogger(__name__)
 
@@ -88,6 +89,19 @@ def run_investigation_loop(investigation_id: str):
         inv.status = "running"
         inv.started_at = get_utc_now()
         db.commit()
+
+        if inv.mode == "ai" and not NVIDIA_API_KEY:
+            inv.status = "failed"
+            inv.termination_reason = "AI mode requires NVIDIA_API_KEY. Select deterministic mode for the offline synthetic-demo planner."
+            inv.completed_at = get_utc_now()
+            db.commit()
+            coordinator.emit_event(investigation_id, {
+                "type": "investigation_blocked",
+                "investigation_id": investigation_id,
+                "reason": inv.termination_reason,
+                "timestamp": get_utc_now().isoformat(),
+            })
+            return
 
         coordinator.emit_event(investigation_id, {
             "type": "investigation_started",
@@ -187,6 +201,29 @@ def run_investigation_loop(investigation_id: str):
             params = next_action_spec.get("parameters", {})
             rationale = next_action_spec.get("rationale", "")
 
+            try:
+                params = registry.validate_tool_arguments(tool_name, params)
+            except ValueError as exc:
+                action_rec = InvestigationAction(
+                    investigation_id=investigation_id,
+                    sequence_number=sequence_number,
+                    tool_name=tool_name,
+                    action_type="rejected_tool_call",
+                    rationale=rationale,
+                    validated_inputs_json="{}",
+                    status="blocked",
+                    result_summary="Tool call rejected by the typed registry.",
+                    error_details=str(exc),
+                    completed_at=get_utc_now(),
+                )
+                db.add(action_rec)
+                inv.status = "failed"
+                inv.termination_reason = f"Unsafe or invalid tool call rejected: {exc}"
+                inv.completed_at = get_utc_now()
+                db.commit()
+                coordinator.emit_event(investigation_id, {"type": "action_rejected", "reason": str(exc)})
+                break
+
             # Persist Planned Action to DB
             action_rec = InvestigationAction(
                 investigation_id=investigation_id,
@@ -243,7 +280,9 @@ def run_investigation_loop(investigation_id: str):
 
             # Record in state
             if result.evidence_ids:
-                state.discovered_evidence_ids.extend(result.evidence_ids)
+                for eid in result.evidence_ids:
+                    if eid and eid not in state.discovered_evidence_ids:
+                        state.discovered_evidence_ids.append(eid)
 
             # Audit entry
             add_audit_entry(

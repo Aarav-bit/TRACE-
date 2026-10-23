@@ -5,6 +5,9 @@ from fastapi.middleware.cors import CORSMiddleware
 from backend.database.session import init_db, SessionLocal
 from backend.database.models import Case
 from backend.synthetic.cases import seed_synthetic_case
+from backend.config import NVIDIA_API_KEY, NVIDIA_BASE_URL, NVIDIA_MODEL, LLM_PROVIDER
+from backend.tools.adapters.tsk_adapter import tsk_adapter
+from backend.tools.adapters.autopsy_adapter import autopsy_adapter
 # Import all approved tools to trigger registry initialization
 import backend.tools
 from backend.api.routes_cases import router as cases_router, demo_router
@@ -53,8 +56,8 @@ app = FastAPI(
 # Enable CORS for Next.js frontend
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
-    allow_credentials=True,
+    allow_origins=["http://localhost:3000", "http://127.0.0.1:3000"],
+    allow_credentials=False,
     allow_methods=["*"],
     allow_headers=["*"],
 )
@@ -74,6 +77,33 @@ def health_check():
         "status": "healthy",
         "service": "TRACE Autonomous Digital Forensics Engine",
         "version": "1.0.0",
+    }
+
+
+@app.get("/api/health")
+def api_health_check():
+    return health_check()
+
+
+@app.get("/api/config/status")
+def configuration_status():
+    """Report only capability metadata; secrets and source paths are never returned."""
+    return {
+        "agent_mode": LLM_PROVIDER,
+        "nvidia": {
+            "configured": bool(NVIDIA_API_KEY),
+            "base_url": NVIDIA_BASE_URL,
+            "model": NVIDIA_MODEL,
+            "status": "ready" if NVIDIA_API_KEY else "not_configured",
+        },
+        "forensic_tools": {
+            "sleuth_kit": {
+                "available": tsk_adapter.is_available(),
+                "operations": tsk_adapter.available_operations(),
+            },
+            "autopsy": {"available": autopsy_adapter.is_available()},
+        },
+        "demo_mode": {"available": True, "label": "synthetic evidence only"},
     }
 
 if __name__ == "__main__":

@@ -19,7 +19,7 @@ class InvestigationState:
         "Submit findings to independent deterministic verifier",
     ])
     completed_steps: int = 0
-    max_steps: int = 15
+    max_steps: int = 12
     discovered_evidence_ids: List[str] = field(default_factory=list)
     findings_generated: List[str] = field(default_factory=list)
     contradictions: List[str] = field(default_factory=list)
@@ -62,7 +62,7 @@ class InvestigationState:
             current_phase=data.get("current_phase", "Reconnaissance"),
             proposed_plan=data.get("proposed_plan", []),
             completed_steps=data.get("completed_steps", 0),
-            max_steps=data.get("max_steps", 15),
+            max_steps=data.get("max_steps", 12),
             discovered_evidence_ids=data.get("discovered_evidence_ids", []),
             findings_generated=data.get("findings_generated", []),
             contradictions=data.get("contradictions", []),
