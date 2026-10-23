@@ -164,6 +164,11 @@ function EvidenceExplorerContent() {
           <div className="flex items-center justify-center h-full text-cyber-muted font-mono text-xs">
             Loading Case Artifact Telemetry...
           </div>
+        ) : !selectedCaseId ? (
+          <div className="flex flex-col items-center justify-center h-full text-center p-8 space-y-2">
+            <p className="text-sm font-semibold text-cyber-text">No Cases Found</p>
+            <p className="text-xs text-cyber-dim">Create or intake a forensic case to explore timelines, process trees, and relational graphs.</p>
+          </div>
         ) : (
           <>
             {activeTab === "timeline" && (

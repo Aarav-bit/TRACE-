@@ -37,20 +37,6 @@ export default function OverviewDashboard() {
     }
   };
 
-  const handleRunBenchmark = async (caseType: "complete" | "degraded") => {
-    setIsLaunchingBenchmark(true);
-    try {
-      const res = await seedDemoCase(caseType);
-      if (res && res.case_id) {
-        window.location.href = `/investigations`;
-      }
-    } catch (e) {
-      console.error("Failed to seed benchmark case:", e);
-    } finally {
-      setIsLaunchingBenchmark(false);
-    }
-  };
-
   const totalArtifacts = cases.reduce((acc, c) => acc + (c.artifact_count || 0), 0);
   const totalFindings = cases.reduce((acc, c) => acc + (c.finding_count || 0), 0);
   const totalEvents = cases.reduce((acc, c) => acc + (c.event_count || 0), 0);
@@ -92,15 +78,6 @@ export default function OverviewDashboard() {
             <Download className="w-4 h-4 text-sky-400" />
             <span>Download Presentation Evidence (.zip)</span>
           </a>
-
-          <button
-            onClick={() => handleRunBenchmark("complete")}
-            disabled={isLaunchingBenchmark}
-            className="px-4 py-2 rounded-lg bg-cyber-surface hover:bg-cyber-panel border border-cyber-border text-cyber-muted hover:text-cyber-text font-medium text-xs flex items-center gap-2 transition-colors cursor-pointer disabled:opacity-50"
-          >
-            <Play className="w-3.5 h-3.5 text-emerald-400" />
-            <span>{isLaunchingBenchmark ? "Launching..." : "Run Benchmark Case"}</span>
-          </button>
         </div>
       </div>
 

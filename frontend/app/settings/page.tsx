@@ -20,7 +20,7 @@ import {
   fetchSettings,
   updateSettings,
   testNvidiaConnection,
-  resetDemoEnvironment,
+  purgeAllCases,
   SettingsData,
 } from "@/lib/api";
 
@@ -112,15 +112,16 @@ export default function SettingsPage() {
     }
   };
 
-  const handleResetDemo = async () => {
-    if (!confirm("Reset synthetic demonstration cases back to clean baseline state?")) return;
+  const handlePurgeAll = async () => {
+    if (!confirm("Are you sure you want to purge all cases, artifacts, and findings? This leaves a clean, pristine workspace.")) return;
     setIsResetting(true);
     try {
-      await resetDemoEnvironment();
-      alert("Synthetic demo environment reset to clean baseline.");
+      await purgeAllCases();
+      alert("All cases and evidence purged. Workspace is clean.");
+      window.location.reload();
     } catch (e) {
       console.error(e);
-      alert("Failed to reset demo environment.");
+      alert("Failed to purge data.");
     } finally {
       setIsResetting(false);
     }
@@ -381,25 +382,25 @@ export default function SettingsPage() {
           </div>
         </div>
 
-        {/* Demonstration Baseline Management */}
-        <div className="p-5 rounded-lg bg-cyber-card border border-cyber-border flex items-center justify-between">
+        {/* Workspace Data Management */}
+        <div className="p-4 rounded-lg bg-cyber-card border border-cyber-border flex items-center justify-between">
           <div>
-            <span className="text-xs font-bold text-cyber-text block">
-              Demonstration Environment Reset
+            <span className="text-xs font-semibold text-cyber-text block">
+              Workspace Case Purge
             </span>
             <p className="text-xs text-cyber-dim mt-0.5">
-              Restores synthetic demonstration cases to original baseline state.
+              Permanently purges all cases, evidence artifacts, and investigative findings.
             </p>
           </div>
 
           <button
             type="button"
-            onClick={handleResetDemo}
+            onClick={handlePurgeAll}
             disabled={isResetting}
-            className="px-4 py-2 rounded bg-cyber-surface hover:bg-cyber-panel border border-cyber-border text-xs text-cyber-text font-mono flex items-center gap-1.5 transition-colors cursor-pointer disabled:opacity-50"
+            className="px-3.5 py-1.5 rounded bg-cyber-surface hover:bg-rose-950/40 border border-cyber-border hover:border-rose-800 text-xs text-cyber-muted hover:text-rose-300 font-mono flex items-center gap-1.5 transition-colors cursor-pointer disabled:opacity-50"
           >
             <RotateCcw className={`w-3.5 h-3.5 ${isResetting ? "animate-spin" : ""}`} />
-            <span>Reset Demo Data</span>
+            <span>Purge All Data</span>
           </button>
         </div>
 

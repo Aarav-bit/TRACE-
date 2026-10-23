@@ -65,6 +65,15 @@ def delete_case(case_id: str, db: Session = Depends(get_db)):
     db.commit()
     return {"success": True, "message": "Case deleted"}
 
+@router.delete("")
+def delete_all_cases(db: Session = Depends(get_db)):
+    cases = db.query(Case).all()
+    count = len(cases)
+    for c in cases:
+        db.delete(c)
+    db.commit()
+    return {"success": True, "deleted_count": count, "message": "All cases and evidence purged."}
+
 # Demo seeding endpoints
 demo_router = APIRouter(prefix="/api/demo", tags=["demo"])
 
@@ -79,13 +88,20 @@ def seed_demo(case_type: str = Query("complete", pattern="^(complete|degraded)$"
         "message": f"Synthetic demo case '{case.name}' initialized with verified evidence.",
     }
 
+@demo_router.post("/purge")
+def purge_demo(db: Session = Depends(get_db)):
+    demo_cases = db.query(Case).filter(Case.is_demo == True).all()
+    count = len(demo_cases)
+    for c in demo_cases:
+        db.delete(c)
+    db.commit()
+    return {"success": True, "deleted_count": count, "message": "All demo cases purged."}
+
 @demo_router.post("/reset")
 def reset_demo(db: Session = Depends(get_db)):
     db.query(Case).filter(Case.is_demo == True).delete()
     db.commit()
-    case_a = seed_synthetic_case(db, case_type="complete")
     return {
         "success": True,
-        "message": "Demo environment reset to baseline. Case A seeded successfully.",
-        "case_id": case_a.id,
+        "message": "Demo data purged successfully.",
     }

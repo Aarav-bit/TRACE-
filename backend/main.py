@@ -30,17 +30,6 @@ async def lifespan(app: FastAPI):
     # Initialize SQLite database schema
     logger.info("Initializing TRACE database tables...")
     init_db()
-
-    # Pre-seed demo cases if clean install
-    db = SessionLocal()
-    try:
-        existing_demo = db.query(Case).filter(Case.is_demo == True).first()
-        if not existing_demo:
-            logger.info("Fresh database detected: Seeding default synthetic demonstration case (Case A)...")
-            seed_synthetic_case(db, case_type="complete")
-    finally:
-        db.close()
-
     yield
     logger.info("TRACE backend shutting down.")
 

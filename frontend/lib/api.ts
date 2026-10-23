@@ -45,9 +45,15 @@ export async function seedDemoCase(caseType: "complete" | "degraded"): Promise<{
   return res.json();
 }
 
-export async function resetDemoEnvironment(): Promise<{ success: boolean; case_id: string }> {
+export async function resetDemoEnvironment(): Promise<{ success: boolean; case_id?: string; message?: string }> {
   const res = await fetch(`${API_BASE}/demo/reset`, { method: "POST" });
   if (!res.ok) throw new Error("Failed to reset demo environment");
+  return res.json();
+}
+
+export async function purgeAllCases(): Promise<{ success: boolean; message: string; deleted_count: number }> {
+  const res = await fetch(`${API_BASE}/cases`, { method: "DELETE" });
+  if (!res.ok) throw new Error("Failed to purge cases");
   return res.json();
 }
 
