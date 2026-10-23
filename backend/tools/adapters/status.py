@@ -1,0 +1,100 @@
+from typing import List
+from backend.database.schemas import ToolStatusItem
+from backend.tools.adapters.tsk_adapter import tsk_adapter
+from backend.tools.adapters.autopsy_adapter import autopsy_adapter
+from backend.tools.adapters.volatility_adapter import volatility_adapter
+
+def get_all_tool_statuses() -> List[ToolStatusItem]:
+    statuses = [
+        ToolStatusItem(
+            name="inspect_case",
+            display_name="Case Manifest & Hash Auditor",
+            category="Built-in Forensic Parser",
+            installed=True,
+            version="1.0.0 (Native)",
+            supported_operations=["SHA-256 validation", "Artifact header parsing", "Telemetric gap analysis"],
+            last_health_check="Operational (Built-in)",
+            configuration_guidance="Standard internal parser; requires no external dependencies.",
+        ),
+        ToolStatusItem(
+            name="query_events",
+            display_name="Forensic Event Query Engine",
+            category="Built-in Query Adapter",
+            installed=True,
+            version="1.0.0 (Native)",
+            supported_operations=["Multi-attribute indexing", "Regex filtering", "Provenance tracking"],
+            last_health_check="Operational (Built-in)",
+            configuration_guidance="Native SQLite-backed query engine for endpoint events.",
+        ),
+        ToolStatusItem(
+            name="trace_process",
+            display_name="Process Ancestry Reconstructor",
+            category="Built-in Forensic Engine",
+            installed=True,
+            version="1.0.0 (Native)",
+            supported_operations=["Parent-child tree assembly", "Observed vs inferred classification", "PPID gap detection"],
+            last_health_check="Operational (Built-in)",
+            configuration_guidance="Deterministic tree builder utilizing Windows EID 4688 and Sysmon EID 1 records.",
+        ),
+        ToolStatusItem(
+            name="build_timeline",
+            display_name="Unified UTC Timeline Generator",
+            category="Built-in Timeline Adapter",
+            installed=True,
+            version="1.0.0 (Native)",
+            supported_operations=["Strict UTC normalization", "Timezone metadata preservation", "Entity cross-filtering"],
+            last_health_check="Operational (Built-in)",
+            configuration_guidance="Built-in timeline engine with strict non-naive datetime ordering.",
+        ),
+        ToolStatusItem(
+            name="correlate_artifacts",
+            display_name="Multi-Pivot Artifact Correlator",
+            category="Built-in Correlation Adapter",
+            installed=True,
+            version="1.0.0 (Native)",
+            supported_operations=["Account-to-process binding", "Payload dropping identification", "Persistence detection"],
+            last_health_check="Operational (Built-in)",
+            configuration_guidance="Rule-based correlation graph engine outputting to React Flow schema.",
+        ),
+        ToolStatusItem(
+            name="verify_claim",
+            display_name="Independent Deterministic Verifier",
+            category="Built-in Verification Subsystem",
+            installed=True,
+            version="1.0.0 (Native)",
+            supported_operations=["Ground-truth evidence checking", "Contradiction scanning", "Causal proof validation"],
+            last_health_check="Operational (Built-in)",
+            configuration_guidance="Deterministic verification subsystem decoupled from LLM confidence.",
+        ),
+        ToolStatusItem(
+            name="the_sleuth_kit",
+            display_name="The Sleuth Kit (TSK)",
+            category="External Disk Analysis",
+            installed=tsk_adapter.is_available(),
+            version=tsk_adapter.get_version(),
+            supported_operations=["fls file listing", "istat inode inspection", "mactime timeline generation"],
+            last_health_check="Available" if tsk_adapter.is_available() else "Unavailable (Not on PATH)",
+            configuration_guidance="Install 'sleuthkit' via package manager or download binaries from sleuthkit.org and add to system PATH.",
+        ),
+        ToolStatusItem(
+            name="autopsy",
+            display_name="Autopsy Digital Forensics CLI",
+            category="External Forensic Suite",
+            installed=autopsy_adapter.is_available(),
+            version=autopsy_adapter.get_version(),
+            supported_operations=["Automated ingest modules", "DataSource processor", "Keyword search service"],
+            last_health_check="Available" if autopsy_adapter.is_available() else "Unavailable (Executable not found)",
+            configuration_guidance="Set AUTOPSY_PATH to autopsy64.exe or ensure Autopsy is in system PATH for disk image ingest.",
+        ),
+        ToolStatusItem(
+            name="volatility_3",
+            display_name="Volatility 3 Memory Forensics",
+            category="External Memory Analyzer",
+            installed=volatility_adapter.is_available(),
+            version=volatility_adapter.get_version(),
+            supported_operations=["windows.pslist", "windows.malfind", "windows.netscan", "windows.cmdline"],
+            last_health_check="Available" if volatility_adapter.is_available() else "Unavailable (Package not installed)",
+            configuration_guidance="Install via 'pip install volatility3' to enable memory dump analysis when raw RAM dumps are provided.",
+        ),
+    ]
+    return statuses
