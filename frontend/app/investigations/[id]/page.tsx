@@ -190,16 +190,16 @@ export default function LiveInvestigationCenter() {
     <div className="flex flex-col h-full overflow-hidden bg-cyber-bg">
       {/* Top Workspace Tab Bar */}
       <div className="h-12 border-b border-cyber-border bg-cyber-card px-6 flex items-center justify-between shrink-0">
-        <div className="flex items-center gap-1 font-mono text-xs">
+        <div className="flex items-center gap-1 text-xs">
           <button
             onClick={() => setActiveTab("trace")}
             className={`px-3 py-1.5 rounded-md flex items-center gap-2 transition-colors ${
               activeTab === "trace"
-                ? "bg-sky-950 text-sky-400 font-bold border border-sky-800"
+                ? "bg-cyber-surface text-sky-400 font-semibold"
                 : "text-cyber-muted hover:text-cyber-text"
             }`}
           >
-            <Activity className="w-3.5 h-3.5 text-sky-400" />
+            <Activity className="w-3.5 h-3.5" />
             <span>Live Trace ({actions.length})</span>
           </button>
 
@@ -207,11 +207,11 @@ export default function LiveInvestigationCenter() {
             onClick={() => setActiveTab("timeline")}
             className={`px-3 py-1.5 rounded-md flex items-center gap-2 transition-colors ${
               activeTab === "timeline"
-                ? "bg-sky-950 text-sky-400 font-bold border border-sky-800"
+                ? "bg-cyber-surface text-sky-400 font-semibold"
                 : "text-cyber-muted hover:text-cyber-text"
             }`}
           >
-            <FileSearch className="w-3.5 h-3.5 text-sky-400" />
+            <FileSearch className="w-3.5 h-3.5" />
             <span>Timeline ({timelineEvents.length})</span>
           </button>
 
@@ -219,11 +219,11 @@ export default function LiveInvestigationCenter() {
             onClick={() => setActiveTab("process")}
             className={`px-3 py-1.5 rounded-md flex items-center gap-2 transition-colors ${
               activeTab === "process"
-                ? "bg-sky-950 text-sky-400 font-bold border border-sky-800"
+                ? "bg-cyber-surface text-sky-400 font-semibold"
                 : "text-cyber-muted hover:text-cyber-text"
             }`}
           >
-            <GitBranch className="w-3.5 h-3.5 text-sky-400" />
+            <GitBranch className="w-3.5 h-3.5" />
             <span>Process Tree</span>
           </button>
 
@@ -231,11 +231,11 @@ export default function LiveInvestigationCenter() {
             onClick={() => setActiveTab("graph")}
             className={`px-3 py-1.5 rounded-md flex items-center gap-2 transition-colors ${
               activeTab === "graph"
-                ? "bg-sky-950 text-sky-400 font-bold border border-sky-800"
+                ? "bg-cyber-surface text-sky-400 font-semibold"
                 : "text-cyber-muted hover:text-cyber-text"
             }`}
           >
-            <Network className="w-3.5 h-3.5 text-sky-400" />
+            <Network className="w-3.5 h-3.5" />
             <span>Evidence Graph</span>
           </button>
 
@@ -243,7 +243,7 @@ export default function LiveInvestigationCenter() {
             onClick={() => setActiveTab("findings")}
             className={`px-3 py-1.5 rounded-md flex items-center gap-2 transition-colors ${
               activeTab === "findings"
-                ? "bg-sky-950 text-sky-400 font-bold border border-sky-800"
+                ? "bg-cyber-surface text-emerald-400 font-semibold"
                 : "text-cyber-muted hover:text-cyber-text"
             }`}
           >
@@ -257,9 +257,9 @@ export default function LiveInvestigationCenter() {
           href={getReportHtmlUrl(investigation.case_id)}
           target="_blank"
           rel="noopener noreferrer"
-          className="px-3 py-1 rounded bg-cyber-surface hover:bg-cyber-panel border border-cyber-border text-xs text-sky-400 font-mono font-medium flex items-center gap-1.5 transition-colors"
+          className="px-3 py-1.5 rounded-md bg-cyber-surface hover:bg-cyber-panel border border-cyber-border text-xs text-cyber-text font-medium flex items-center gap-1.5 transition-colors"
         >
-          <FileText className="w-3.5 h-3.5" />
+          <FileText className="w-3.5 h-3.5 text-sky-400" />
           <span>Export Report</span>
         </a>
       </div>

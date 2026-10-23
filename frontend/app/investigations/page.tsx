@@ -209,15 +209,17 @@ export default function CreateInvestigationPage() {
       </div>
 
       {/* Presentation Evidence Download Banner */}
-      <div className="p-4 rounded-lg bg-sky-950/30 border border-sky-800/80 flex items-start justify-between gap-4">
-        <div className="flex items-start gap-3">
-          <Info className="w-5 h-5 text-sky-400 mt-0.5 shrink-0" />
-          <div className="text-xs">
-            <span className="font-bold text-sky-300 block mb-0.5">
-              Demonstration Evidence Package Available
+      <div className="p-3.5 rounded-lg bg-cyber-card border border-cyber-border flex items-center justify-between gap-4">
+        <div className="flex items-center gap-3">
+          <div className="w-8 h-8 rounded-md bg-sky-950/50 border border-sky-800/60 flex items-center justify-center shrink-0">
+            <Download className="w-4 h-4 text-sky-400" />
+          </div>
+          <div>
+            <span className="font-semibold text-xs text-cyber-text block">
+              Sample Presentation Evidence Package
             </span>
-            <p className="text-cyber-muted leading-relaxed">
-              To demonstrate real-time evidence ingestion to judges, download our prepared incident triage archive (ZIP containing Windows Security 4688 logs, Sysmon file &amp; network records, and PowerShell 4104 script block telemetry), then drag and drop it into the upload box below.
+            <p className="text-[11px] text-cyber-dim leading-normal">
+              Pre-packaged incident triage archive containing real Windows Security, Sysmon, and PowerShell telemetry.
             </p>
           </div>
         </div>
@@ -225,25 +227,25 @@ export default function CreateInvestigationPage() {
         <a
           href={getSampleEvidenceDownloadUrl()}
           download="incident_triage_bundle.zip"
-          className="px-4 py-2 rounded-md bg-sky-500 hover:bg-sky-400 text-black font-bold text-xs flex items-center gap-2 shrink-0 transition-colors cursor-pointer"
+          className="px-3.5 py-1.5 rounded-md bg-sky-500 hover:bg-sky-400 text-black font-semibold text-xs flex items-center gap-2 shrink-0 transition-colors cursor-pointer"
         >
-          <Download className="w-4 h-4" />
-          <span>Download Package (.zip)</span>
+          <Download className="w-3.5 h-3.5" />
+          <span>Download .zip</span>
         </a>
       </div>
 
       {errorMsg && (
-        <div className="p-3.5 rounded-lg bg-rose-950/60 border border-rose-800 text-rose-300 text-xs flex items-center gap-2">
+        <div className="p-3 rounded-lg bg-rose-950/40 border border-rose-800/60 text-rose-300 text-xs flex items-center gap-2">
           <AlertCircle className="w-4 h-4 shrink-0 text-rose-400" />
           <span>{errorMsg}</span>
         </div>
       )}
 
-      <form onSubmit={handleCreateCaseAndUpload} className="space-y-6">
+      <form onSubmit={handleCreateCaseAndUpload} className="space-y-5">
         {/* Case Name */}
         <div>
-          <label className="block text-xs font-semibold text-cyber-text uppercase tracking-wider mb-1.5">
-            Case Title &amp; Incident Identifier *
+          <label className="block text-xs font-medium text-cyber-muted mb-1">
+            Case Title &amp; Incident Identifier
           </label>
           <input
             type="text"
@@ -251,72 +253,69 @@ export default function CreateInvestigationPage() {
             placeholder="e.g. INC-2026-9402: Suspicious Administrative Execution & Payload Staging"
             value={caseName}
             onChange={(e) => setCaseName(e.target.value)}
-            className="w-full bg-cyber-card border border-cyber-border rounded-lg px-4 py-2.5 text-xs text-cyber-text focus:outline-none focus:border-sky-500 font-mono"
+            className="w-full bg-cyber-card border border-cyber-border rounded-lg px-3.5 py-2 text-xs text-cyber-text focus:outline-none focus:border-sky-500 font-mono"
           />
         </div>
 
         {/* Objective */}
         <div>
-          <label className="block text-xs font-semibold text-cyber-text uppercase tracking-wider mb-1.5">
-            Investigation Objective &amp; Scope *
+          <label className="block text-xs font-medium text-cyber-muted mb-1">
+            Investigation Objective &amp; Scope
           </label>
           <textarea
             required
-            rows={3}
+            rows={2}
             value={objective}
             onChange={(e) => setObjective(e.target.value)}
             className="w-full bg-cyber-card border border-cyber-border rounded-lg p-3 text-xs text-cyber-text focus:outline-none focus:border-sky-500 font-mono leading-relaxed"
           />
-          <span className="text-[11px] text-cyber-dim block mt-1">
-            The autonomous investigator uses this objective to focus evidence querying, formulate hypotheses, and identify evidentiary gaps.
-          </span>
         </div>
 
         {/* Investigation Mode */}
         <div>
-          <label className="block text-xs font-semibold text-cyber-text uppercase tracking-wider mb-1.5">
-            Investigation Reasoning Engine
+          <label className="block text-xs font-medium text-cyber-muted mb-1.5">
+            Reasoning Engine
           </label>
-          <div className="grid grid-cols-2 gap-3">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <div
-              onClick={() => setMode("deterministic")}
-              className={`p-3.5 rounded-lg border cursor-pointer transition-colors ${
-                mode === "deterministic"
-                  ? "bg-sky-950/40 border-sky-500 text-cyber-text"
+              onClick={() => setMode("ai")}
+              className={`p-3.5 rounded-lg border cursor-pointer transition-all ${
+                mode === "ai"
+                  ? "bg-cyber-surface border-sky-500 text-cyber-text"
                   : "bg-cyber-card border-cyber-border text-cyber-muted hover:border-cyber-borderLight"
               }`}
             >
               <div className="flex items-center justify-between mb-1">
-                <span className="font-bold text-xs text-cyber-text">
-                  Local Deterministic Engine
+                <span className="font-semibold text-xs text-cyber-text">
+                  Adaptive AI (NVIDIA Nemotron 120B)
                 </span>
-                <span className="text-[10px] font-mono px-1.5 py-0.2 rounded bg-emerald-950 text-emerald-400 border border-emerald-800">
-                  100% PRIVATE &bull; NO API KEY
+                <span className="text-[9px] font-mono px-1.5 py-0.2 rounded bg-emerald-950/60 text-emerald-400 border border-emerald-800/60">
+                  NVIDIA NIM
                 </span>
               </div>
               <p className="text-[11px] text-cyber-dim leading-normal">
-                Analyzes live evidence using rule-based threat heuristics, parent-child process tree builders, and the independent verifier.
+                Dispatches structured tool calls to <code className="text-emerald-400">nvidia/nemotron-3.5-super-vl-120b-a12b</code>. Falls back to local engine if offline.
               </p>
             </div>
 
             <div
-              onClick={() => setMode("ai")}
-              className={`p-3.5 rounded-lg border cursor-pointer transition-colors ${
-                mode === "ai"
-                  ? "bg-emerald-950/30 border-emerald-500 text-cyber-text"
+              onClick={() => setMode("deterministic")}
+              className={`p-3.5 rounded-lg border cursor-pointer transition-all ${
+                mode === "deterministic"
+                  ? "bg-cyber-surface border-sky-500 text-cyber-text"
                   : "bg-cyber-card border-cyber-border text-cyber-muted hover:border-cyber-borderLight"
               }`}
             >
               <div className="flex items-center justify-between mb-1">
-                <span className="font-bold text-xs text-cyber-text">
-                  Adaptive AI Mode (NVIDIA Nemotron 120B)
+                <span className="font-semibold text-xs text-cyber-text">
+                  Autonomous Local Engine
                 </span>
-                <span className="text-[10px] font-mono px-1.5 py-0.2 rounded bg-emerald-950 text-emerald-400 border border-emerald-800">
-                  NVIDIA NIM / 120B
+                <span className="text-[9px] font-mono px-1.5 py-0.2 rounded bg-sky-950/60 text-sky-400 border border-sky-800/60">
+                  OFFLINE
                 </span>
               </div>
               <p className="text-[11px] text-cyber-dim leading-normal">
-                Dispatches structured tool calls to <code className="text-emerald-400">nvidia/nemotron-3.5-super-vl-120b-a12b</code> for multi-step forensic hypothesis testing. Seamlessly falls back to local engine if offline.
+                Private and offline. Rule-based threat heuristics, parent-child process tree reconstruction, and independent verifier.
               </p>
             </div>
           </div>
