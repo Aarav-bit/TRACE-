@@ -1,0 +1,2893 @@
+task,model,case_id,actual,predicted
+triage_label,Dummy baseline,CASE-029,0,0
+triage_label,Dummy baseline,CASE-009,0,0
+triage_label,Dummy baseline,CASE-010,1,0
+triage_label,Dummy baseline,CASE-010,0,0
+triage_label,Dummy baseline,CASE-024,0,0
+triage_label,Dummy baseline,CASE-028,0,0
+triage_label,Dummy baseline,CASE-029,0,0
+triage_label,Dummy baseline,CASE-018,0,0
+triage_label,Dummy baseline,CASE-029,0,0
+triage_label,Dummy baseline,CASE-010,0,0
+triage_label,Dummy baseline,CASE-025,0,0
+triage_label,Dummy baseline,CASE-016,0,0
+triage_label,Dummy baseline,CASE-018,0,0
+triage_label,Dummy baseline,CASE-016,1,0
+triage_label,Dummy baseline,CASE-009,0,0
+triage_label,Dummy baseline,CASE-024,0,0
+triage_label,Dummy baseline,CASE-029,1,0
+triage_label,Dummy baseline,CASE-018,0,0
+triage_label,Dummy baseline,CASE-016,0,0
+triage_label,Dummy baseline,CASE-010,0,0
+triage_label,Dummy baseline,CASE-009,0,0
+triage_label,Dummy baseline,CASE-029,0,0
+triage_label,Dummy baseline,CASE-024,0,0
+triage_label,Dummy baseline,CASE-010,0,0
+triage_label,Dummy baseline,CASE-016,0,0
+triage_label,Dummy baseline,CASE-009,1,0
+triage_label,Dummy baseline,CASE-016,0,0
+triage_label,Dummy baseline,CASE-025,0,0
+triage_label,Dummy baseline,CASE-029,0,0
+triage_label,Dummy baseline,CASE-029,0,0
+triage_label,Dummy baseline,CASE-029,0,0
+triage_label,Dummy baseline,CASE-028,0,0
+triage_label,Dummy baseline,CASE-010,0,0
+triage_label,Dummy baseline,CASE-028,0,0
+triage_label,Dummy baseline,CASE-016,0,0
+triage_label,Dummy baseline,CASE-016,0,0
+triage_label,Dummy baseline,CASE-025,0,0
+triage_label,Dummy baseline,CASE-025,0,0
+triage_label,Dummy baseline,CASE-025,0,0
+triage_label,Dummy baseline,CASE-028,0,0
+triage_label,Dummy baseline,CASE-028,0,0
+triage_label,Dummy baseline,CASE-024,0,0
+triage_label,Dummy baseline,CASE-024,1,0
+triage_label,Dummy baseline,CASE-025,1,0
+triage_label,Dummy baseline,CASE-028,0,0
+triage_label,Dummy baseline,CASE-016,0,0
+triage_label,Dummy baseline,CASE-009,0,0
+triage_label,Dummy baseline,CASE-009,0,0
+triage_label,Dummy baseline,CASE-009,0,0
+triage_label,Dummy baseline,CASE-024,0,0
+triage_label,Dummy baseline,CASE-024,0,0
+triage_label,Dummy baseline,CASE-028,0,0
+triage_label,Dummy baseline,CASE-010,1,0
+triage_label,Dummy baseline,CASE-010,0,0
+triage_label,Dummy baseline,CASE-018,0,0
+triage_label,Dummy baseline,CASE-029,1,0
+triage_label,Dummy baseline,CASE-016,0,0
+triage_label,Dummy baseline,CASE-018,0,0
+triage_label,Dummy baseline,CASE-009,0,0
+triage_label,Dummy baseline,CASE-009,0,0
+triage_label,Dummy baseline,CASE-016,0,0
+triage_label,Dummy baseline,CASE-010,0,0
+triage_label,Dummy baseline,CASE-029,0,0
+triage_label,Dummy baseline,CASE-018,0,0
+triage_label,Dummy baseline,CASE-016,1,0
+triage_label,Dummy baseline,CASE-028,0,0
+triage_label,Dummy baseline,CASE-010,0,0
+triage_label,Dummy baseline,CASE-025,1,0
+triage_label,Dummy baseline,CASE-010,0,0
+triage_label,Dummy baseline,CASE-010,0,0
+triage_label,Dummy baseline,CASE-010,0,0
+triage_label,Dummy baseline,CASE-025,1,0
+triage_label,Dummy baseline,CASE-024,1,0
+triage_label,Dummy baseline,CASE-029,1,0
+triage_label,Dummy baseline,CASE-028,1,0
+triage_label,Dummy baseline,CASE-009,0,0
+triage_label,Dummy baseline,CASE-009,1,0
+triage_label,Dummy baseline,CASE-009,0,0
+triage_label,Dummy baseline,CASE-009,0,0
+triage_label,Dummy baseline,CASE-028,1,0
+triage_label,Dummy baseline,CASE-028,0,0
+triage_label,Dummy baseline,CASE-029,0,0
+triage_label,Dummy baseline,CASE-024,1,0
+triage_label,Dummy baseline,CASE-029,0,0
+triage_label,Dummy baseline,CASE-018,1,0
+triage_label,Dummy baseline,CASE-010,0,0
+triage_label,Dummy baseline,CASE-010,0,0
+triage_label,Dummy baseline,CASE-016,0,0
+triage_label,Dummy baseline,CASE-029,1,0
+triage_label,Dummy baseline,CASE-029,1,0
+triage_label,Dummy baseline,CASE-010,1,0
+triage_label,Dummy baseline,CASE-010,0,0
+triage_label,Dummy baseline,CASE-025,0,0
+triage_label,Dummy baseline,CASE-025,1,0
+triage_label,Dummy baseline,CASE-028,0,0
+triage_label,Dummy baseline,CASE-029,0,0
+triage_label,Dummy baseline,CASE-028,0,0
+triage_label,Dummy baseline,CASE-010,1,0
+triage_label,Dummy baseline,CASE-029,0,0
+triage_label,Dummy baseline,CASE-009,0,0
+triage_label,Dummy baseline,CASE-010,0,0
+triage_label,Dummy baseline,CASE-018,0,0
+triage_label,Dummy baseline,CASE-009,1,0
+triage_label,Dummy baseline,CASE-025,0,0
+triage_label,Dummy baseline,CASE-009,0,0
+triage_label,Dummy baseline,CASE-018,0,0
+triage_label,Dummy baseline,CASE-024,1,0
+triage_label,Dummy baseline,CASE-024,0,0
+triage_label,Dummy baseline,CASE-009,1,0
+triage_label,Dummy baseline,CASE-029,0,0
+triage_label,Dummy baseline,CASE-028,0,0
+triage_label,Dummy baseline,CASE-009,1,0
+triage_label,Dummy baseline,CASE-029,0,0
+triage_label,Dummy baseline,CASE-018,0,0
+triage_label,Dummy baseline,CASE-024,1,0
+triage_label,Dummy baseline,CASE-009,0,0
+triage_label,Dummy baseline,CASE-025,1,0
+triage_label,Dummy baseline,CASE-018,0,0
+triage_label,Dummy baseline,CASE-016,1,0
+triage_label,Dummy baseline,CASE-016,0,0
+triage_label,Dummy baseline,CASE-009,0,0
+triage_label,Dummy baseline,CASE-024,1,0
+triage_label,Dummy baseline,CASE-016,0,0
+triage_label,Dummy baseline,CASE-010,0,0
+triage_label,Dummy baseline,CASE-010,0,0
+triage_label,Dummy baseline,CASE-009,0,0
+triage_label,Dummy baseline,CASE-010,0,0
+triage_label,Dummy baseline,CASE-024,0,0
+triage_label,Dummy baseline,CASE-025,0,0
+triage_label,Dummy baseline,CASE-028,0,0
+triage_label,Dummy baseline,CASE-025,1,0
+triage_label,Dummy baseline,CASE-029,1,0
+triage_label,Dummy baseline,CASE-010,0,0
+triage_label,Dummy baseline,CASE-025,0,0
+triage_label,Dummy baseline,CASE-009,0,0
+triage_label,Dummy baseline,CASE-018,0,0
+triage_label,Dummy baseline,CASE-028,0,0
+triage_label,Dummy baseline,CASE-010,1,0
+triage_label,Dummy baseline,CASE-010,0,0
+triage_label,Dummy baseline,CASE-009,0,0
+triage_label,Dummy baseline,CASE-016,0,0
+triage_label,Dummy baseline,CASE-024,0,0
+triage_label,Dummy baseline,CASE-025,0,0
+triage_label,Dummy baseline,CASE-009,0,0
+triage_label,Dummy baseline,CASE-025,0,0
+triage_label,Dummy baseline,CASE-025,1,0
+triage_label,Dummy baseline,CASE-018,1,0
+triage_label,Dummy baseline,CASE-010,0,0
+triage_label,Dummy baseline,CASE-016,0,0
+triage_label,Dummy baseline,CASE-010,1,0
+triage_label,Dummy baseline,CASE-029,0,0
+triage_label,Dummy baseline,CASE-025,0,0
+triage_label,Dummy baseline,CASE-028,1,0
+triage_label,Dummy baseline,CASE-029,0,0
+triage_label,Dummy baseline,CASE-029,0,0
+triage_label,Dummy baseline,CASE-029,0,0
+triage_label,Dummy baseline,CASE-009,0,0
+triage_label,Dummy baseline,CASE-025,0,0
+triage_label,Dummy baseline,CASE-016,0,0
+triage_label,Dummy baseline,CASE-028,0,0
+triage_label,Dummy baseline,CASE-009,1,0
+triage_label,Dummy baseline,CASE-025,1,0
+triage_label,Dummy baseline,CASE-009,0,0
+triage_label,Dummy baseline,CASE-016,0,0
+triage_label,Dummy baseline,CASE-010,0,0
+triage_label,Dummy baseline,CASE-018,1,0
+triage_label,Dummy baseline,CASE-024,1,0
+triage_label,Dummy baseline,CASE-024,0,0
+triage_label,Dummy baseline,CASE-025,0,0
+triage_label,Dummy baseline,CASE-029,1,0
+triage_label,Dummy baseline,CASE-018,0,0
+triage_label,Dummy baseline,CASE-010,0,0
+triage_label,Dummy baseline,CASE-016,0,0
+triage_label,Dummy baseline,CASE-010,0,0
+triage_label,Dummy baseline,CASE-016,0,0
+triage_label,Dummy baseline,CASE-028,1,0
+triage_label,Dummy baseline,CASE-025,0,0
+triage_label,Dummy baseline,CASE-028,1,0
+triage_label,Dummy baseline,CASE-029,0,0
+triage_label,Dummy baseline,CASE-025,1,0
+triage_label,Dummy baseline,CASE-016,0,0
+triage_label,Dummy baseline,CASE-010,1,0
+triage_label,Dummy baseline,CASE-029,1,0
+triage_label,Dummy baseline,CASE-018,0,0
+triage_label,Dummy baseline,CASE-028,1,0
+triage_label,Dummy baseline,CASE-025,1,0
+triage_label,Dummy baseline,CASE-028,1,0
+triage_label,Dummy baseline,CASE-025,0,0
+triage_label,Dummy baseline,CASE-010,1,0
+triage_label,Dummy baseline,CASE-016,0,0
+triage_label,Dummy baseline,CASE-009,0,0
+triage_label,Dummy baseline,CASE-029,0,0
+triage_label,Dummy baseline,CASE-025,1,0
+triage_label,Dummy baseline,CASE-024,0,0
+triage_label,Dummy baseline,CASE-018,0,0
+triage_label,Dummy baseline,CASE-010,0,0
+triage_label,Dummy baseline,CASE-024,1,0
+triage_label,Dummy baseline,CASE-018,0,0
+triage_label,Dummy baseline,CASE-018,0,0
+triage_label,Dummy baseline,CASE-025,1,0
+triage_label,Dummy baseline,CASE-028,0,0
+triage_label,Dummy baseline,CASE-025,1,0
+triage_label,Dummy baseline,CASE-028,1,0
+triage_label,Dummy baseline,CASE-024,0,0
+triage_label,Dummy baseline,CASE-010,0,0
+triage_label,Dummy baseline,CASE-009,0,0
+triage_label,Dummy baseline,CASE-018,1,0
+triage_label,Dummy baseline,CASE-009,0,0
+triage_label,Dummy baseline,CASE-010,1,0
+triage_label,Dummy baseline,CASE-016,1,0
+triage_label,Dummy baseline,CASE-010,0,0
+triage_label,Dummy baseline,CASE-016,0,0
+triage_label,Dummy baseline,CASE-024,1,0
+triage_label,Dummy baseline,CASE-016,0,0
+triage_label,Dummy baseline,CASE-016,0,0
+triage_label,Dummy baseline,CASE-025,0,0
+triage_label,Dummy baseline,CASE-028,0,0
+triage_label,Dummy baseline,CASE-018,0,0
+triage_label,Dummy baseline,CASE-029,1,0
+triage_label,Dummy baseline,CASE-028,0,0
+triage_label,Dummy baseline,CASE-028,0,0
+triage_label,Dummy baseline,CASE-018,1,0
+triage_label,Dummy baseline,CASE-029,1,0
+triage_label,Dummy baseline,CASE-028,0,0
+triage_label,Dummy baseline,CASE-018,0,0
+triage_label,Dummy baseline,CASE-024,0,0
+triage_label,Dummy baseline,CASE-029,0,0
+triage_label,Dummy baseline,CASE-010,0,0
+triage_label,Dummy baseline,CASE-009,0,0
+triage_label,Dummy baseline,CASE-024,0,0
+triage_label,Dummy baseline,CASE-029,1,0
+triage_label,Dummy baseline,CASE-029,0,0
+triage_label,Dummy baseline,CASE-024,0,0
+triage_label,Dummy baseline,CASE-028,0,0
+triage_label,Dummy baseline,CASE-018,0,0
+triage_label,Dummy baseline,CASE-029,1,0
+triage_label,Dummy baseline,CASE-018,0,0
+triage_label,Dummy baseline,CASE-025,1,0
+triage_label,Dummy baseline,CASE-016,0,0
+triage_label,Dummy baseline,CASE-028,0,0
+triage_label,Dummy baseline,CASE-029,0,0
+triage_label,Logistic Regression,CASE-029,0,0
+triage_label,Logistic Regression,CASE-009,0,0
+triage_label,Logistic Regression,CASE-010,1,0
+triage_label,Logistic Regression,CASE-010,0,0
+triage_label,Logistic Regression,CASE-024,0,0
+triage_label,Logistic Regression,CASE-028,0,1
+triage_label,Logistic Regression,CASE-029,0,0
+triage_label,Logistic Regression,CASE-018,0,0
+triage_label,Logistic Regression,CASE-029,0,1
+triage_label,Logistic Regression,CASE-010,0,0
+triage_label,Logistic Regression,CASE-025,0,0
+triage_label,Logistic Regression,CASE-016,0,0
+triage_label,Logistic Regression,CASE-018,0,0
+triage_label,Logistic Regression,CASE-016,1,1
+triage_label,Logistic Regression,CASE-009,0,0
+triage_label,Logistic Regression,CASE-024,0,0
+triage_label,Logistic Regression,CASE-029,1,1
+triage_label,Logistic Regression,CASE-018,0,1
+triage_label,Logistic Regression,CASE-016,0,1
+triage_label,Logistic Regression,CASE-010,0,0
+triage_label,Logistic Regression,CASE-009,0,1
+triage_label,Logistic Regression,CASE-029,0,0
+triage_label,Logistic Regression,CASE-024,0,0
+triage_label,Logistic Regression,CASE-010,0,1
+triage_label,Logistic Regression,CASE-016,0,1
+triage_label,Logistic Regression,CASE-009,1,1
+triage_label,Logistic Regression,CASE-016,0,0
+triage_label,Logistic Regression,CASE-025,0,0
+triage_label,Logistic Regression,CASE-029,0,0
+triage_label,Logistic Regression,CASE-029,0,0
+triage_label,Logistic Regression,CASE-029,0,0
+triage_label,Logistic Regression,CASE-028,0,0
+triage_label,Logistic Regression,CASE-010,0,0
+triage_label,Logistic Regression,CASE-028,0,1
+triage_label,Logistic Regression,CASE-016,0,0
+triage_label,Logistic Regression,CASE-016,0,0
+triage_label,Logistic Regression,CASE-025,0,0
+triage_label,Logistic Regression,CASE-025,0,0
+triage_label,Logistic Regression,CASE-025,0,1
+triage_label,Logistic Regression,CASE-028,0,0
+triage_label,Logistic Regression,CASE-028,0,0
+triage_label,Logistic Regression,CASE-024,0,1
+triage_label,Logistic Regression,CASE-024,1,1
+triage_label,Logistic Regression,CASE-025,1,1
+triage_label,Logistic Regression,CASE-028,0,1
+triage_label,Logistic Regression,CASE-016,0,0
+triage_label,Logistic Regression,CASE-009,0,0
+triage_label,Logistic Regression,CASE-009,0,1
+triage_label,Logistic Regression,CASE-009,0,0
+triage_label,Logistic Regression,CASE-024,0,1
+triage_label,Logistic Regression,CASE-024,0,1
+triage_label,Logistic Regression,CASE-028,0,0
+triage_label,Logistic Regression,CASE-010,1,1
+triage_label,Logistic Regression,CASE-010,0,1
+triage_label,Logistic Regression,CASE-018,0,0
+triage_label,Logistic Regression,CASE-029,1,0
+triage_label,Logistic Regression,CASE-016,0,0
+triage_label,Logistic Regression,CASE-018,0,0
+triage_label,Logistic Regression,CASE-009,0,1
+triage_label,Logistic Regression,CASE-009,0,0
+triage_label,Logistic Regression,CASE-016,0,0
+triage_label,Logistic Regression,CASE-010,0,1
+triage_label,Logistic Regression,CASE-029,0,0
+triage_label,Logistic Regression,CASE-018,0,0
+triage_label,Logistic Regression,CASE-016,1,0
+triage_label,Logistic Regression,CASE-028,0,1
+triage_label,Logistic Regression,CASE-010,0,1
+triage_label,Logistic Regression,CASE-025,1,0
+triage_label,Logistic Regression,CASE-010,0,1
+triage_label,Logistic Regression,CASE-010,0,1
+triage_label,Logistic Regression,CASE-010,0,0
+triage_label,Logistic Regression,CASE-025,1,1
+triage_label,Logistic Regression,CASE-024,1,0
+triage_label,Logistic Regression,CASE-029,1,1
+triage_label,Logistic Regression,CASE-028,1,0
+triage_label,Logistic Regression,CASE-009,0,1
+triage_label,Logistic Regression,CASE-009,1,1
+triage_label,Logistic Regression,CASE-009,0,0
+triage_label,Logistic Regression,CASE-009,0,0
+triage_label,Logistic Regression,CASE-028,1,0
+triage_label,Logistic Regression,CASE-028,0,1
+triage_label,Logistic Regression,CASE-029,0,1
+triage_label,Logistic Regression,CASE-024,1,0
+triage_label,Logistic Regression,CASE-029,0,0
+triage_label,Logistic Regression,CASE-018,1,1
+triage_label,Logistic Regression,CASE-010,0,0
+triage_label,Logistic Regression,CASE-010,0,1
+triage_label,Logistic Regression,CASE-016,0,0
+triage_label,Logistic Regression,CASE-029,1,0
+triage_label,Logistic Regression,CASE-029,1,1
+triage_label,Logistic Regression,CASE-010,1,0
+triage_label,Logistic Regression,CASE-010,0,0
+triage_label,Logistic Regression,CASE-025,0,1
+triage_label,Logistic Regression,CASE-025,1,0
+triage_label,Logistic Regression,CASE-028,0,1
+triage_label,Logistic Regression,CASE-029,0,0
+triage_label,Logistic Regression,CASE-028,0,0
+triage_label,Logistic Regression,CASE-010,1,1
+triage_label,Logistic Regression,CASE-029,0,1
+triage_label,Logistic Regression,CASE-009,0,0
+triage_label,Logistic Regression,CASE-010,0,0
+triage_label,Logistic Regression,CASE-018,0,0
+triage_label,Logistic Regression,CASE-009,1,1
+triage_label,Logistic Regression,CASE-025,0,0
+triage_label,Logistic Regression,CASE-009,0,1
+triage_label,Logistic Regression,CASE-018,0,1
+triage_label,Logistic Regression,CASE-024,1,0
+triage_label,Logistic Regression,CASE-024,0,0
+triage_label,Logistic Regression,CASE-009,1,1
+triage_label,Logistic Regression,CASE-029,0,0
+triage_label,Logistic Regression,CASE-028,0,0
+triage_label,Logistic Regression,CASE-009,1,1
+triage_label,Logistic Regression,CASE-029,0,0
+triage_label,Logistic Regression,CASE-018,0,1
+triage_label,Logistic Regression,CASE-024,1,1
+triage_label,Logistic Regression,CASE-009,0,0
+triage_label,Logistic Regression,CASE-025,1,1
+triage_label,Logistic Regression,CASE-018,0,0
+triage_label,Logistic Regression,CASE-016,1,1
+triage_label,Logistic Regression,CASE-016,0,0
+triage_label,Logistic Regression,CASE-009,0,1
+triage_label,Logistic Regression,CASE-024,1,0
+triage_label,Logistic Regression,CASE-016,0,0
+triage_label,Logistic Regression,CASE-010,0,0
+triage_label,Logistic Regression,CASE-010,0,0
+triage_label,Logistic Regression,CASE-009,0,0
+triage_label,Logistic Regression,CASE-010,0,0
+triage_label,Logistic Regression,CASE-024,0,0
+triage_label,Logistic Regression,CASE-025,0,0
+triage_label,Logistic Regression,CASE-028,0,0
+triage_label,Logistic Regression,CASE-025,1,0
+triage_label,Logistic Regression,CASE-029,1,1
+triage_label,Logistic Regression,CASE-010,0,1
+triage_label,Logistic Regression,CASE-025,0,0
+triage_label,Logistic Regression,CASE-009,0,1
+triage_label,Logistic Regression,CASE-018,0,1
+triage_label,Logistic Regression,CASE-028,0,0
+triage_label,Logistic Regression,CASE-010,1,1
+triage_label,Logistic Regression,CASE-010,0,0
+triage_label,Logistic Regression,CASE-009,0,1
+triage_label,Logistic Regression,CASE-016,0,1
+triage_label,Logistic Regression,CASE-024,0,1
+triage_label,Logistic Regression,CASE-025,0,1
+triage_label,Logistic Regression,CASE-009,0,0
+triage_label,Logistic Regression,CASE-025,0,0
+triage_label,Logistic Regression,CASE-025,1,0
+triage_label,Logistic Regression,CASE-018,1,0
+triage_label,Logistic Regression,CASE-010,0,0
+triage_label,Logistic Regression,CASE-016,0,0
+triage_label,Logistic Regression,CASE-010,1,1
+triage_label,Logistic Regression,CASE-029,0,0
+triage_label,Logistic Regression,CASE-025,0,0
+triage_label,Logistic Regression,CASE-028,1,1
+triage_label,Logistic Regression,CASE-029,0,1
+triage_label,Logistic Regression,CASE-029,0,0
+triage_label,Logistic Regression,CASE-029,0,0
+triage_label,Logistic Regression,CASE-009,0,0
+triage_label,Logistic Regression,CASE-025,0,1
+triage_label,Logistic Regression,CASE-016,0,0
+triage_label,Logistic Regression,CASE-028,0,0
+triage_label,Logistic Regression,CASE-009,1,1
+triage_label,Logistic Regression,CASE-025,1,0
+triage_label,Logistic Regression,CASE-009,0,0
+triage_label,Logistic Regression,CASE-016,0,0
+triage_label,Logistic Regression,CASE-010,0,0
+triage_label,Logistic Regression,CASE-018,1,0
+triage_label,Logistic Regression,CASE-024,1,1
+triage_label,Logistic Regression,CASE-024,0,0
+triage_label,Logistic Regression,CASE-025,0,1
+triage_label,Logistic Regression,CASE-029,1,1
+triage_label,Logistic Regression,CASE-018,0,0
+triage_label,Logistic Regression,CASE-010,0,0
+triage_label,Logistic Regression,CASE-016,0,1
+triage_label,Logistic Regression,CASE-010,0,0
+triage_label,Logistic Regression,CASE-016,0,0
+triage_label,Logistic Regression,CASE-028,1,0
+triage_label,Logistic Regression,CASE-025,0,0
+triage_label,Logistic Regression,CASE-028,1,1
+triage_label,Logistic Regression,CASE-029,0,1
+triage_label,Logistic Regression,CASE-025,1,1
+triage_label,Logistic Regression,CASE-016,0,0
+triage_label,Logistic Regression,CASE-010,1,1
+triage_label,Logistic Regression,CASE-029,1,0
+triage_label,Logistic Regression,CASE-018,0,0
+triage_label,Logistic Regression,CASE-028,1,1
+triage_label,Logistic Regression,CASE-025,1,1
+triage_label,Logistic Regression,CASE-028,1,1
+triage_label,Logistic Regression,CASE-025,0,1
+triage_label,Logistic Regression,CASE-010,1,0
+triage_label,Logistic Regression,CASE-016,0,1
+triage_label,Logistic Regression,CASE-009,0,1
+triage_label,Logistic Regression,CASE-029,0,0
+triage_label,Logistic Regression,CASE-025,1,1
+triage_label,Logistic Regression,CASE-024,0,1
+triage_label,Logistic Regression,CASE-018,0,1
+triage_label,Logistic Regression,CASE-010,0,1
+triage_label,Logistic Regression,CASE-024,1,0
+triage_label,Logistic Regression,CASE-018,0,0
+triage_label,Logistic Regression,CASE-018,0,0
+triage_label,Logistic Regression,CASE-025,1,1
+triage_label,Logistic Regression,CASE-028,0,0
+triage_label,Logistic Regression,CASE-025,1,0
+triage_label,Logistic Regression,CASE-028,1,1
+triage_label,Logistic Regression,CASE-024,0,1
+triage_label,Logistic Regression,CASE-010,0,0
+triage_label,Logistic Regression,CASE-009,0,0
+triage_label,Logistic Regression,CASE-018,1,1
+triage_label,Logistic Regression,CASE-009,0,0
+triage_label,Logistic Regression,CASE-010,1,1
+triage_label,Logistic Regression,CASE-016,1,1
+triage_label,Logistic Regression,CASE-010,0,1
+triage_label,Logistic Regression,CASE-016,0,1
+triage_label,Logistic Regression,CASE-024,1,1
+triage_label,Logistic Regression,CASE-016,0,0
+triage_label,Logistic Regression,CASE-016,0,0
+triage_label,Logistic Regression,CASE-025,0,0
+triage_label,Logistic Regression,CASE-028,0,1
+triage_label,Logistic Regression,CASE-018,0,1
+triage_label,Logistic Regression,CASE-029,1,1
+triage_label,Logistic Regression,CASE-028,0,1
+triage_label,Logistic Regression,CASE-028,0,1
+triage_label,Logistic Regression,CASE-018,1,1
+triage_label,Logistic Regression,CASE-029,1,0
+triage_label,Logistic Regression,CASE-028,0,0
+triage_label,Logistic Regression,CASE-018,0,0
+triage_label,Logistic Regression,CASE-024,0,0
+triage_label,Logistic Regression,CASE-029,0,1
+triage_label,Logistic Regression,CASE-010,0,0
+triage_label,Logistic Regression,CASE-009,0,0
+triage_label,Logistic Regression,CASE-024,0,1
+triage_label,Logistic Regression,CASE-029,1,0
+triage_label,Logistic Regression,CASE-029,0,0
+triage_label,Logistic Regression,CASE-024,0,1
+triage_label,Logistic Regression,CASE-028,0,0
+triage_label,Logistic Regression,CASE-018,0,0
+triage_label,Logistic Regression,CASE-029,1,1
+triage_label,Logistic Regression,CASE-018,0,1
+triage_label,Logistic Regression,CASE-025,1,0
+triage_label,Logistic Regression,CASE-016,0,0
+triage_label,Logistic Regression,CASE-028,0,1
+triage_label,Logistic Regression,CASE-029,0,0
+triage_label,Random Forest,CASE-029,0,0
+triage_label,Random Forest,CASE-009,0,0
+triage_label,Random Forest,CASE-010,1,0
+triage_label,Random Forest,CASE-010,0,0
+triage_label,Random Forest,CASE-024,0,0
+triage_label,Random Forest,CASE-028,0,1
+triage_label,Random Forest,CASE-029,0,0
+triage_label,Random Forest,CASE-018,0,0
+triage_label,Random Forest,CASE-029,0,0
+triage_label,Random Forest,CASE-010,0,0
+triage_label,Random Forest,CASE-025,0,0
+triage_label,Random Forest,CASE-016,0,0
+triage_label,Random Forest,CASE-018,0,0
+triage_label,Random Forest,CASE-016,1,1
+triage_label,Random Forest,CASE-009,0,0
+triage_label,Random Forest,CASE-024,0,0
+triage_label,Random Forest,CASE-029,1,1
+triage_label,Random Forest,CASE-018,0,1
+triage_label,Random Forest,CASE-016,0,1
+triage_label,Random Forest,CASE-010,0,0
+triage_label,Random Forest,CASE-009,0,0
+triage_label,Random Forest,CASE-029,0,0
+triage_label,Random Forest,CASE-024,0,0
+triage_label,Random Forest,CASE-010,0,0
+triage_label,Random Forest,CASE-016,0,1
+triage_label,Random Forest,CASE-009,1,1
+triage_label,Random Forest,CASE-016,0,0
+triage_label,Random Forest,CASE-025,0,0
+triage_label,Random Forest,CASE-029,0,0
+triage_label,Random Forest,CASE-029,0,0
+triage_label,Random Forest,CASE-029,0,0
+triage_label,Random Forest,CASE-028,0,0
+triage_label,Random Forest,CASE-010,0,0
+triage_label,Random Forest,CASE-028,0,0
+triage_label,Random Forest,CASE-016,0,0
+triage_label,Random Forest,CASE-016,0,0
+triage_label,Random Forest,CASE-025,0,0
+triage_label,Random Forest,CASE-025,0,0
+triage_label,Random Forest,CASE-025,0,1
+triage_label,Random Forest,CASE-028,0,0
+triage_label,Random Forest,CASE-028,0,0
+triage_label,Random Forest,CASE-024,0,1
+triage_label,Random Forest,CASE-024,1,0
+triage_label,Random Forest,CASE-025,1,1
+triage_label,Random Forest,CASE-028,0,1
+triage_label,Random Forest,CASE-016,0,0
+triage_label,Random Forest,CASE-009,0,1
+triage_label,Random Forest,CASE-009,0,1
+triage_label,Random Forest,CASE-009,0,0
+triage_label,Random Forest,CASE-024,0,1
+triage_label,Random Forest,CASE-024,0,1
+triage_label,Random Forest,CASE-028,0,0
+triage_label,Random Forest,CASE-010,1,0
+triage_label,Random Forest,CASE-010,0,1
+triage_label,Random Forest,CASE-018,0,0
+triage_label,Random Forest,CASE-029,1,0
+triage_label,Random Forest,CASE-016,0,0
+triage_label,Random Forest,CASE-018,0,0
+triage_label,Random Forest,CASE-009,0,0
+triage_label,Random Forest,CASE-009,0,0
+triage_label,Random Forest,CASE-016,0,0
+triage_label,Random Forest,CASE-010,0,0
+triage_label,Random Forest,CASE-029,0,0
+triage_label,Random Forest,CASE-018,0,0
+triage_label,Random Forest,CASE-016,1,0
+triage_label,Random Forest,CASE-028,0,1
+triage_label,Random Forest,CASE-010,0,1
+triage_label,Random Forest,CASE-025,1,0
+triage_label,Random Forest,CASE-010,0,1
+triage_label,Random Forest,CASE-010,0,0
+triage_label,Random Forest,CASE-010,0,0
+triage_label,Random Forest,CASE-025,1,1
+triage_label,Random Forest,CASE-024,1,0
+triage_label,Random Forest,CASE-029,1,0
+triage_label,Random Forest,CASE-028,1,0
+triage_label,Random Forest,CASE-009,0,0
+triage_label,Random Forest,CASE-009,1,1
+triage_label,Random Forest,CASE-009,0,1
+triage_label,Random Forest,CASE-009,0,0
+triage_label,Random Forest,CASE-028,1,1
+triage_label,Random Forest,CASE-028,0,1
+triage_label,Random Forest,CASE-029,0,1
+triage_label,Random Forest,CASE-024,1,0
+triage_label,Random Forest,CASE-029,0,0
+triage_label,Random Forest,CASE-018,1,0
+triage_label,Random Forest,CASE-010,0,0
+triage_label,Random Forest,CASE-010,0,0
+triage_label,Random Forest,CASE-016,0,0
+triage_label,Random Forest,CASE-029,1,0
+triage_label,Random Forest,CASE-029,1,1
+triage_label,Random Forest,CASE-010,1,0
+triage_label,Random Forest,CASE-010,0,0
+triage_label,Random Forest,CASE-025,0,0
+triage_label,Random Forest,CASE-025,1,0
+triage_label,Random Forest,CASE-028,0,1
+triage_label,Random Forest,CASE-029,0,0
+triage_label,Random Forest,CASE-028,0,0
+triage_label,Random Forest,CASE-010,1,0
+triage_label,Random Forest,CASE-029,0,0
+triage_label,Random Forest,CASE-009,0,0
+triage_label,Random Forest,CASE-010,0,0
+triage_label,Random Forest,CASE-018,0,0
+triage_label,Random Forest,CASE-009,1,0
+triage_label,Random Forest,CASE-025,0,0
+triage_label,Random Forest,CASE-009,0,1
+triage_label,Random Forest,CASE-018,0,1
+triage_label,Random Forest,CASE-024,1,0
+triage_label,Random Forest,CASE-024,0,0
+triage_label,Random Forest,CASE-009,1,1
+triage_label,Random Forest,CASE-029,0,0
+triage_label,Random Forest,CASE-028,0,0
+triage_label,Random Forest,CASE-009,1,1
+triage_label,Random Forest,CASE-029,0,0
+triage_label,Random Forest,CASE-018,0,1
+triage_label,Random Forest,CASE-024,1,1
+triage_label,Random Forest,CASE-009,0,0
+triage_label,Random Forest,CASE-025,1,0
+triage_label,Random Forest,CASE-018,0,0
+triage_label,Random Forest,CASE-016,1,1
+triage_label,Random Forest,CASE-016,0,0
+triage_label,Random Forest,CASE-009,0,1
+triage_label,Random Forest,CASE-024,1,0
+triage_label,Random Forest,CASE-016,0,0
+triage_label,Random Forest,CASE-010,0,0
+triage_label,Random Forest,CASE-010,0,0
+triage_label,Random Forest,CASE-009,0,0
+triage_label,Random Forest,CASE-010,0,0
+triage_label,Random Forest,CASE-024,0,0
+triage_label,Random Forest,CASE-025,0,0
+triage_label,Random Forest,CASE-028,0,0
+triage_label,Random Forest,CASE-025,1,0
+triage_label,Random Forest,CASE-029,1,1
+triage_label,Random Forest,CASE-010,0,0
+triage_label,Random Forest,CASE-025,0,0
+triage_label,Random Forest,CASE-009,0,1
+triage_label,Random Forest,CASE-018,0,0
+triage_label,Random Forest,CASE-028,0,0
+triage_label,Random Forest,CASE-010,1,1
+triage_label,Random Forest,CASE-010,0,0
+triage_label,Random Forest,CASE-009,0,1
+triage_label,Random Forest,CASE-016,0,1
+triage_label,Random Forest,CASE-024,0,1
+triage_label,Random Forest,CASE-025,0,1
+triage_label,Random Forest,CASE-009,0,0
+triage_label,Random Forest,CASE-025,0,0
+triage_label,Random Forest,CASE-025,1,0
+triage_label,Random Forest,CASE-018,1,1
+triage_label,Random Forest,CASE-010,0,0
+triage_label,Random Forest,CASE-016,0,0
+triage_label,Random Forest,CASE-010,1,1
+triage_label,Random Forest,CASE-029,0,0
+triage_label,Random Forest,CASE-025,0,0
+triage_label,Random Forest,CASE-028,1,1
+triage_label,Random Forest,CASE-029,0,1
+triage_label,Random Forest,CASE-029,0,0
+triage_label,Random Forest,CASE-029,0,0
+triage_label,Random Forest,CASE-009,0,0
+triage_label,Random Forest,CASE-025,0,0
+triage_label,Random Forest,CASE-016,0,0
+triage_label,Random Forest,CASE-028,0,0
+triage_label,Random Forest,CASE-009,1,1
+triage_label,Random Forest,CASE-025,1,0
+triage_label,Random Forest,CASE-009,0,0
+triage_label,Random Forest,CASE-016,0,0
+triage_label,Random Forest,CASE-010,0,0
+triage_label,Random Forest,CASE-018,1,0
+triage_label,Random Forest,CASE-024,1,1
+triage_label,Random Forest,CASE-024,0,0
+triage_label,Random Forest,CASE-025,0,1
+triage_label,Random Forest,CASE-029,1,1
+triage_label,Random Forest,CASE-018,0,0
+triage_label,Random Forest,CASE-010,0,0
+triage_label,Random Forest,CASE-016,0,0
+triage_label,Random Forest,CASE-010,0,0
+triage_label,Random Forest,CASE-016,0,0
+triage_label,Random Forest,CASE-028,1,1
+triage_label,Random Forest,CASE-025,0,0
+triage_label,Random Forest,CASE-028,1,1
+triage_label,Random Forest,CASE-029,0,1
+triage_label,Random Forest,CASE-025,1,1
+triage_label,Random Forest,CASE-016,0,0
+triage_label,Random Forest,CASE-010,1,1
+triage_label,Random Forest,CASE-029,1,0
+triage_label,Random Forest,CASE-018,0,0
+triage_label,Random Forest,CASE-028,1,0
+triage_label,Random Forest,CASE-025,1,1
+triage_label,Random Forest,CASE-028,1,0
+triage_label,Random Forest,CASE-025,0,1
+triage_label,Random Forest,CASE-010,1,0
+triage_label,Random Forest,CASE-016,0,0
+triage_label,Random Forest,CASE-009,0,1
+triage_label,Random Forest,CASE-029,0,0
+triage_label,Random Forest,CASE-025,1,1
+triage_label,Random Forest,CASE-024,0,1
+triage_label,Random Forest,CASE-018,0,0
+triage_label,Random Forest,CASE-010,0,1
+triage_label,Random Forest,CASE-024,1,0
+triage_label,Random Forest,CASE-018,0,0
+triage_label,Random Forest,CASE-018,0,0
+triage_label,Random Forest,CASE-025,1,1
+triage_label,Random Forest,CASE-028,0,0
+triage_label,Random Forest,CASE-025,1,0
+triage_label,Random Forest,CASE-028,1,0
+triage_label,Random Forest,CASE-024,0,1
+triage_label,Random Forest,CASE-010,0,0
+triage_label,Random Forest,CASE-009,0,0
+triage_label,Random Forest,CASE-018,1,0
+triage_label,Random Forest,CASE-009,0,0
+triage_label,Random Forest,CASE-010,1,1
+triage_label,Random Forest,CASE-016,1,1
+triage_label,Random Forest,CASE-010,0,1
+triage_label,Random Forest,CASE-016,0,1
+triage_label,Random Forest,CASE-024,1,0
+triage_label,Random Forest,CASE-016,0,0
+triage_label,Random Forest,CASE-016,0,0
+triage_label,Random Forest,CASE-025,0,0
+triage_label,Random Forest,CASE-028,0,0
+triage_label,Random Forest,CASE-018,0,0
+triage_label,Random Forest,CASE-029,1,1
+triage_label,Random Forest,CASE-028,0,0
+triage_label,Random Forest,CASE-028,0,1
+triage_label,Random Forest,CASE-018,1,0
+triage_label,Random Forest,CASE-029,1,0
+triage_label,Random Forest,CASE-028,0,0
+triage_label,Random Forest,CASE-018,0,1
+triage_label,Random Forest,CASE-024,0,0
+triage_label,Random Forest,CASE-029,0,0
+triage_label,Random Forest,CASE-010,0,0
+triage_label,Random Forest,CASE-009,0,0
+triage_label,Random Forest,CASE-024,0,0
+triage_label,Random Forest,CASE-029,1,1
+triage_label,Random Forest,CASE-029,0,0
+triage_label,Random Forest,CASE-024,0,1
+triage_label,Random Forest,CASE-028,0,0
+triage_label,Random Forest,CASE-018,0,0
+triage_label,Random Forest,CASE-029,1,1
+triage_label,Random Forest,CASE-018,0,1
+triage_label,Random Forest,CASE-025,1,0
+triage_label,Random Forest,CASE-016,0,0
+triage_label,Random Forest,CASE-028,0,1
+triage_label,Random Forest,CASE-029,0,0
+triage_label,XGBoost,CASE-029,0,0
+triage_label,XGBoost,CASE-009,0,0
+triage_label,XGBoost,CASE-010,1,0
+triage_label,XGBoost,CASE-010,0,0
+triage_label,XGBoost,CASE-024,0,0
+triage_label,XGBoost,CASE-028,0,0
+triage_label,XGBoost,CASE-029,0,0
+triage_label,XGBoost,CASE-018,0,0
+triage_label,XGBoost,CASE-029,0,0
+triage_label,XGBoost,CASE-010,0,0
+triage_label,XGBoost,CASE-025,0,0
+triage_label,XGBoost,CASE-016,0,0
+triage_label,XGBoost,CASE-018,0,0
+triage_label,XGBoost,CASE-016,1,0
+triage_label,XGBoost,CASE-009,0,0
+triage_label,XGBoost,CASE-024,0,0
+triage_label,XGBoost,CASE-029,1,0
+triage_label,XGBoost,CASE-018,0,0
+triage_label,XGBoost,CASE-016,0,0
+triage_label,XGBoost,CASE-010,0,0
+triage_label,XGBoost,CASE-009,0,0
+triage_label,XGBoost,CASE-029,0,0
+triage_label,XGBoost,CASE-024,0,0
+triage_label,XGBoost,CASE-010,0,0
+triage_label,XGBoost,CASE-016,0,0
+triage_label,XGBoost,CASE-009,1,0
+triage_label,XGBoost,CASE-016,0,0
+triage_label,XGBoost,CASE-025,0,0
+triage_label,XGBoost,CASE-029,0,0
+triage_label,XGBoost,CASE-029,0,0
+triage_label,XGBoost,CASE-029,0,0
+triage_label,XGBoost,CASE-028,0,0
+triage_label,XGBoost,CASE-010,0,0
+triage_label,XGBoost,CASE-028,0,0
+triage_label,XGBoost,CASE-016,0,0
+triage_label,XGBoost,CASE-016,0,0
+triage_label,XGBoost,CASE-025,0,0
+triage_label,XGBoost,CASE-025,0,0
+triage_label,XGBoost,CASE-025,0,0
+triage_label,XGBoost,CASE-028,0,0
+triage_label,XGBoost,CASE-028,0,0
+triage_label,XGBoost,CASE-024,0,0
+triage_label,XGBoost,CASE-024,1,0
+triage_label,XGBoost,CASE-025,1,1
+triage_label,XGBoost,CASE-028,0,0
+triage_label,XGBoost,CASE-016,0,0
+triage_label,XGBoost,CASE-009,0,0
+triage_label,XGBoost,CASE-009,0,0
+triage_label,XGBoost,CASE-009,0,0
+triage_label,XGBoost,CASE-024,0,0
+triage_label,XGBoost,CASE-024,0,0
+triage_label,XGBoost,CASE-028,0,0
+triage_label,XGBoost,CASE-010,1,0
+triage_label,XGBoost,CASE-010,0,0
+triage_label,XGBoost,CASE-018,0,0
+triage_label,XGBoost,CASE-029,1,0
+triage_label,XGBoost,CASE-016,0,0
+triage_label,XGBoost,CASE-018,0,0
+triage_label,XGBoost,CASE-009,0,0
+triage_label,XGBoost,CASE-009,0,0
+triage_label,XGBoost,CASE-016,0,0
+triage_label,XGBoost,CASE-010,0,0
+triage_label,XGBoost,CASE-029,0,0
+triage_label,XGBoost,CASE-018,0,0
+triage_label,XGBoost,CASE-016,1,0
+triage_label,XGBoost,CASE-028,0,0
+triage_label,XGBoost,CASE-010,0,0
+triage_label,XGBoost,CASE-025,1,0
+triage_label,XGBoost,CASE-010,0,0
+triage_label,XGBoost,CASE-010,0,0
+triage_label,XGBoost,CASE-010,0,0
+triage_label,XGBoost,CASE-025,1,0
+triage_label,XGBoost,CASE-024,1,0
+triage_label,XGBoost,CASE-029,1,0
+triage_label,XGBoost,CASE-028,1,0
+triage_label,XGBoost,CASE-009,0,0
+triage_label,XGBoost,CASE-009,1,0
+triage_label,XGBoost,CASE-009,0,0
+triage_label,XGBoost,CASE-009,0,0
+triage_label,XGBoost,CASE-028,1,0
+triage_label,XGBoost,CASE-028,0,0
+triage_label,XGBoost,CASE-029,0,0
+triage_label,XGBoost,CASE-024,1,0
+triage_label,XGBoost,CASE-029,0,0
+triage_label,XGBoost,CASE-018,1,0
+triage_label,XGBoost,CASE-010,0,0
+triage_label,XGBoost,CASE-010,0,0
+triage_label,XGBoost,CASE-016,0,0
+triage_label,XGBoost,CASE-029,1,0
+triage_label,XGBoost,CASE-029,1,0
+triage_label,XGBoost,CASE-010,1,0
+triage_label,XGBoost,CASE-010,0,0
+triage_label,XGBoost,CASE-025,0,0
+triage_label,XGBoost,CASE-025,1,0
+triage_label,XGBoost,CASE-028,0,0
+triage_label,XGBoost,CASE-029,0,0
+triage_label,XGBoost,CASE-028,0,0
+triage_label,XGBoost,CASE-010,1,0
+triage_label,XGBoost,CASE-029,0,0
+triage_label,XGBoost,CASE-009,0,0
+triage_label,XGBoost,CASE-010,0,0
+triage_label,XGBoost,CASE-018,0,0
+triage_label,XGBoost,CASE-009,1,0
+triage_label,XGBoost,CASE-025,0,0
+triage_label,XGBoost,CASE-009,0,0
+triage_label,XGBoost,CASE-018,0,0
+triage_label,XGBoost,CASE-024,1,0
+triage_label,XGBoost,CASE-024,0,0
+triage_label,XGBoost,CASE-009,1,0
+triage_label,XGBoost,CASE-029,0,0
+triage_label,XGBoost,CASE-028,0,0
+triage_label,XGBoost,CASE-009,1,0
+triage_label,XGBoost,CASE-029,0,0
+triage_label,XGBoost,CASE-018,0,0
+triage_label,XGBoost,CASE-024,1,0
+triage_label,XGBoost,CASE-009,0,0
+triage_label,XGBoost,CASE-025,1,0
+triage_label,XGBoost,CASE-018,0,0
+triage_label,XGBoost,CASE-016,1,0
+triage_label,XGBoost,CASE-016,0,0
+triage_label,XGBoost,CASE-009,0,0
+triage_label,XGBoost,CASE-024,1,0
+triage_label,XGBoost,CASE-016,0,0
+triage_label,XGBoost,CASE-010,0,0
+triage_label,XGBoost,CASE-010,0,0
+triage_label,XGBoost,CASE-009,0,0
+triage_label,XGBoost,CASE-010,0,0
+triage_label,XGBoost,CASE-024,0,0
+triage_label,XGBoost,CASE-025,0,0
+triage_label,XGBoost,CASE-028,0,0
+triage_label,XGBoost,CASE-025,1,0
+triage_label,XGBoost,CASE-029,1,0
+triage_label,XGBoost,CASE-010,0,0
+triage_label,XGBoost,CASE-025,0,0
+triage_label,XGBoost,CASE-009,0,0
+triage_label,XGBoost,CASE-018,0,0
+triage_label,XGBoost,CASE-028,0,0
+triage_label,XGBoost,CASE-010,1,0
+triage_label,XGBoost,CASE-010,0,0
+triage_label,XGBoost,CASE-009,0,0
+triage_label,XGBoost,CASE-016,0,0
+triage_label,XGBoost,CASE-024,0,0
+triage_label,XGBoost,CASE-025,0,0
+triage_label,XGBoost,CASE-009,0,0
+triage_label,XGBoost,CASE-025,0,0
+triage_label,XGBoost,CASE-025,1,0
+triage_label,XGBoost,CASE-018,1,0
+triage_label,XGBoost,CASE-010,0,0
+triage_label,XGBoost,CASE-016,0,0
+triage_label,XGBoost,CASE-010,1,0
+triage_label,XGBoost,CASE-029,0,0
+triage_label,XGBoost,CASE-025,0,0
+triage_label,XGBoost,CASE-028,1,0
+triage_label,XGBoost,CASE-029,0,0
+triage_label,XGBoost,CASE-029,0,0
+triage_label,XGBoost,CASE-029,0,0
+triage_label,XGBoost,CASE-009,0,0
+triage_label,XGBoost,CASE-025,0,0
+triage_label,XGBoost,CASE-016,0,0
+triage_label,XGBoost,CASE-028,0,0
+triage_label,XGBoost,CASE-009,1,0
+triage_label,XGBoost,CASE-025,1,0
+triage_label,XGBoost,CASE-009,0,0
+triage_label,XGBoost,CASE-016,0,0
+triage_label,XGBoost,CASE-010,0,0
+triage_label,XGBoost,CASE-018,1,0
+triage_label,XGBoost,CASE-024,1,0
+triage_label,XGBoost,CASE-024,0,0
+triage_label,XGBoost,CASE-025,0,0
+triage_label,XGBoost,CASE-029,1,0
+triage_label,XGBoost,CASE-018,0,0
+triage_label,XGBoost,CASE-010,0,0
+triage_label,XGBoost,CASE-016,0,0
+triage_label,XGBoost,CASE-010,0,0
+triage_label,XGBoost,CASE-016,0,0
+triage_label,XGBoost,CASE-028,1,0
+triage_label,XGBoost,CASE-025,0,0
+triage_label,XGBoost,CASE-028,1,1
+triage_label,XGBoost,CASE-029,0,0
+triage_label,XGBoost,CASE-025,1,0
+triage_label,XGBoost,CASE-016,0,0
+triage_label,XGBoost,CASE-010,1,1
+triage_label,XGBoost,CASE-029,1,0
+triage_label,XGBoost,CASE-018,0,0
+triage_label,XGBoost,CASE-028,1,0
+triage_label,XGBoost,CASE-025,1,1
+triage_label,XGBoost,CASE-028,1,0
+triage_label,XGBoost,CASE-025,0,0
+triage_label,XGBoost,CASE-010,1,0
+triage_label,XGBoost,CASE-016,0,0
+triage_label,XGBoost,CASE-009,0,0
+triage_label,XGBoost,CASE-029,0,0
+triage_label,XGBoost,CASE-025,1,0
+triage_label,XGBoost,CASE-024,0,0
+triage_label,XGBoost,CASE-018,0,0
+triage_label,XGBoost,CASE-010,0,0
+triage_label,XGBoost,CASE-024,1,0
+triage_label,XGBoost,CASE-018,0,0
+triage_label,XGBoost,CASE-018,0,0
+triage_label,XGBoost,CASE-025,1,0
+triage_label,XGBoost,CASE-028,0,0
+triage_label,XGBoost,CASE-025,1,0
+triage_label,XGBoost,CASE-028,1,0
+triage_label,XGBoost,CASE-024,0,0
+triage_label,XGBoost,CASE-010,0,0
+triage_label,XGBoost,CASE-009,0,0
+triage_label,XGBoost,CASE-018,1,0
+triage_label,XGBoost,CASE-009,0,0
+triage_label,XGBoost,CASE-010,1,1
+triage_label,XGBoost,CASE-016,1,0
+triage_label,XGBoost,CASE-010,0,0
+triage_label,XGBoost,CASE-016,0,0
+triage_label,XGBoost,CASE-024,1,0
+triage_label,XGBoost,CASE-016,0,0
+triage_label,XGBoost,CASE-016,0,0
+triage_label,XGBoost,CASE-025,0,0
+triage_label,XGBoost,CASE-028,0,0
+triage_label,XGBoost,CASE-018,0,0
+triage_label,XGBoost,CASE-029,1,0
+triage_label,XGBoost,CASE-028,0,0
+triage_label,XGBoost,CASE-028,0,0
+triage_label,XGBoost,CASE-018,1,0
+triage_label,XGBoost,CASE-029,1,0
+triage_label,XGBoost,CASE-028,0,0
+triage_label,XGBoost,CASE-018,0,0
+triage_label,XGBoost,CASE-024,0,0
+triage_label,XGBoost,CASE-029,0,0
+triage_label,XGBoost,CASE-010,0,0
+triage_label,XGBoost,CASE-009,0,0
+triage_label,XGBoost,CASE-024,0,0
+triage_label,XGBoost,CASE-029,1,0
+triage_label,XGBoost,CASE-029,0,0
+triage_label,XGBoost,CASE-024,0,0
+triage_label,XGBoost,CASE-028,0,0
+triage_label,XGBoost,CASE-018,0,0
+triage_label,XGBoost,CASE-029,1,0
+triage_label,XGBoost,CASE-018,0,0
+triage_label,XGBoost,CASE-025,1,0
+triage_label,XGBoost,CASE-016,0,0
+triage_label,XGBoost,CASE-028,0,0
+triage_label,XGBoost,CASE-029,0,0
+triage_label,TF-IDF + Logistic Regression,CASE-029,0,0
+triage_label,TF-IDF + Logistic Regression,CASE-009,0,0
+triage_label,TF-IDF + Logistic Regression,CASE-010,1,1
+triage_label,TF-IDF + Logistic Regression,CASE-010,0,0
+triage_label,TF-IDF + Logistic Regression,CASE-024,0,0
+triage_label,TF-IDF + Logistic Regression,CASE-028,0,1
+triage_label,TF-IDF + Logistic Regression,CASE-029,0,0
+triage_label,TF-IDF + Logistic Regression,CASE-018,0,0
+triage_label,TF-IDF + Logistic Regression,CASE-029,0,0
+triage_label,TF-IDF + Logistic Regression,CASE-010,0,0
+triage_label,TF-IDF + Logistic Regression,CASE-025,0,0
+triage_label,TF-IDF + Logistic Regression,CASE-016,0,0
+triage_label,TF-IDF + Logistic Regression,CASE-018,0,0
+triage_label,TF-IDF + Logistic Regression,CASE-016,1,1
+triage_label,TF-IDF + Logistic Regression,CASE-009,0,0
+triage_label,TF-IDF + Logistic Regression,CASE-024,0,0
+triage_label,TF-IDF + Logistic Regression,CASE-029,1,1
+triage_label,TF-IDF + Logistic Regression,CASE-018,0,1
+triage_label,TF-IDF + Logistic Regression,CASE-016,0,0
+triage_label,TF-IDF + Logistic Regression,CASE-010,0,1
+triage_label,TF-IDF + Logistic Regression,CASE-009,0,0
+triage_label,TF-IDF + Logistic Regression,CASE-029,0,0
+triage_label,TF-IDF + Logistic Regression,CASE-024,0,0
+triage_label,TF-IDF + Logistic Regression,CASE-010,0,1
+triage_label,TF-IDF + Logistic Regression,CASE-016,0,0
+triage_label,TF-IDF + Logistic Regression,CASE-009,1,0
+triage_label,TF-IDF + Logistic Regression,CASE-016,0,0
+triage_label,TF-IDF + Logistic Regression,CASE-025,0,1
+triage_label,TF-IDF + Logistic Regression,CASE-029,0,0
+triage_label,TF-IDF + Logistic Regression,CASE-029,0,1
+triage_label,TF-IDF + Logistic Regression,CASE-029,0,0
+triage_label,TF-IDF + Logistic Regression,CASE-028,0,0
+triage_label,TF-IDF + Logistic Regression,CASE-010,0,0
+triage_label,TF-IDF + Logistic Regression,CASE-028,0,0
+triage_label,TF-IDF + Logistic Regression,CASE-016,0,1
+triage_label,TF-IDF + Logistic Regression,CASE-016,0,0
+triage_label,TF-IDF + Logistic Regression,CASE-025,0,1
+triage_label,TF-IDF + Logistic Regression,CASE-025,0,0
+triage_label,TF-IDF + Logistic Regression,CASE-025,0,1
+triage_label,TF-IDF + Logistic Regression,CASE-028,0,0
+triage_label,TF-IDF + Logistic Regression,CASE-028,0,0
+triage_label,TF-IDF + Logistic Regression,CASE-024,0,1
+triage_label,TF-IDF + Logistic Regression,CASE-024,1,1
+triage_label,TF-IDF + Logistic Regression,CASE-025,1,1
+triage_label,TF-IDF + Logistic Regression,CASE-028,0,0
+triage_label,TF-IDF + Logistic Regression,CASE-016,0,0
+triage_label,TF-IDF + Logistic Regression,CASE-009,0,1
+triage_label,TF-IDF + Logistic Regression,CASE-009,0,1
+triage_label,TF-IDF + Logistic Regression,CASE-009,0,0
+triage_label,TF-IDF + Logistic Regression,CASE-024,0,0
+triage_label,TF-IDF + Logistic Regression,CASE-024,0,1
+triage_label,TF-IDF + Logistic Regression,CASE-028,0,0
+triage_label,TF-IDF + Logistic Regression,CASE-010,1,0
+triage_label,TF-IDF + Logistic Regression,CASE-010,0,1
+triage_label,TF-IDF + Logistic Regression,CASE-018,0,0
+triage_label,TF-IDF + Logistic Regression,CASE-029,1,0
+triage_label,TF-IDF + Logistic Regression,CASE-016,0,0
+triage_label,TF-IDF + Logistic Regression,CASE-018,0,0
+triage_label,TF-IDF + Logistic Regression,CASE-009,0,1
+triage_label,TF-IDF + Logistic Regression,CASE-009,0,0
+triage_label,TF-IDF + Logistic Regression,CASE-016,0,0
+triage_label,TF-IDF + Logistic Regression,CASE-010,0,0
+triage_label,TF-IDF + Logistic Regression,CASE-029,0,1
+triage_label,TF-IDF + Logistic Regression,CASE-018,0,0
+triage_label,TF-IDF + Logistic Regression,CASE-016,1,1
+triage_label,TF-IDF + Logistic Regression,CASE-028,0,1
+triage_label,TF-IDF + Logistic Regression,CASE-010,0,1
+triage_label,TF-IDF + Logistic Regression,CASE-025,1,1
+triage_label,TF-IDF + Logistic Regression,CASE-010,0,1
+triage_label,TF-IDF + Logistic Regression,CASE-010,0,0
+triage_label,TF-IDF + Logistic Regression,CASE-010,0,0
+triage_label,TF-IDF + Logistic Regression,CASE-025,1,0
+triage_label,TF-IDF + Logistic Regression,CASE-024,1,0
+triage_label,TF-IDF + Logistic Regression,CASE-029,1,1
+triage_label,TF-IDF + Logistic Regression,CASE-028,1,0
+triage_label,TF-IDF + Logistic Regression,CASE-009,0,1
+triage_label,TF-IDF + Logistic Regression,CASE-009,1,1
+triage_label,TF-IDF + Logistic Regression,CASE-009,0,1
+triage_label,TF-IDF + Logistic Regression,CASE-009,0,0
+triage_label,TF-IDF + Logistic Regression,CASE-028,1,1
+triage_label,TF-IDF + Logistic Regression,CASE-028,0,1
+triage_label,TF-IDF + Logistic Regression,CASE-029,0,1
+triage_label,TF-IDF + Logistic Regression,CASE-024,1,0
+triage_label,TF-IDF + Logistic Regression,CASE-029,0,0
+triage_label,TF-IDF + Logistic Regression,CASE-018,1,1
+triage_label,TF-IDF + Logistic Regression,CASE-010,0,0
+triage_label,TF-IDF + Logistic Regression,CASE-010,0,1
+triage_label,TF-IDF + Logistic Regression,CASE-016,0,0
+triage_label,TF-IDF + Logistic Regression,CASE-029,1,0
+triage_label,TF-IDF + Logistic Regression,CASE-029,1,1
+triage_label,TF-IDF + Logistic Regression,CASE-010,1,0
+triage_label,TF-IDF + Logistic Regression,CASE-010,0,1
+triage_label,TF-IDF + Logistic Regression,CASE-025,0,0
+triage_label,TF-IDF + Logistic Regression,CASE-025,1,0
+triage_label,TF-IDF + Logistic Regression,CASE-028,0,1
+triage_label,TF-IDF + Logistic Regression,CASE-029,0,0
+triage_label,TF-IDF + Logistic Regression,CASE-028,0,0
+triage_label,TF-IDF + Logistic Regression,CASE-010,1,0
+triage_label,TF-IDF + Logistic Regression,CASE-029,0,1
+triage_label,TF-IDF + Logistic Regression,CASE-009,0,0
+triage_label,TF-IDF + Logistic Regression,CASE-010,0,0
+triage_label,TF-IDF + Logistic Regression,CASE-018,0,0
+triage_label,TF-IDF + Logistic Regression,CASE-009,1,0
+triage_label,TF-IDF + Logistic Regression,CASE-025,0,0
+triage_label,TF-IDF + Logistic Regression,CASE-009,0,1
+triage_label,TF-IDF + Logistic Regression,CASE-018,0,0
+triage_label,TF-IDF + Logistic Regression,CASE-024,1,0
+triage_label,TF-IDF + Logistic Regression,CASE-024,0,0
+triage_label,TF-IDF + Logistic Regression,CASE-009,1,1
+triage_label,TF-IDF + Logistic Regression,CASE-029,0,0
+triage_label,TF-IDF + Logistic Regression,CASE-028,0,0
+triage_label,TF-IDF + Logistic Regression,CASE-009,1,1
+triage_label,TF-IDF + Logistic Regression,CASE-029,0,0
+triage_label,TF-IDF + Logistic Regression,CASE-018,0,0
+triage_label,TF-IDF + Logistic Regression,CASE-024,1,1
+triage_label,TF-IDF + Logistic Regression,CASE-009,0,0
+triage_label,TF-IDF + Logistic Regression,CASE-025,1,0
+triage_label,TF-IDF + Logistic Regression,CASE-018,0,0
+triage_label,TF-IDF + Logistic Regression,CASE-016,1,1
+triage_label,TF-IDF + Logistic Regression,CASE-016,0,1
+triage_label,TF-IDF + Logistic Regression,CASE-009,0,1
+triage_label,TF-IDF + Logistic Regression,CASE-024,1,1
+triage_label,TF-IDF + Logistic Regression,CASE-016,0,0
+triage_label,TF-IDF + Logistic Regression,CASE-010,0,0
+triage_label,TF-IDF + Logistic Regression,CASE-010,0,0
+triage_label,TF-IDF + Logistic Regression,CASE-009,0,1
+triage_label,TF-IDF + Logistic Regression,CASE-010,0,0
+triage_label,TF-IDF + Logistic Regression,CASE-024,0,1
+triage_label,TF-IDF + Logistic Regression,CASE-025,0,0
+triage_label,TF-IDF + Logistic Regression,CASE-028,0,0
+triage_label,TF-IDF + Logistic Regression,CASE-025,1,1
+triage_label,TF-IDF + Logistic Regression,CASE-029,1,1
+triage_label,TF-IDF + Logistic Regression,CASE-010,0,0
+triage_label,TF-IDF + Logistic Regression,CASE-025,0,0
+triage_label,TF-IDF + Logistic Regression,CASE-009,0,1
+triage_label,TF-IDF + Logistic Regression,CASE-018,0,0
+triage_label,TF-IDF + Logistic Regression,CASE-028,0,0
+triage_label,TF-IDF + Logistic Regression,CASE-010,1,1
+triage_label,TF-IDF + Logistic Regression,CASE-010,0,0
+triage_label,TF-IDF + Logistic Regression,CASE-009,0,1
+triage_label,TF-IDF + Logistic Regression,CASE-016,0,1
+triage_label,TF-IDF + Logistic Regression,CASE-024,0,1
+triage_label,TF-IDF + Logistic Regression,CASE-025,0,1
+triage_label,TF-IDF + Logistic Regression,CASE-009,0,1
+triage_label,TF-IDF + Logistic Regression,CASE-025,0,0
+triage_label,TF-IDF + Logistic Regression,CASE-025,1,1
+triage_label,TF-IDF + Logistic Regression,CASE-018,1,1
+triage_label,TF-IDF + Logistic Regression,CASE-010,0,1
+triage_label,TF-IDF + Logistic Regression,CASE-016,0,0
+triage_label,TF-IDF + Logistic Regression,CASE-010,1,1
+triage_label,TF-IDF + Logistic Regression,CASE-029,0,0
+triage_label,TF-IDF + Logistic Regression,CASE-025,0,0
+triage_label,TF-IDF + Logistic Regression,CASE-028,1,1
+triage_label,TF-IDF + Logistic Regression,CASE-029,0,1
+triage_label,TF-IDF + Logistic Regression,CASE-029,0,0
+triage_label,TF-IDF + Logistic Regression,CASE-029,0,0
+triage_label,TF-IDF + Logistic Regression,CASE-009,0,0
+triage_label,TF-IDF + Logistic Regression,CASE-025,0,0
+triage_label,TF-IDF + Logistic Regression,CASE-016,0,0
+triage_label,TF-IDF + Logistic Regression,CASE-028,0,0
+triage_label,TF-IDF + Logistic Regression,CASE-009,1,1
+triage_label,TF-IDF + Logistic Regression,CASE-025,1,0
+triage_label,TF-IDF + Logistic Regression,CASE-009,0,0
+triage_label,TF-IDF + Logistic Regression,CASE-016,0,0
+triage_label,TF-IDF + Logistic Regression,CASE-010,0,0
+triage_label,TF-IDF + Logistic Regression,CASE-018,1,0
+triage_label,TF-IDF + Logistic Regression,CASE-024,1,1
+triage_label,TF-IDF + Logistic Regression,CASE-024,0,0
+triage_label,TF-IDF + Logistic Regression,CASE-025,0,1
+triage_label,TF-IDF + Logistic Regression,CASE-029,1,1
+triage_label,TF-IDF + Logistic Regression,CASE-018,0,0
+triage_label,TF-IDF + Logistic Regression,CASE-010,0,0
+triage_label,TF-IDF + Logistic Regression,CASE-016,0,0
+triage_label,TF-IDF + Logistic Regression,CASE-010,0,0
+triage_label,TF-IDF + Logistic Regression,CASE-016,0,0
+triage_label,TF-IDF + Logistic Regression,CASE-028,1,1
+triage_label,TF-IDF + Logistic Regression,CASE-025,0,0
+triage_label,TF-IDF + Logistic Regression,CASE-028,1,1
+triage_label,TF-IDF + Logistic Regression,CASE-029,0,1
+triage_label,TF-IDF + Logistic Regression,CASE-025,1,1
+triage_label,TF-IDF + Logistic Regression,CASE-016,0,0
+triage_label,TF-IDF + Logistic Regression,CASE-010,1,1
+triage_label,TF-IDF + Logistic Regression,CASE-029,1,1
+triage_label,TF-IDF + Logistic Regression,CASE-018,0,0
+triage_label,TF-IDF + Logistic Regression,CASE-028,1,0
+triage_label,TF-IDF + Logistic Regression,CASE-025,1,1
+triage_label,TF-IDF + Logistic Regression,CASE-028,1,1
+triage_label,TF-IDF + Logistic Regression,CASE-025,0,1
+triage_label,TF-IDF + Logistic Regression,CASE-010,1,0
+triage_label,TF-IDF + Logistic Regression,CASE-016,0,1
+triage_label,TF-IDF + Logistic Regression,CASE-009,0,1
+triage_label,TF-IDF + Logistic Regression,CASE-029,0,0
+triage_label,TF-IDF + Logistic Regression,CASE-025,1,1
+triage_label,TF-IDF + Logistic Regression,CASE-024,0,1
+triage_label,TF-IDF + Logistic Regression,CASE-018,0,0
+triage_label,TF-IDF + Logistic Regression,CASE-010,0,1
+triage_label,TF-IDF + Logistic Regression,CASE-024,1,1
+triage_label,TF-IDF + Logistic Regression,CASE-018,0,0
+triage_label,TF-IDF + Logistic Regression,CASE-018,0,0
+triage_label,TF-IDF + Logistic Regression,CASE-025,1,1
+triage_label,TF-IDF + Logistic Regression,CASE-028,0,0
+triage_label,TF-IDF + Logistic Regression,CASE-025,1,1
+triage_label,TF-IDF + Logistic Regression,CASE-028,1,1
+triage_label,TF-IDF + Logistic Regression,CASE-024,0,1
+triage_label,TF-IDF + Logistic Regression,CASE-010,0,1
+triage_label,TF-IDF + Logistic Regression,CASE-009,0,0
+triage_label,TF-IDF + Logistic Regression,CASE-018,1,1
+triage_label,TF-IDF + Logistic Regression,CASE-009,0,0
+triage_label,TF-IDF + Logistic Regression,CASE-010,1,1
+triage_label,TF-IDF + Logistic Regression,CASE-016,1,1
+triage_label,TF-IDF + Logistic Regression,CASE-010,0,1
+triage_label,TF-IDF + Logistic Regression,CASE-016,0,1
+triage_label,TF-IDF + Logistic Regression,CASE-024,1,1
+triage_label,TF-IDF + Logistic Regression,CASE-016,0,0
+triage_label,TF-IDF + Logistic Regression,CASE-016,0,0
+triage_label,TF-IDF + Logistic Regression,CASE-025,0,0
+triage_label,TF-IDF + Logistic Regression,CASE-028,0,0
+triage_label,TF-IDF + Logistic Regression,CASE-018,0,0
+triage_label,TF-IDF + Logistic Regression,CASE-029,1,1
+triage_label,TF-IDF + Logistic Regression,CASE-028,0,0
+triage_label,TF-IDF + Logistic Regression,CASE-028,0,1
+triage_label,TF-IDF + Logistic Regression,CASE-018,1,1
+triage_label,TF-IDF + Logistic Regression,CASE-029,1,0
+triage_label,TF-IDF + Logistic Regression,CASE-028,0,0
+triage_label,TF-IDF + Logistic Regression,CASE-018,0,1
+triage_label,TF-IDF + Logistic Regression,CASE-024,0,0
+triage_label,TF-IDF + Logistic Regression,CASE-029,0,1
+triage_label,TF-IDF + Logistic Regression,CASE-010,0,0
+triage_label,TF-IDF + Logistic Regression,CASE-009,0,0
+triage_label,TF-IDF + Logistic Regression,CASE-024,0,0
+triage_label,TF-IDF + Logistic Regression,CASE-029,1,1
+triage_label,TF-IDF + Logistic Regression,CASE-029,0,1
+triage_label,TF-IDF + Logistic Regression,CASE-024,0,1
+triage_label,TF-IDF + Logistic Regression,CASE-028,0,0
+triage_label,TF-IDF + Logistic Regression,CASE-018,0,0
+triage_label,TF-IDF + Logistic Regression,CASE-029,1,1
+triage_label,TF-IDF + Logistic Regression,CASE-018,0,1
+triage_label,TF-IDF + Logistic Regression,CASE-025,1,0
+triage_label,TF-IDF + Logistic Regression,CASE-016,0,1
+triage_label,TF-IDF + Logistic Regression,CASE-028,0,1
+triage_label,TF-IDF + Logistic Regression,CASE-029,0,0
+triage_label,Transformer embeddings + Logistic Regression,CASE-029,0,0
+triage_label,Transformer embeddings + Logistic Regression,CASE-009,0,0
+triage_label,Transformer embeddings + Logistic Regression,CASE-010,1,0
+triage_label,Transformer embeddings + Logistic Regression,CASE-010,0,0
+triage_label,Transformer embeddings + Logistic Regression,CASE-024,0,0
+triage_label,Transformer embeddings + Logistic Regression,CASE-028,0,1
+triage_label,Transformer embeddings + Logistic Regression,CASE-029,0,0
+triage_label,Transformer embeddings + Logistic Regression,CASE-018,0,1
+triage_label,Transformer embeddings + Logistic Regression,CASE-029,0,1
+triage_label,Transformer embeddings + Logistic Regression,CASE-010,0,0
+triage_label,Transformer embeddings + Logistic Regression,CASE-025,0,0
+triage_label,Transformer embeddings + Logistic Regression,CASE-016,0,0
+triage_label,Transformer embeddings + Logistic Regression,CASE-018,0,0
+triage_label,Transformer embeddings + Logistic Regression,CASE-016,1,1
+triage_label,Transformer embeddings + Logistic Regression,CASE-009,0,0
+triage_label,Transformer embeddings + Logistic Regression,CASE-024,0,0
+triage_label,Transformer embeddings + Logistic Regression,CASE-029,1,1
+triage_label,Transformer embeddings + Logistic Regression,CASE-018,0,1
+triage_label,Transformer embeddings + Logistic Regression,CASE-016,0,0
+triage_label,Transformer embeddings + Logistic Regression,CASE-010,0,0
+triage_label,Transformer embeddings + Logistic Regression,CASE-009,0,0
+triage_label,Transformer embeddings + Logistic Regression,CASE-029,0,0
+triage_label,Transformer embeddings + Logistic Regression,CASE-024,0,0
+triage_label,Transformer embeddings + Logistic Regression,CASE-010,0,1
+triage_label,Transformer embeddings + Logistic Regression,CASE-016,0,1
+triage_label,Transformer embeddings + Logistic Regression,CASE-009,1,0
+triage_label,Transformer embeddings + Logistic Regression,CASE-016,0,0
+triage_label,Transformer embeddings + Logistic Regression,CASE-025,0,1
+triage_label,Transformer embeddings + Logistic Regression,CASE-029,0,0
+triage_label,Transformer embeddings + Logistic Regression,CASE-029,0,1
+triage_label,Transformer embeddings + Logistic Regression,CASE-029,0,0
+triage_label,Transformer embeddings + Logistic Regression,CASE-028,0,0
+triage_label,Transformer embeddings + Logistic Regression,CASE-010,0,1
+triage_label,Transformer embeddings + Logistic Regression,CASE-028,0,0
+triage_label,Transformer embeddings + Logistic Regression,CASE-016,0,1
+triage_label,Transformer embeddings + Logistic Regression,CASE-016,0,0
+triage_label,Transformer embeddings + Logistic Regression,CASE-025,0,1
+triage_label,Transformer embeddings + Logistic Regression,CASE-025,0,0
+triage_label,Transformer embeddings + Logistic Regression,CASE-025,0,1
+triage_label,Transformer embeddings + Logistic Regression,CASE-028,0,0
+triage_label,Transformer embeddings + Logistic Regression,CASE-028,0,0
+triage_label,Transformer embeddings + Logistic Regression,CASE-024,0,0
+triage_label,Transformer embeddings + Logistic Regression,CASE-024,1,0
+triage_label,Transformer embeddings + Logistic Regression,CASE-025,1,1
+triage_label,Transformer embeddings + Logistic Regression,CASE-028,0,1
+triage_label,Transformer embeddings + Logistic Regression,CASE-016,0,0
+triage_label,Transformer embeddings + Logistic Regression,CASE-009,0,1
+triage_label,Transformer embeddings + Logistic Regression,CASE-009,0,1
+triage_label,Transformer embeddings + Logistic Regression,CASE-009,0,1
+triage_label,Transformer embeddings + Logistic Regression,CASE-024,0,1
+triage_label,Transformer embeddings + Logistic Regression,CASE-024,0,1
+triage_label,Transformer embeddings + Logistic Regression,CASE-028,0,0
+triage_label,Transformer embeddings + Logistic Regression,CASE-010,1,0
+triage_label,Transformer embeddings + Logistic Regression,CASE-010,0,1
+triage_label,Transformer embeddings + Logistic Regression,CASE-018,0,1
+triage_label,Transformer embeddings + Logistic Regression,CASE-029,1,0
+triage_label,Transformer embeddings + Logistic Regression,CASE-016,0,0
+triage_label,Transformer embeddings + Logistic Regression,CASE-018,0,0
+triage_label,Transformer embeddings + Logistic Regression,CASE-009,0,1
+triage_label,Transformer embeddings + Logistic Regression,CASE-009,0,0
+triage_label,Transformer embeddings + Logistic Regression,CASE-016,0,0
+triage_label,Transformer embeddings + Logistic Regression,CASE-010,0,0
+triage_label,Transformer embeddings + Logistic Regression,CASE-029,0,1
+triage_label,Transformer embeddings + Logistic Regression,CASE-018,0,0
+triage_label,Transformer embeddings + Logistic Regression,CASE-016,1,1
+triage_label,Transformer embeddings + Logistic Regression,CASE-028,0,1
+triage_label,Transformer embeddings + Logistic Regression,CASE-010,0,1
+triage_label,Transformer embeddings + Logistic Regression,CASE-025,1,1
+triage_label,Transformer embeddings + Logistic Regression,CASE-010,0,1
+triage_label,Transformer embeddings + Logistic Regression,CASE-010,0,0
+triage_label,Transformer embeddings + Logistic Regression,CASE-010,0,1
+triage_label,Transformer embeddings + Logistic Regression,CASE-025,1,0
+triage_label,Transformer embeddings + Logistic Regression,CASE-024,1,0
+triage_label,Transformer embeddings + Logistic Regression,CASE-029,1,0
+triage_label,Transformer embeddings + Logistic Regression,CASE-028,1,0
+triage_label,Transformer embeddings + Logistic Regression,CASE-009,0,0
+triage_label,Transformer embeddings + Logistic Regression,CASE-009,1,1
+triage_label,Transformer embeddings + Logistic Regression,CASE-009,0,1
+triage_label,Transformer embeddings + Logistic Regression,CASE-009,0,0
+triage_label,Transformer embeddings + Logistic Regression,CASE-028,1,1
+triage_label,Transformer embeddings + Logistic Regression,CASE-028,0,1
+triage_label,Transformer embeddings + Logistic Regression,CASE-029,0,1
+triage_label,Transformer embeddings + Logistic Regression,CASE-024,1,0
+triage_label,Transformer embeddings + Logistic Regression,CASE-029,0,0
+triage_label,Transformer embeddings + Logistic Regression,CASE-018,1,1
+triage_label,Transformer embeddings + Logistic Regression,CASE-010,0,0
+triage_label,Transformer embeddings + Logistic Regression,CASE-010,0,1
+triage_label,Transformer embeddings + Logistic Regression,CASE-016,0,0
+triage_label,Transformer embeddings + Logistic Regression,CASE-029,1,0
+triage_label,Transformer embeddings + Logistic Regression,CASE-029,1,1
+triage_label,Transformer embeddings + Logistic Regression,CASE-010,1,0
+triage_label,Transformer embeddings + Logistic Regression,CASE-010,0,1
+triage_label,Transformer embeddings + Logistic Regression,CASE-025,0,0
+triage_label,Transformer embeddings + Logistic Regression,CASE-025,1,0
+triage_label,Transformer embeddings + Logistic Regression,CASE-028,0,1
+triage_label,Transformer embeddings + Logistic Regression,CASE-029,0,0
+triage_label,Transformer embeddings + Logistic Regression,CASE-028,0,0
+triage_label,Transformer embeddings + Logistic Regression,CASE-010,1,0
+triage_label,Transformer embeddings + Logistic Regression,CASE-029,0,1
+triage_label,Transformer embeddings + Logistic Regression,CASE-009,0,0
+triage_label,Transformer embeddings + Logistic Regression,CASE-010,0,0
+triage_label,Transformer embeddings + Logistic Regression,CASE-018,0,0
+triage_label,Transformer embeddings + Logistic Regression,CASE-009,1,0
+triage_label,Transformer embeddings + Logistic Regression,CASE-025,0,0
+triage_label,Transformer embeddings + Logistic Regression,CASE-009,0,0
+triage_label,Transformer embeddings + Logistic Regression,CASE-018,0,0
+triage_label,Transformer embeddings + Logistic Regression,CASE-024,1,0
+triage_label,Transformer embeddings + Logistic Regression,CASE-024,0,0
+triage_label,Transformer embeddings + Logistic Regression,CASE-009,1,1
+triage_label,Transformer embeddings + Logistic Regression,CASE-029,0,0
+triage_label,Transformer embeddings + Logistic Regression,CASE-028,0,0
+triage_label,Transformer embeddings + Logistic Regression,CASE-009,1,1
+triage_label,Transformer embeddings + Logistic Regression,CASE-029,0,0
+triage_label,Transformer embeddings + Logistic Regression,CASE-018,0,1
+triage_label,Transformer embeddings + Logistic Regression,CASE-024,1,1
+triage_label,Transformer embeddings + Logistic Regression,CASE-009,0,0
+triage_label,Transformer embeddings + Logistic Regression,CASE-025,1,0
+triage_label,Transformer embeddings + Logistic Regression,CASE-018,0,0
+triage_label,Transformer embeddings + Logistic Regression,CASE-016,1,1
+triage_label,Transformer embeddings + Logistic Regression,CASE-016,0,1
+triage_label,Transformer embeddings + Logistic Regression,CASE-009,0,1
+triage_label,Transformer embeddings + Logistic Regression,CASE-024,1,0
+triage_label,Transformer embeddings + Logistic Regression,CASE-016,0,1
+triage_label,Transformer embeddings + Logistic Regression,CASE-010,0,0
+triage_label,Transformer embeddings + Logistic Regression,CASE-010,0,0
+triage_label,Transformer embeddings + Logistic Regression,CASE-009,0,1
+triage_label,Transformer embeddings + Logistic Regression,CASE-010,0,0
+triage_label,Transformer embeddings + Logistic Regression,CASE-024,0,1
+triage_label,Transformer embeddings + Logistic Regression,CASE-025,0,0
+triage_label,Transformer embeddings + Logistic Regression,CASE-028,0,0
+triage_label,Transformer embeddings + Logistic Regression,CASE-025,1,1
+triage_label,Transformer embeddings + Logistic Regression,CASE-029,1,0
+triage_label,Transformer embeddings + Logistic Regression,CASE-010,0,0
+triage_label,Transformer embeddings + Logistic Regression,CASE-025,0,0
+triage_label,Transformer embeddings + Logistic Regression,CASE-009,0,0
+triage_label,Transformer embeddings + Logistic Regression,CASE-018,0,0
+triage_label,Transformer embeddings + Logistic Regression,CASE-028,0,0
+triage_label,Transformer embeddings + Logistic Regression,CASE-010,1,1
+triage_label,Transformer embeddings + Logistic Regression,CASE-010,0,0
+triage_label,Transformer embeddings + Logistic Regression,CASE-009,0,1
+triage_label,Transformer embeddings + Logistic Regression,CASE-016,0,1
+triage_label,Transformer embeddings + Logistic Regression,CASE-024,0,0
+triage_label,Transformer embeddings + Logistic Regression,CASE-025,0,1
+triage_label,Transformer embeddings + Logistic Regression,CASE-009,0,1
+triage_label,Transformer embeddings + Logistic Regression,CASE-025,0,0
+triage_label,Transformer embeddings + Logistic Regression,CASE-025,1,1
+triage_label,Transformer embeddings + Logistic Regression,CASE-018,1,1
+triage_label,Transformer embeddings + Logistic Regression,CASE-010,0,1
+triage_label,Transformer embeddings + Logistic Regression,CASE-016,0,0
+triage_label,Transformer embeddings + Logistic Regression,CASE-010,1,1
+triage_label,Transformer embeddings + Logistic Regression,CASE-029,0,0
+triage_label,Transformer embeddings + Logistic Regression,CASE-025,0,0
+triage_label,Transformer embeddings + Logistic Regression,CASE-028,1,1
+triage_label,Transformer embeddings + Logistic Regression,CASE-029,0,1
+triage_label,Transformer embeddings + Logistic Regression,CASE-029,0,1
+triage_label,Transformer embeddings + Logistic Regression,CASE-029,0,0
+triage_label,Transformer embeddings + Logistic Regression,CASE-009,0,0
+triage_label,Transformer embeddings + Logistic Regression,CASE-025,0,0
+triage_label,Transformer embeddings + Logistic Regression,CASE-016,0,0
+triage_label,Transformer embeddings + Logistic Regression,CASE-028,0,0
+triage_label,Transformer embeddings + Logistic Regression,CASE-009,1,1
+triage_label,Transformer embeddings + Logistic Regression,CASE-025,1,0
+triage_label,Transformer embeddings + Logistic Regression,CASE-009,0,0
+triage_label,Transformer embeddings + Logistic Regression,CASE-016,0,0
+triage_label,Transformer embeddings + Logistic Regression,CASE-010,0,1
+triage_label,Transformer embeddings + Logistic Regression,CASE-018,1,0
+triage_label,Transformer embeddings + Logistic Regression,CASE-024,1,1
+triage_label,Transformer embeddings + Logistic Regression,CASE-024,0,0
+triage_label,Transformer embeddings + Logistic Regression,CASE-025,0,1
+triage_label,Transformer embeddings + Logistic Regression,CASE-029,1,1
+triage_label,Transformer embeddings + Logistic Regression,CASE-018,0,1
+triage_label,Transformer embeddings + Logistic Regression,CASE-010,0,0
+triage_label,Transformer embeddings + Logistic Regression,CASE-016,0,0
+triage_label,Transformer embeddings + Logistic Regression,CASE-010,0,0
+triage_label,Transformer embeddings + Logistic Regression,CASE-016,0,0
+triage_label,Transformer embeddings + Logistic Regression,CASE-028,1,1
+triage_label,Transformer embeddings + Logistic Regression,CASE-025,0,0
+triage_label,Transformer embeddings + Logistic Regression,CASE-028,1,1
+triage_label,Transformer embeddings + Logistic Regression,CASE-029,0,0
+triage_label,Transformer embeddings + Logistic Regression,CASE-025,1,1
+triage_label,Transformer embeddings + Logistic Regression,CASE-016,0,1
+triage_label,Transformer embeddings + Logistic Regression,CASE-010,1,1
+triage_label,Transformer embeddings + Logistic Regression,CASE-029,1,1
+triage_label,Transformer embeddings + Logistic Regression,CASE-018,0,0
+triage_label,Transformer embeddings + Logistic Regression,CASE-028,1,1
+triage_label,Transformer embeddings + Logistic Regression,CASE-025,1,1
+triage_label,Transformer embeddings + Logistic Regression,CASE-028,1,1
+triage_label,Transformer embeddings + Logistic Regression,CASE-025,0,1
+triage_label,Transformer embeddings + Logistic Regression,CASE-010,1,1
+triage_label,Transformer embeddings + Logistic Regression,CASE-016,0,1
+triage_label,Transformer embeddings + Logistic Regression,CASE-009,0,1
+triage_label,Transformer embeddings + Logistic Regression,CASE-029,0,0
+triage_label,Transformer embeddings + Logistic Regression,CASE-025,1,0
+triage_label,Transformer embeddings + Logistic Regression,CASE-024,0,1
+triage_label,Transformer embeddings + Logistic Regression,CASE-018,0,0
+triage_label,Transformer embeddings + Logistic Regression,CASE-010,0,1
+triage_label,Transformer embeddings + Logistic Regression,CASE-024,1,1
+triage_label,Transformer embeddings + Logistic Regression,CASE-018,0,0
+triage_label,Transformer embeddings + Logistic Regression,CASE-018,0,0
+triage_label,Transformer embeddings + Logistic Regression,CASE-025,1,1
+triage_label,Transformer embeddings + Logistic Regression,CASE-028,0,0
+triage_label,Transformer embeddings + Logistic Regression,CASE-025,1,1
+triage_label,Transformer embeddings + Logistic Regression,CASE-028,1,0
+triage_label,Transformer embeddings + Logistic Regression,CASE-024,0,1
+triage_label,Transformer embeddings + Logistic Regression,CASE-010,0,0
+triage_label,Transformer embeddings + Logistic Regression,CASE-009,0,0
+triage_label,Transformer embeddings + Logistic Regression,CASE-018,1,0
+triage_label,Transformer embeddings + Logistic Regression,CASE-009,0,0
+triage_label,Transformer embeddings + Logistic Regression,CASE-010,1,1
+triage_label,Transformer embeddings + Logistic Regression,CASE-016,1,1
+triage_label,Transformer embeddings + Logistic Regression,CASE-010,0,1
+triage_label,Transformer embeddings + Logistic Regression,CASE-016,0,1
+triage_label,Transformer embeddings + Logistic Regression,CASE-024,1,0
+triage_label,Transformer embeddings + Logistic Regression,CASE-016,0,0
+triage_label,Transformer embeddings + Logistic Regression,CASE-016,0,0
+triage_label,Transformer embeddings + Logistic Regression,CASE-025,0,0
+triage_label,Transformer embeddings + Logistic Regression,CASE-028,0,1
+triage_label,Transformer embeddings + Logistic Regression,CASE-018,0,0
+triage_label,Transformer embeddings + Logistic Regression,CASE-029,1,1
+triage_label,Transformer embeddings + Logistic Regression,CASE-028,0,0
+triage_label,Transformer embeddings + Logistic Regression,CASE-028,0,1
+triage_label,Transformer embeddings + Logistic Regression,CASE-018,1,1
+triage_label,Transformer embeddings + Logistic Regression,CASE-029,1,0
+triage_label,Transformer embeddings + Logistic Regression,CASE-028,0,1
+triage_label,Transformer embeddings + Logistic Regression,CASE-018,0,1
+triage_label,Transformer embeddings + Logistic Regression,CASE-024,0,0
+triage_label,Transformer embeddings + Logistic Regression,CASE-029,0,1
+triage_label,Transformer embeddings + Logistic Regression,CASE-010,0,0
+triage_label,Transformer embeddings + Logistic Regression,CASE-009,0,0
+triage_label,Transformer embeddings + Logistic Regression,CASE-024,0,0
+triage_label,Transformer embeddings + Logistic Regression,CASE-029,1,0
+triage_label,Transformer embeddings + Logistic Regression,CASE-029,0,1
+triage_label,Transformer embeddings + Logistic Regression,CASE-024,0,0
+triage_label,Transformer embeddings + Logistic Regression,CASE-028,0,0
+triage_label,Transformer embeddings + Logistic Regression,CASE-018,0,0
+triage_label,Transformer embeddings + Logistic Regression,CASE-029,1,1
+triage_label,Transformer embeddings + Logistic Regression,CASE-018,0,0
+triage_label,Transformer embeddings + Logistic Regression,CASE-025,1,0
+triage_label,Transformer embeddings + Logistic Regression,CASE-016,0,1
+triage_label,Transformer embeddings + Logistic Regression,CASE-028,0,1
+triage_label,Transformer embeddings + Logistic Regression,CASE-029,0,0
+scenario,Dummy baseline,CASE-029,suspicious_web_activity,data_leakage
+scenario,Dummy baseline,CASE-009,suspicious_web_activity,data_leakage
+scenario,Dummy baseline,CASE-010,timeline_anomaly,data_leakage
+scenario,Dummy baseline,CASE-010,timeline_anomaly,data_leakage
+scenario,Dummy baseline,CASE-024,timeline_anomaly,data_leakage
+scenario,Dummy baseline,CASE-028,data_leakage,data_leakage
+scenario,Dummy baseline,CASE-029,timeline_anomaly,data_leakage
+scenario,Dummy baseline,CASE-018,data_leakage,data_leakage
+scenario,Dummy baseline,CASE-029,data_leakage,data_leakage
+scenario,Dummy baseline,CASE-010,suspicious_web_activity,data_leakage
+scenario,Dummy baseline,CASE-025,timeline_anomaly,data_leakage
+scenario,Dummy baseline,CASE-016,suspicious_web_activity,data_leakage
+scenario,Dummy baseline,CASE-018,suspicious_web_activity,data_leakage
+scenario,Dummy baseline,CASE-016,data_leakage,data_leakage
+scenario,Dummy baseline,CASE-009,suspicious_web_activity,data_leakage
+scenario,Dummy baseline,CASE-024,suspicious_web_activity,data_leakage
+scenario,Dummy baseline,CASE-029,data_leakage,data_leakage
+scenario,Dummy baseline,CASE-018,data_leakage,data_leakage
+scenario,Dummy baseline,CASE-016,suspicious_web_activity,data_leakage
+scenario,Dummy baseline,CASE-010,timeline_anomaly,data_leakage
+scenario,Dummy baseline,CASE-009,suspicious_web_activity,data_leakage
+scenario,Dummy baseline,CASE-029,timeline_anomaly,data_leakage
+scenario,Dummy baseline,CASE-024,suspicious_web_activity,data_leakage
+scenario,Dummy baseline,CASE-010,data_leakage,data_leakage
+scenario,Dummy baseline,CASE-016,timeline_anomaly,data_leakage
+scenario,Dummy baseline,CASE-009,timeline_anomaly,data_leakage
+scenario,Dummy baseline,CASE-016,suspicious_web_activity,data_leakage
+scenario,Dummy baseline,CASE-025,data_leakage,data_leakage
+scenario,Dummy baseline,CASE-029,suspicious_web_activity,data_leakage
+scenario,Dummy baseline,CASE-029,data_leakage,data_leakage
+scenario,Dummy baseline,CASE-029,timeline_anomaly,data_leakage
+scenario,Dummy baseline,CASE-028,suspicious_web_activity,data_leakage
+scenario,Dummy baseline,CASE-010,data_leakage,data_leakage
+scenario,Dummy baseline,CASE-028,timeline_anomaly,data_leakage
+scenario,Dummy baseline,CASE-016,data_leakage,data_leakage
+scenario,Dummy baseline,CASE-016,suspicious_web_activity,data_leakage
+scenario,Dummy baseline,CASE-025,data_leakage,data_leakage
+scenario,Dummy baseline,CASE-025,suspicious_web_activity,data_leakage
+scenario,Dummy baseline,CASE-025,data_leakage,data_leakage
+scenario,Dummy baseline,CASE-028,suspicious_web_activity,data_leakage
+scenario,Dummy baseline,CASE-028,suspicious_web_activity,data_leakage
+scenario,Dummy baseline,CASE-024,timeline_anomaly,data_leakage
+scenario,Dummy baseline,CASE-024,suspicious_web_activity,data_leakage
+scenario,Dummy baseline,CASE-025,data_leakage,data_leakage
+scenario,Dummy baseline,CASE-028,data_leakage,data_leakage
+scenario,Dummy baseline,CASE-016,timeline_anomaly,data_leakage
+scenario,Dummy baseline,CASE-009,data_leakage,data_leakage
+scenario,Dummy baseline,CASE-009,data_leakage,data_leakage
+scenario,Dummy baseline,CASE-009,data_leakage,data_leakage
+scenario,Dummy baseline,CASE-024,data_leakage,data_leakage
+scenario,Dummy baseline,CASE-024,data_leakage,data_leakage
+scenario,Dummy baseline,CASE-028,timeline_anomaly,data_leakage
+scenario,Dummy baseline,CASE-010,timeline_anomaly,data_leakage
+scenario,Dummy baseline,CASE-010,data_leakage,data_leakage
+scenario,Dummy baseline,CASE-018,timeline_anomaly,data_leakage
+scenario,Dummy baseline,CASE-029,suspicious_web_activity,data_leakage
+scenario,Dummy baseline,CASE-016,suspicious_web_activity,data_leakage
+scenario,Dummy baseline,CASE-018,suspicious_web_activity,data_leakage
+scenario,Dummy baseline,CASE-009,timeline_anomaly,data_leakage
+scenario,Dummy baseline,CASE-009,suspicious_web_activity,data_leakage
+scenario,Dummy baseline,CASE-016,suspicious_web_activity,data_leakage
+scenario,Dummy baseline,CASE-010,timeline_anomaly,data_leakage
+scenario,Dummy baseline,CASE-029,data_leakage,data_leakage
+scenario,Dummy baseline,CASE-018,timeline_anomaly,data_leakage
+scenario,Dummy baseline,CASE-016,data_leakage,data_leakage
+scenario,Dummy baseline,CASE-028,data_leakage,data_leakage
+scenario,Dummy baseline,CASE-010,data_leakage,data_leakage
+scenario,Dummy baseline,CASE-025,data_leakage,data_leakage
+scenario,Dummy baseline,CASE-010,data_leakage,data_leakage
+scenario,Dummy baseline,CASE-010,suspicious_web_activity,data_leakage
+scenario,Dummy baseline,CASE-010,data_leakage,data_leakage
+scenario,Dummy baseline,CASE-025,timeline_anomaly,data_leakage
+scenario,Dummy baseline,CASE-024,timeline_anomaly,data_leakage
+scenario,Dummy baseline,CASE-029,timeline_anomaly,data_leakage
+scenario,Dummy baseline,CASE-028,timeline_anomaly,data_leakage
+scenario,Dummy baseline,CASE-009,suspicious_web_activity,data_leakage
+scenario,Dummy baseline,CASE-009,data_leakage,data_leakage
+scenario,Dummy baseline,CASE-009,data_leakage,data_leakage
+scenario,Dummy baseline,CASE-009,suspicious_web_activity,data_leakage
+scenario,Dummy baseline,CASE-028,data_leakage,data_leakage
+scenario,Dummy baseline,CASE-028,data_leakage,data_leakage
+scenario,Dummy baseline,CASE-029,data_leakage,data_leakage
+scenario,Dummy baseline,CASE-024,timeline_anomaly,data_leakage
+scenario,Dummy baseline,CASE-029,suspicious_web_activity,data_leakage
+scenario,Dummy baseline,CASE-018,data_leakage,data_leakage
+scenario,Dummy baseline,CASE-010,timeline_anomaly,data_leakage
+scenario,Dummy baseline,CASE-010,data_leakage,data_leakage
+scenario,Dummy baseline,CASE-016,suspicious_web_activity,data_leakage
+scenario,Dummy baseline,CASE-029,timeline_anomaly,data_leakage
+scenario,Dummy baseline,CASE-029,data_leakage,data_leakage
+scenario,Dummy baseline,CASE-010,suspicious_web_activity,data_leakage
+scenario,Dummy baseline,CASE-010,data_leakage,data_leakage
+scenario,Dummy baseline,CASE-025,suspicious_web_activity,data_leakage
+scenario,Dummy baseline,CASE-025,timeline_anomaly,data_leakage
+scenario,Dummy baseline,CASE-028,data_leakage,data_leakage
+scenario,Dummy baseline,CASE-029,suspicious_web_activity,data_leakage
+scenario,Dummy baseline,CASE-028,suspicious_web_activity,data_leakage
+scenario,Dummy baseline,CASE-010,timeline_anomaly,data_leakage
+scenario,Dummy baseline,CASE-029,data_leakage,data_leakage
+scenario,Dummy baseline,CASE-009,timeline_anomaly,data_leakage
+scenario,Dummy baseline,CASE-010,timeline_anomaly,data_leakage
+scenario,Dummy baseline,CASE-018,timeline_anomaly,data_leakage
+scenario,Dummy baseline,CASE-009,suspicious_web_activity,data_leakage
+scenario,Dummy baseline,CASE-025,suspicious_web_activity,data_leakage
+scenario,Dummy baseline,CASE-009,timeline_anomaly,data_leakage
+scenario,Dummy baseline,CASE-018,suspicious_web_activity,data_leakage
+scenario,Dummy baseline,CASE-024,timeline_anomaly,data_leakage
+scenario,Dummy baseline,CASE-024,suspicious_web_activity,data_leakage
+scenario,Dummy baseline,CASE-009,data_leakage,data_leakage
+scenario,Dummy baseline,CASE-029,suspicious_web_activity,data_leakage
+scenario,Dummy baseline,CASE-028,timeline_anomaly,data_leakage
+scenario,Dummy baseline,CASE-009,data_leakage,data_leakage
+scenario,Dummy baseline,CASE-029,suspicious_web_activity,data_leakage
+scenario,Dummy baseline,CASE-018,data_leakage,data_leakage
+scenario,Dummy baseline,CASE-024,data_leakage,data_leakage
+scenario,Dummy baseline,CASE-009,suspicious_web_activity,data_leakage
+scenario,Dummy baseline,CASE-025,timeline_anomaly,data_leakage
+scenario,Dummy baseline,CASE-018,timeline_anomaly,data_leakage
+scenario,Dummy baseline,CASE-016,data_leakage,data_leakage
+scenario,Dummy baseline,CASE-016,data_leakage,data_leakage
+scenario,Dummy baseline,CASE-009,data_leakage,data_leakage
+scenario,Dummy baseline,CASE-024,timeline_anomaly,data_leakage
+scenario,Dummy baseline,CASE-016,data_leakage,data_leakage
+scenario,Dummy baseline,CASE-010,suspicious_web_activity,data_leakage
+scenario,Dummy baseline,CASE-010,suspicious_web_activity,data_leakage
+scenario,Dummy baseline,CASE-009,data_leakage,data_leakage
+scenario,Dummy baseline,CASE-010,suspicious_web_activity,data_leakage
+scenario,Dummy baseline,CASE-024,data_leakage,data_leakage
+scenario,Dummy baseline,CASE-025,suspicious_web_activity,data_leakage
+scenario,Dummy baseline,CASE-028,suspicious_web_activity,data_leakage
+scenario,Dummy baseline,CASE-025,data_leakage,data_leakage
+scenario,Dummy baseline,CASE-029,suspicious_web_activity,data_leakage
+scenario,Dummy baseline,CASE-010,suspicious_web_activity,data_leakage
+scenario,Dummy baseline,CASE-025,suspicious_web_activity,data_leakage
+scenario,Dummy baseline,CASE-009,timeline_anomaly,data_leakage
+scenario,Dummy baseline,CASE-018,timeline_anomaly,data_leakage
+scenario,Dummy baseline,CASE-028,suspicious_web_activity,data_leakage
+scenario,Dummy baseline,CASE-010,data_leakage,data_leakage
+scenario,Dummy baseline,CASE-010,suspicious_web_activity,data_leakage
+scenario,Dummy baseline,CASE-009,data_leakage,data_leakage
+scenario,Dummy baseline,CASE-016,data_leakage,data_leakage
+scenario,Dummy baseline,CASE-024,timeline_anomaly,data_leakage
+scenario,Dummy baseline,CASE-025,data_leakage,data_leakage
+scenario,Dummy baseline,CASE-009,data_leakage,data_leakage
+scenario,Dummy baseline,CASE-025,suspicious_web_activity,data_leakage
+scenario,Dummy baseline,CASE-025,data_leakage,data_leakage
+scenario,Dummy baseline,CASE-018,data_leakage,data_leakage
+scenario,Dummy baseline,CASE-010,data_leakage,data_leakage
+scenario,Dummy baseline,CASE-016,suspicious_web_activity,data_leakage
+scenario,Dummy baseline,CASE-010,data_leakage,data_leakage
+scenario,Dummy baseline,CASE-029,timeline_anomaly,data_leakage
+scenario,Dummy baseline,CASE-025,timeline_anomaly,data_leakage
+scenario,Dummy baseline,CASE-028,data_leakage,data_leakage
+scenario,Dummy baseline,CASE-029,data_leakage,data_leakage
+scenario,Dummy baseline,CASE-029,data_leakage,data_leakage
+scenario,Dummy baseline,CASE-029,timeline_anomaly,data_leakage
+scenario,Dummy baseline,CASE-009,suspicious_web_activity,data_leakage
+scenario,Dummy baseline,CASE-025,timeline_anomaly,data_leakage
+scenario,Dummy baseline,CASE-016,suspicious_web_activity,data_leakage
+scenario,Dummy baseline,CASE-028,timeline_anomaly,data_leakage
+scenario,Dummy baseline,CASE-009,data_leakage,data_leakage
+scenario,Dummy baseline,CASE-025,suspicious_web_activity,data_leakage
+scenario,Dummy baseline,CASE-009,timeline_anomaly,data_leakage
+scenario,Dummy baseline,CASE-016,timeline_anomaly,data_leakage
+scenario,Dummy baseline,CASE-010,data_leakage,data_leakage
+scenario,Dummy baseline,CASE-018,suspicious_web_activity,data_leakage
+scenario,Dummy baseline,CASE-024,data_leakage,data_leakage
+scenario,Dummy baseline,CASE-024,suspicious_web_activity,data_leakage
+scenario,Dummy baseline,CASE-025,timeline_anomaly,data_leakage
+scenario,Dummy baseline,CASE-029,data_leakage,data_leakage
+scenario,Dummy baseline,CASE-018,data_leakage,data_leakage
+scenario,Dummy baseline,CASE-010,timeline_anomaly,data_leakage
+scenario,Dummy baseline,CASE-016,timeline_anomaly,data_leakage
+scenario,Dummy baseline,CASE-010,suspicious_web_activity,data_leakage
+scenario,Dummy baseline,CASE-016,timeline_anomaly,data_leakage
+scenario,Dummy baseline,CASE-028,data_leakage,data_leakage
+scenario,Dummy baseline,CASE-025,timeline_anomaly,data_leakage
+scenario,Dummy baseline,CASE-028,data_leakage,data_leakage
+scenario,Dummy baseline,CASE-029,timeline_anomaly,data_leakage
+scenario,Dummy baseline,CASE-025,data_leakage,data_leakage
+scenario,Dummy baseline,CASE-016,data_leakage,data_leakage
+scenario,Dummy baseline,CASE-010,data_leakage,data_leakage
+scenario,Dummy baseline,CASE-029,data_leakage,data_leakage
+scenario,Dummy baseline,CASE-018,suspicious_web_activity,data_leakage
+scenario,Dummy baseline,CASE-028,data_leakage,data_leakage
+scenario,Dummy baseline,CASE-025,data_leakage,data_leakage
+scenario,Dummy baseline,CASE-028,data_leakage,data_leakage
+scenario,Dummy baseline,CASE-025,data_leakage,data_leakage
+scenario,Dummy baseline,CASE-010,data_leakage,data_leakage
+scenario,Dummy baseline,CASE-016,data_leakage,data_leakage
+scenario,Dummy baseline,CASE-009,data_leakage,data_leakage
+scenario,Dummy baseline,CASE-029,timeline_anomaly,data_leakage
+scenario,Dummy baseline,CASE-025,suspicious_web_activity,data_leakage
+scenario,Dummy baseline,CASE-024,data_leakage,data_leakage
+scenario,Dummy baseline,CASE-018,suspicious_web_activity,data_leakage
+scenario,Dummy baseline,CASE-010,data_leakage,data_leakage
+scenario,Dummy baseline,CASE-024,data_leakage,data_leakage
+scenario,Dummy baseline,CASE-018,suspicious_web_activity,data_leakage
+scenario,Dummy baseline,CASE-018,timeline_anomaly,data_leakage
+scenario,Dummy baseline,CASE-025,data_leakage,data_leakage
+scenario,Dummy baseline,CASE-028,suspicious_web_activity,data_leakage
+scenario,Dummy baseline,CASE-025,data_leakage,data_leakage
+scenario,Dummy baseline,CASE-028,suspicious_web_activity,data_leakage
+scenario,Dummy baseline,CASE-024,data_leakage,data_leakage
+scenario,Dummy baseline,CASE-010,timeline_anomaly,data_leakage
+scenario,Dummy baseline,CASE-009,suspicious_web_activity,data_leakage
+scenario,Dummy baseline,CASE-018,timeline_anomaly,data_leakage
+scenario,Dummy baseline,CASE-009,suspicious_web_activity,data_leakage
+scenario,Dummy baseline,CASE-010,data_leakage,data_leakage
+scenario,Dummy baseline,CASE-016,data_leakage,data_leakage
+scenario,Dummy baseline,CASE-010,data_leakage,data_leakage
+scenario,Dummy baseline,CASE-016,data_leakage,data_leakage
+scenario,Dummy baseline,CASE-024,timeline_anomaly,data_leakage
+scenario,Dummy baseline,CASE-016,suspicious_web_activity,data_leakage
+scenario,Dummy baseline,CASE-016,suspicious_web_activity,data_leakage
+scenario,Dummy baseline,CASE-025,timeline_anomaly,data_leakage
+scenario,Dummy baseline,CASE-028,data_leakage,data_leakage
+scenario,Dummy baseline,CASE-018,suspicious_web_activity,data_leakage
+scenario,Dummy baseline,CASE-029,data_leakage,data_leakage
+scenario,Dummy baseline,CASE-028,suspicious_web_activity,data_leakage
+scenario,Dummy baseline,CASE-028,timeline_anomaly,data_leakage
+scenario,Dummy baseline,CASE-018,data_leakage,data_leakage
+scenario,Dummy baseline,CASE-029,suspicious_web_activity,data_leakage
+scenario,Dummy baseline,CASE-028,data_leakage,data_leakage
+scenario,Dummy baseline,CASE-018,data_leakage,data_leakage
+scenario,Dummy baseline,CASE-024,suspicious_web_activity,data_leakage
+scenario,Dummy baseline,CASE-029,data_leakage,data_leakage
+scenario,Dummy baseline,CASE-010,timeline_anomaly,data_leakage
+scenario,Dummy baseline,CASE-009,timeline_anomaly,data_leakage
+scenario,Dummy baseline,CASE-024,timeline_anomaly,data_leakage
+scenario,Dummy baseline,CASE-029,timeline_anomaly,data_leakage
+scenario,Dummy baseline,CASE-029,data_leakage,data_leakage
+scenario,Dummy baseline,CASE-024,timeline_anomaly,data_leakage
+scenario,Dummy baseline,CASE-028,timeline_anomaly,data_leakage
+scenario,Dummy baseline,CASE-018,timeline_anomaly,data_leakage
+scenario,Dummy baseline,CASE-029,data_leakage,data_leakage
+scenario,Dummy baseline,CASE-018,suspicious_web_activity,data_leakage
+scenario,Dummy baseline,CASE-025,suspicious_web_activity,data_leakage
+scenario,Dummy baseline,CASE-016,data_leakage,data_leakage
+scenario,Dummy baseline,CASE-028,data_leakage,data_leakage
+scenario,Dummy baseline,CASE-029,timeline_anomaly,data_leakage
+scenario,Logistic Regression,CASE-029,suspicious_web_activity,suspicious_web_activity
+scenario,Logistic Regression,CASE-009,suspicious_web_activity,suspicious_web_activity
+scenario,Logistic Regression,CASE-010,timeline_anomaly,timeline_anomaly
+scenario,Logistic Regression,CASE-010,timeline_anomaly,timeline_anomaly
+scenario,Logistic Regression,CASE-024,timeline_anomaly,timeline_anomaly
+scenario,Logistic Regression,CASE-028,data_leakage,data_leakage
+scenario,Logistic Regression,CASE-029,timeline_anomaly,timeline_anomaly
+scenario,Logistic Regression,CASE-018,data_leakage,data_leakage
+scenario,Logistic Regression,CASE-029,data_leakage,data_leakage
+scenario,Logistic Regression,CASE-010,suspicious_web_activity,suspicious_web_activity
+scenario,Logistic Regression,CASE-025,timeline_anomaly,timeline_anomaly
+scenario,Logistic Regression,CASE-016,suspicious_web_activity,suspicious_web_activity
+scenario,Logistic Regression,CASE-018,suspicious_web_activity,suspicious_web_activity
+scenario,Logistic Regression,CASE-016,data_leakage,data_leakage
+scenario,Logistic Regression,CASE-009,suspicious_web_activity,suspicious_web_activity
+scenario,Logistic Regression,CASE-024,suspicious_web_activity,suspicious_web_activity
+scenario,Logistic Regression,CASE-029,data_leakage,data_leakage
+scenario,Logistic Regression,CASE-018,data_leakage,data_leakage
+scenario,Logistic Regression,CASE-016,suspicious_web_activity,suspicious_web_activity
+scenario,Logistic Regression,CASE-010,timeline_anomaly,timeline_anomaly
+scenario,Logistic Regression,CASE-009,suspicious_web_activity,suspicious_web_activity
+scenario,Logistic Regression,CASE-029,timeline_anomaly,timeline_anomaly
+scenario,Logistic Regression,CASE-024,suspicious_web_activity,suspicious_web_activity
+scenario,Logistic Regression,CASE-010,data_leakage,data_leakage
+scenario,Logistic Regression,CASE-016,timeline_anomaly,timeline_anomaly
+scenario,Logistic Regression,CASE-009,timeline_anomaly,timeline_anomaly
+scenario,Logistic Regression,CASE-016,suspicious_web_activity,suspicious_web_activity
+scenario,Logistic Regression,CASE-025,data_leakage,data_leakage
+scenario,Logistic Regression,CASE-029,suspicious_web_activity,suspicious_web_activity
+scenario,Logistic Regression,CASE-029,data_leakage,data_leakage
+scenario,Logistic Regression,CASE-029,timeline_anomaly,timeline_anomaly
+scenario,Logistic Regression,CASE-028,suspicious_web_activity,suspicious_web_activity
+scenario,Logistic Regression,CASE-010,data_leakage,data_leakage
+scenario,Logistic Regression,CASE-028,timeline_anomaly,timeline_anomaly
+scenario,Logistic Regression,CASE-016,data_leakage,data_leakage
+scenario,Logistic Regression,CASE-016,suspicious_web_activity,suspicious_web_activity
+scenario,Logistic Regression,CASE-025,data_leakage,data_leakage
+scenario,Logistic Regression,CASE-025,suspicious_web_activity,suspicious_web_activity
+scenario,Logistic Regression,CASE-025,data_leakage,data_leakage
+scenario,Logistic Regression,CASE-028,suspicious_web_activity,suspicious_web_activity
+scenario,Logistic Regression,CASE-028,suspicious_web_activity,suspicious_web_activity
+scenario,Logistic Regression,CASE-024,timeline_anomaly,timeline_anomaly
+scenario,Logistic Regression,CASE-024,suspicious_web_activity,suspicious_web_activity
+scenario,Logistic Regression,CASE-025,data_leakage,data_leakage
+scenario,Logistic Regression,CASE-028,data_leakage,data_leakage
+scenario,Logistic Regression,CASE-016,timeline_anomaly,timeline_anomaly
+scenario,Logistic Regression,CASE-009,data_leakage,data_leakage
+scenario,Logistic Regression,CASE-009,data_leakage,timeline_anomaly
+scenario,Logistic Regression,CASE-009,data_leakage,data_leakage
+scenario,Logistic Regression,CASE-024,data_leakage,data_leakage
+scenario,Logistic Regression,CASE-024,data_leakage,data_leakage
+scenario,Logistic Regression,CASE-028,timeline_anomaly,timeline_anomaly
+scenario,Logistic Regression,CASE-010,timeline_anomaly,timeline_anomaly
+scenario,Logistic Regression,CASE-010,data_leakage,data_leakage
+scenario,Logistic Regression,CASE-018,timeline_anomaly,timeline_anomaly
+scenario,Logistic Regression,CASE-029,suspicious_web_activity,suspicious_web_activity
+scenario,Logistic Regression,CASE-016,suspicious_web_activity,suspicious_web_activity
+scenario,Logistic Regression,CASE-018,suspicious_web_activity,suspicious_web_activity
+scenario,Logistic Regression,CASE-009,timeline_anomaly,timeline_anomaly
+scenario,Logistic Regression,CASE-009,suspicious_web_activity,suspicious_web_activity
+scenario,Logistic Regression,CASE-016,suspicious_web_activity,suspicious_web_activity
+scenario,Logistic Regression,CASE-010,timeline_anomaly,timeline_anomaly
+scenario,Logistic Regression,CASE-029,data_leakage,data_leakage
+scenario,Logistic Regression,CASE-018,timeline_anomaly,timeline_anomaly
+scenario,Logistic Regression,CASE-016,data_leakage,data_leakage
+scenario,Logistic Regression,CASE-028,data_leakage,data_leakage
+scenario,Logistic Regression,CASE-010,data_leakage,data_leakage
+scenario,Logistic Regression,CASE-025,data_leakage,data_leakage
+scenario,Logistic Regression,CASE-010,data_leakage,data_leakage
+scenario,Logistic Regression,CASE-010,suspicious_web_activity,suspicious_web_activity
+scenario,Logistic Regression,CASE-010,data_leakage,data_leakage
+scenario,Logistic Regression,CASE-025,timeline_anomaly,timeline_anomaly
+scenario,Logistic Regression,CASE-024,timeline_anomaly,timeline_anomaly
+scenario,Logistic Regression,CASE-029,timeline_anomaly,timeline_anomaly
+scenario,Logistic Regression,CASE-028,timeline_anomaly,timeline_anomaly
+scenario,Logistic Regression,CASE-009,suspicious_web_activity,suspicious_web_activity
+scenario,Logistic Regression,CASE-009,data_leakage,data_leakage
+scenario,Logistic Regression,CASE-009,data_leakage,data_leakage
+scenario,Logistic Regression,CASE-009,suspicious_web_activity,suspicious_web_activity
+scenario,Logistic Regression,CASE-028,data_leakage,data_leakage
+scenario,Logistic Regression,CASE-028,data_leakage,data_leakage
+scenario,Logistic Regression,CASE-029,data_leakage,data_leakage
+scenario,Logistic Regression,CASE-024,timeline_anomaly,timeline_anomaly
+scenario,Logistic Regression,CASE-029,suspicious_web_activity,suspicious_web_activity
+scenario,Logistic Regression,CASE-018,data_leakage,data_leakage
+scenario,Logistic Regression,CASE-010,timeline_anomaly,timeline_anomaly
+scenario,Logistic Regression,CASE-010,data_leakage,data_leakage
+scenario,Logistic Regression,CASE-016,suspicious_web_activity,suspicious_web_activity
+scenario,Logistic Regression,CASE-029,timeline_anomaly,timeline_anomaly
+scenario,Logistic Regression,CASE-029,data_leakage,data_leakage
+scenario,Logistic Regression,CASE-010,suspicious_web_activity,suspicious_web_activity
+scenario,Logistic Regression,CASE-010,data_leakage,data_leakage
+scenario,Logistic Regression,CASE-025,suspicious_web_activity,suspicious_web_activity
+scenario,Logistic Regression,CASE-025,timeline_anomaly,timeline_anomaly
+scenario,Logistic Regression,CASE-028,data_leakage,data_leakage
+scenario,Logistic Regression,CASE-029,suspicious_web_activity,suspicious_web_activity
+scenario,Logistic Regression,CASE-028,suspicious_web_activity,suspicious_web_activity
+scenario,Logistic Regression,CASE-010,timeline_anomaly,timeline_anomaly
+scenario,Logistic Regression,CASE-029,data_leakage,data_leakage
+scenario,Logistic Regression,CASE-009,timeline_anomaly,timeline_anomaly
+scenario,Logistic Regression,CASE-010,timeline_anomaly,timeline_anomaly
+scenario,Logistic Regression,CASE-018,timeline_anomaly,timeline_anomaly
+scenario,Logistic Regression,CASE-009,suspicious_web_activity,suspicious_web_activity
+scenario,Logistic Regression,CASE-025,suspicious_web_activity,suspicious_web_activity
+scenario,Logistic Regression,CASE-009,timeline_anomaly,timeline_anomaly
+scenario,Logistic Regression,CASE-018,suspicious_web_activity,suspicious_web_activity
+scenario,Logistic Regression,CASE-024,timeline_anomaly,timeline_anomaly
+scenario,Logistic Regression,CASE-024,suspicious_web_activity,suspicious_web_activity
+scenario,Logistic Regression,CASE-009,data_leakage,data_leakage
+scenario,Logistic Regression,CASE-029,suspicious_web_activity,suspicious_web_activity
+scenario,Logistic Regression,CASE-028,timeline_anomaly,timeline_anomaly
+scenario,Logistic Regression,CASE-009,data_leakage,data_leakage
+scenario,Logistic Regression,CASE-029,suspicious_web_activity,suspicious_web_activity
+scenario,Logistic Regression,CASE-018,data_leakage,data_leakage
+scenario,Logistic Regression,CASE-024,data_leakage,data_leakage
+scenario,Logistic Regression,CASE-009,suspicious_web_activity,suspicious_web_activity
+scenario,Logistic Regression,CASE-025,timeline_anomaly,timeline_anomaly
+scenario,Logistic Regression,CASE-018,timeline_anomaly,timeline_anomaly
+scenario,Logistic Regression,CASE-016,data_leakage,data_leakage
+scenario,Logistic Regression,CASE-016,data_leakage,data_leakage
+scenario,Logistic Regression,CASE-009,data_leakage,data_leakage
+scenario,Logistic Regression,CASE-024,timeline_anomaly,timeline_anomaly
+scenario,Logistic Regression,CASE-016,data_leakage,data_leakage
+scenario,Logistic Regression,CASE-010,suspicious_web_activity,suspicious_web_activity
+scenario,Logistic Regression,CASE-010,suspicious_web_activity,suspicious_web_activity
+scenario,Logistic Regression,CASE-009,data_leakage,data_leakage
+scenario,Logistic Regression,CASE-010,suspicious_web_activity,suspicious_web_activity
+scenario,Logistic Regression,CASE-024,data_leakage,data_leakage
+scenario,Logistic Regression,CASE-025,suspicious_web_activity,suspicious_web_activity
+scenario,Logistic Regression,CASE-028,suspicious_web_activity,suspicious_web_activity
+scenario,Logistic Regression,CASE-025,data_leakage,data_leakage
+scenario,Logistic Regression,CASE-029,suspicious_web_activity,suspicious_web_activity
+scenario,Logistic Regression,CASE-010,suspicious_web_activity,suspicious_web_activity
+scenario,Logistic Regression,CASE-025,suspicious_web_activity,suspicious_web_activity
+scenario,Logistic Regression,CASE-009,timeline_anomaly,timeline_anomaly
+scenario,Logistic Regression,CASE-018,timeline_anomaly,timeline_anomaly
+scenario,Logistic Regression,CASE-028,suspicious_web_activity,suspicious_web_activity
+scenario,Logistic Regression,CASE-010,data_leakage,data_leakage
+scenario,Logistic Regression,CASE-010,suspicious_web_activity,suspicious_web_activity
+scenario,Logistic Regression,CASE-009,data_leakage,data_leakage
+scenario,Logistic Regression,CASE-016,data_leakage,data_leakage
+scenario,Logistic Regression,CASE-024,timeline_anomaly,timeline_anomaly
+scenario,Logistic Regression,CASE-025,data_leakage,data_leakage
+scenario,Logistic Regression,CASE-009,data_leakage,data_leakage
+scenario,Logistic Regression,CASE-025,suspicious_web_activity,suspicious_web_activity
+scenario,Logistic Regression,CASE-025,data_leakage,data_leakage
+scenario,Logistic Regression,CASE-018,data_leakage,data_leakage
+scenario,Logistic Regression,CASE-010,data_leakage,data_leakage
+scenario,Logistic Regression,CASE-016,suspicious_web_activity,suspicious_web_activity
+scenario,Logistic Regression,CASE-010,data_leakage,data_leakage
+scenario,Logistic Regression,CASE-029,timeline_anomaly,timeline_anomaly
+scenario,Logistic Regression,CASE-025,timeline_anomaly,timeline_anomaly
+scenario,Logistic Regression,CASE-028,data_leakage,data_leakage
+scenario,Logistic Regression,CASE-029,data_leakage,data_leakage
+scenario,Logistic Regression,CASE-029,data_leakage,data_leakage
+scenario,Logistic Regression,CASE-029,timeline_anomaly,timeline_anomaly
+scenario,Logistic Regression,CASE-009,suspicious_web_activity,suspicious_web_activity
+scenario,Logistic Regression,CASE-025,timeline_anomaly,timeline_anomaly
+scenario,Logistic Regression,CASE-016,suspicious_web_activity,suspicious_web_activity
+scenario,Logistic Regression,CASE-028,timeline_anomaly,timeline_anomaly
+scenario,Logistic Regression,CASE-009,data_leakage,data_leakage
+scenario,Logistic Regression,CASE-025,suspicious_web_activity,suspicious_web_activity
+scenario,Logistic Regression,CASE-009,timeline_anomaly,timeline_anomaly
+scenario,Logistic Regression,CASE-016,timeline_anomaly,timeline_anomaly
+scenario,Logistic Regression,CASE-010,data_leakage,data_leakage
+scenario,Logistic Regression,CASE-018,suspicious_web_activity,suspicious_web_activity
+scenario,Logistic Regression,CASE-024,data_leakage,data_leakage
+scenario,Logistic Regression,CASE-024,suspicious_web_activity,suspicious_web_activity
+scenario,Logistic Regression,CASE-025,timeline_anomaly,timeline_anomaly
+scenario,Logistic Regression,CASE-029,data_leakage,data_leakage
+scenario,Logistic Regression,CASE-018,data_leakage,data_leakage
+scenario,Logistic Regression,CASE-010,timeline_anomaly,timeline_anomaly
+scenario,Logistic Regression,CASE-016,timeline_anomaly,timeline_anomaly
+scenario,Logistic Regression,CASE-010,suspicious_web_activity,suspicious_web_activity
+scenario,Logistic Regression,CASE-016,timeline_anomaly,timeline_anomaly
+scenario,Logistic Regression,CASE-028,data_leakage,data_leakage
+scenario,Logistic Regression,CASE-025,timeline_anomaly,timeline_anomaly
+scenario,Logistic Regression,CASE-028,data_leakage,data_leakage
+scenario,Logistic Regression,CASE-029,timeline_anomaly,timeline_anomaly
+scenario,Logistic Regression,CASE-025,data_leakage,data_leakage
+scenario,Logistic Regression,CASE-016,data_leakage,data_leakage
+scenario,Logistic Regression,CASE-010,data_leakage,data_leakage
+scenario,Logistic Regression,CASE-029,data_leakage,data_leakage
+scenario,Logistic Regression,CASE-018,suspicious_web_activity,suspicious_web_activity
+scenario,Logistic Regression,CASE-028,data_leakage,data_leakage
+scenario,Logistic Regression,CASE-025,data_leakage,data_leakage
+scenario,Logistic Regression,CASE-028,data_leakage,data_leakage
+scenario,Logistic Regression,CASE-025,data_leakage,data_leakage
+scenario,Logistic Regression,CASE-010,data_leakage,data_leakage
+scenario,Logistic Regression,CASE-016,data_leakage,data_leakage
+scenario,Logistic Regression,CASE-009,data_leakage,data_leakage
+scenario,Logistic Regression,CASE-029,timeline_anomaly,timeline_anomaly
+scenario,Logistic Regression,CASE-025,suspicious_web_activity,suspicious_web_activity
+scenario,Logistic Regression,CASE-024,data_leakage,data_leakage
+scenario,Logistic Regression,CASE-018,suspicious_web_activity,suspicious_web_activity
+scenario,Logistic Regression,CASE-010,data_leakage,data_leakage
+scenario,Logistic Regression,CASE-024,data_leakage,data_leakage
+scenario,Logistic Regression,CASE-018,suspicious_web_activity,suspicious_web_activity
+scenario,Logistic Regression,CASE-018,timeline_anomaly,timeline_anomaly
+scenario,Logistic Regression,CASE-025,data_leakage,data_leakage
+scenario,Logistic Regression,CASE-028,suspicious_web_activity,suspicious_web_activity
+scenario,Logistic Regression,CASE-025,data_leakage,data_leakage
+scenario,Logistic Regression,CASE-028,suspicious_web_activity,suspicious_web_activity
+scenario,Logistic Regression,CASE-024,data_leakage,data_leakage
+scenario,Logistic Regression,CASE-010,timeline_anomaly,timeline_anomaly
+scenario,Logistic Regression,CASE-009,suspicious_web_activity,suspicious_web_activity
+scenario,Logistic Regression,CASE-018,timeline_anomaly,timeline_anomaly
+scenario,Logistic Regression,CASE-009,suspicious_web_activity,suspicious_web_activity
+scenario,Logistic Regression,CASE-010,data_leakage,data_leakage
+scenario,Logistic Regression,CASE-016,data_leakage,data_leakage
+scenario,Logistic Regression,CASE-010,data_leakage,data_leakage
+scenario,Logistic Regression,CASE-016,data_leakage,data_leakage
+scenario,Logistic Regression,CASE-024,timeline_anomaly,timeline_anomaly
+scenario,Logistic Regression,CASE-016,suspicious_web_activity,suspicious_web_activity
+scenario,Logistic Regression,CASE-016,suspicious_web_activity,suspicious_web_activity
+scenario,Logistic Regression,CASE-025,timeline_anomaly,timeline_anomaly
+scenario,Logistic Regression,CASE-028,data_leakage,data_leakage
+scenario,Logistic Regression,CASE-018,suspicious_web_activity,suspicious_web_activity
+scenario,Logistic Regression,CASE-029,data_leakage,data_leakage
+scenario,Logistic Regression,CASE-028,suspicious_web_activity,suspicious_web_activity
+scenario,Logistic Regression,CASE-028,timeline_anomaly,timeline_anomaly
+scenario,Logistic Regression,CASE-018,data_leakage,data_leakage
+scenario,Logistic Regression,CASE-029,suspicious_web_activity,suspicious_web_activity
+scenario,Logistic Regression,CASE-028,data_leakage,data_leakage
+scenario,Logistic Regression,CASE-018,data_leakage,data_leakage
+scenario,Logistic Regression,CASE-024,suspicious_web_activity,suspicious_web_activity
+scenario,Logistic Regression,CASE-029,data_leakage,data_leakage
+scenario,Logistic Regression,CASE-010,timeline_anomaly,timeline_anomaly
+scenario,Logistic Regression,CASE-009,timeline_anomaly,timeline_anomaly
+scenario,Logistic Regression,CASE-024,timeline_anomaly,timeline_anomaly
+scenario,Logistic Regression,CASE-029,timeline_anomaly,timeline_anomaly
+scenario,Logistic Regression,CASE-029,data_leakage,data_leakage
+scenario,Logistic Regression,CASE-024,timeline_anomaly,timeline_anomaly
+scenario,Logistic Regression,CASE-028,timeline_anomaly,timeline_anomaly
+scenario,Logistic Regression,CASE-018,timeline_anomaly,timeline_anomaly
+scenario,Logistic Regression,CASE-029,data_leakage,data_leakage
+scenario,Logistic Regression,CASE-018,suspicious_web_activity,suspicious_web_activity
+scenario,Logistic Regression,CASE-025,suspicious_web_activity,suspicious_web_activity
+scenario,Logistic Regression,CASE-016,data_leakage,data_leakage
+scenario,Logistic Regression,CASE-028,data_leakage,data_leakage
+scenario,Logistic Regression,CASE-029,timeline_anomaly,timeline_anomaly
+scenario,Random Forest,CASE-029,suspicious_web_activity,suspicious_web_activity
+scenario,Random Forest,CASE-009,suspicious_web_activity,suspicious_web_activity
+scenario,Random Forest,CASE-010,timeline_anomaly,timeline_anomaly
+scenario,Random Forest,CASE-010,timeline_anomaly,timeline_anomaly
+scenario,Random Forest,CASE-024,timeline_anomaly,timeline_anomaly
+scenario,Random Forest,CASE-028,data_leakage,data_leakage
+scenario,Random Forest,CASE-029,timeline_anomaly,timeline_anomaly
+scenario,Random Forest,CASE-018,data_leakage,data_leakage
+scenario,Random Forest,CASE-029,data_leakage,data_leakage
+scenario,Random Forest,CASE-010,suspicious_web_activity,suspicious_web_activity
+scenario,Random Forest,CASE-025,timeline_anomaly,timeline_anomaly
+scenario,Random Forest,CASE-016,suspicious_web_activity,suspicious_web_activity
+scenario,Random Forest,CASE-018,suspicious_web_activity,suspicious_web_activity
+scenario,Random Forest,CASE-016,data_leakage,data_leakage
+scenario,Random Forest,CASE-009,suspicious_web_activity,suspicious_web_activity
+scenario,Random Forest,CASE-024,suspicious_web_activity,suspicious_web_activity
+scenario,Random Forest,CASE-029,data_leakage,data_leakage
+scenario,Random Forest,CASE-018,data_leakage,data_leakage
+scenario,Random Forest,CASE-016,suspicious_web_activity,suspicious_web_activity
+scenario,Random Forest,CASE-010,timeline_anomaly,timeline_anomaly
+scenario,Random Forest,CASE-009,suspicious_web_activity,suspicious_web_activity
+scenario,Random Forest,CASE-029,timeline_anomaly,timeline_anomaly
+scenario,Random Forest,CASE-024,suspicious_web_activity,suspicious_web_activity
+scenario,Random Forest,CASE-010,data_leakage,data_leakage
+scenario,Random Forest,CASE-016,timeline_anomaly,data_leakage
+scenario,Random Forest,CASE-009,timeline_anomaly,timeline_anomaly
+scenario,Random Forest,CASE-016,suspicious_web_activity,suspicious_web_activity
+scenario,Random Forest,CASE-025,data_leakage,data_leakage
+scenario,Random Forest,CASE-029,suspicious_web_activity,suspicious_web_activity
+scenario,Random Forest,CASE-029,data_leakage,data_leakage
+scenario,Random Forest,CASE-029,timeline_anomaly,timeline_anomaly
+scenario,Random Forest,CASE-028,suspicious_web_activity,suspicious_web_activity
+scenario,Random Forest,CASE-010,data_leakage,data_leakage
+scenario,Random Forest,CASE-028,timeline_anomaly,timeline_anomaly
+scenario,Random Forest,CASE-016,data_leakage,data_leakage
+scenario,Random Forest,CASE-016,suspicious_web_activity,suspicious_web_activity
+scenario,Random Forest,CASE-025,data_leakage,data_leakage
+scenario,Random Forest,CASE-025,suspicious_web_activity,suspicious_web_activity
+scenario,Random Forest,CASE-025,data_leakage,data_leakage
+scenario,Random Forest,CASE-028,suspicious_web_activity,suspicious_web_activity
+scenario,Random Forest,CASE-028,suspicious_web_activity,suspicious_web_activity
+scenario,Random Forest,CASE-024,timeline_anomaly,timeline_anomaly
+scenario,Random Forest,CASE-024,suspicious_web_activity,suspicious_web_activity
+scenario,Random Forest,CASE-025,data_leakage,data_leakage
+scenario,Random Forest,CASE-028,data_leakage,data_leakage
+scenario,Random Forest,CASE-016,timeline_anomaly,timeline_anomaly
+scenario,Random Forest,CASE-009,data_leakage,data_leakage
+scenario,Random Forest,CASE-009,data_leakage,data_leakage
+scenario,Random Forest,CASE-009,data_leakage,data_leakage
+scenario,Random Forest,CASE-024,data_leakage,data_leakage
+scenario,Random Forest,CASE-024,data_leakage,data_leakage
+scenario,Random Forest,CASE-028,timeline_anomaly,timeline_anomaly
+scenario,Random Forest,CASE-010,timeline_anomaly,timeline_anomaly
+scenario,Random Forest,CASE-010,data_leakage,data_leakage
+scenario,Random Forest,CASE-018,timeline_anomaly,timeline_anomaly
+scenario,Random Forest,CASE-029,suspicious_web_activity,suspicious_web_activity
+scenario,Random Forest,CASE-016,suspicious_web_activity,suspicious_web_activity
+scenario,Random Forest,CASE-018,suspicious_web_activity,suspicious_web_activity
+scenario,Random Forest,CASE-009,timeline_anomaly,timeline_anomaly
+scenario,Random Forest,CASE-009,suspicious_web_activity,suspicious_web_activity
+scenario,Random Forest,CASE-016,suspicious_web_activity,suspicious_web_activity
+scenario,Random Forest,CASE-010,timeline_anomaly,timeline_anomaly
+scenario,Random Forest,CASE-029,data_leakage,data_leakage
+scenario,Random Forest,CASE-018,timeline_anomaly,timeline_anomaly
+scenario,Random Forest,CASE-016,data_leakage,data_leakage
+scenario,Random Forest,CASE-028,data_leakage,data_leakage
+scenario,Random Forest,CASE-010,data_leakage,data_leakage
+scenario,Random Forest,CASE-025,data_leakage,data_leakage
+scenario,Random Forest,CASE-010,data_leakage,data_leakage
+scenario,Random Forest,CASE-010,suspicious_web_activity,suspicious_web_activity
+scenario,Random Forest,CASE-010,data_leakage,data_leakage
+scenario,Random Forest,CASE-025,timeline_anomaly,timeline_anomaly
+scenario,Random Forest,CASE-024,timeline_anomaly,timeline_anomaly
+scenario,Random Forest,CASE-029,timeline_anomaly,timeline_anomaly
+scenario,Random Forest,CASE-028,timeline_anomaly,timeline_anomaly
+scenario,Random Forest,CASE-009,suspicious_web_activity,suspicious_web_activity
+scenario,Random Forest,CASE-009,data_leakage,data_leakage
+scenario,Random Forest,CASE-009,data_leakage,data_leakage
+scenario,Random Forest,CASE-009,suspicious_web_activity,suspicious_web_activity
+scenario,Random Forest,CASE-028,data_leakage,data_leakage
+scenario,Random Forest,CASE-028,data_leakage,data_leakage
+scenario,Random Forest,CASE-029,data_leakage,data_leakage
+scenario,Random Forest,CASE-024,timeline_anomaly,timeline_anomaly
+scenario,Random Forest,CASE-029,suspicious_web_activity,suspicious_web_activity
+scenario,Random Forest,CASE-018,data_leakage,data_leakage
+scenario,Random Forest,CASE-010,timeline_anomaly,timeline_anomaly
+scenario,Random Forest,CASE-010,data_leakage,data_leakage
+scenario,Random Forest,CASE-016,suspicious_web_activity,suspicious_web_activity
+scenario,Random Forest,CASE-029,timeline_anomaly,timeline_anomaly
+scenario,Random Forest,CASE-029,data_leakage,data_leakage
+scenario,Random Forest,CASE-010,suspicious_web_activity,suspicious_web_activity
+scenario,Random Forest,CASE-010,data_leakage,data_leakage
+scenario,Random Forest,CASE-025,suspicious_web_activity,suspicious_web_activity
+scenario,Random Forest,CASE-025,timeline_anomaly,timeline_anomaly
+scenario,Random Forest,CASE-028,data_leakage,data_leakage
+scenario,Random Forest,CASE-029,suspicious_web_activity,suspicious_web_activity
+scenario,Random Forest,CASE-028,suspicious_web_activity,suspicious_web_activity
+scenario,Random Forest,CASE-010,timeline_anomaly,timeline_anomaly
+scenario,Random Forest,CASE-029,data_leakage,data_leakage
+scenario,Random Forest,CASE-009,timeline_anomaly,timeline_anomaly
+scenario,Random Forest,CASE-010,timeline_anomaly,timeline_anomaly
+scenario,Random Forest,CASE-018,timeline_anomaly,timeline_anomaly
+scenario,Random Forest,CASE-009,suspicious_web_activity,suspicious_web_activity
+scenario,Random Forest,CASE-025,suspicious_web_activity,suspicious_web_activity
+scenario,Random Forest,CASE-009,timeline_anomaly,timeline_anomaly
+scenario,Random Forest,CASE-018,suspicious_web_activity,suspicious_web_activity
+scenario,Random Forest,CASE-024,timeline_anomaly,timeline_anomaly
+scenario,Random Forest,CASE-024,suspicious_web_activity,suspicious_web_activity
+scenario,Random Forest,CASE-009,data_leakage,data_leakage
+scenario,Random Forest,CASE-029,suspicious_web_activity,suspicious_web_activity
+scenario,Random Forest,CASE-028,timeline_anomaly,timeline_anomaly
+scenario,Random Forest,CASE-009,data_leakage,data_leakage
+scenario,Random Forest,CASE-029,suspicious_web_activity,suspicious_web_activity
+scenario,Random Forest,CASE-018,data_leakage,data_leakage
+scenario,Random Forest,CASE-024,data_leakage,data_leakage
+scenario,Random Forest,CASE-009,suspicious_web_activity,suspicious_web_activity
+scenario,Random Forest,CASE-025,timeline_anomaly,timeline_anomaly
+scenario,Random Forest,CASE-018,timeline_anomaly,timeline_anomaly
+scenario,Random Forest,CASE-016,data_leakage,data_leakage
+scenario,Random Forest,CASE-016,data_leakage,data_leakage
+scenario,Random Forest,CASE-009,data_leakage,data_leakage
+scenario,Random Forest,CASE-024,timeline_anomaly,timeline_anomaly
+scenario,Random Forest,CASE-016,data_leakage,data_leakage
+scenario,Random Forest,CASE-010,suspicious_web_activity,suspicious_web_activity
+scenario,Random Forest,CASE-010,suspicious_web_activity,suspicious_web_activity
+scenario,Random Forest,CASE-009,data_leakage,data_leakage
+scenario,Random Forest,CASE-010,suspicious_web_activity,suspicious_web_activity
+scenario,Random Forest,CASE-024,data_leakage,data_leakage
+scenario,Random Forest,CASE-025,suspicious_web_activity,suspicious_web_activity
+scenario,Random Forest,CASE-028,suspicious_web_activity,suspicious_web_activity
+scenario,Random Forest,CASE-025,data_leakage,data_leakage
+scenario,Random Forest,CASE-029,suspicious_web_activity,suspicious_web_activity
+scenario,Random Forest,CASE-010,suspicious_web_activity,suspicious_web_activity
+scenario,Random Forest,CASE-025,suspicious_web_activity,suspicious_web_activity
+scenario,Random Forest,CASE-009,timeline_anomaly,timeline_anomaly
+scenario,Random Forest,CASE-018,timeline_anomaly,timeline_anomaly
+scenario,Random Forest,CASE-028,suspicious_web_activity,suspicious_web_activity
+scenario,Random Forest,CASE-010,data_leakage,data_leakage
+scenario,Random Forest,CASE-010,suspicious_web_activity,suspicious_web_activity
+scenario,Random Forest,CASE-009,data_leakage,data_leakage
+scenario,Random Forest,CASE-016,data_leakage,data_leakage
+scenario,Random Forest,CASE-024,timeline_anomaly,data_leakage
+scenario,Random Forest,CASE-025,data_leakage,data_leakage
+scenario,Random Forest,CASE-009,data_leakage,data_leakage
+scenario,Random Forest,CASE-025,suspicious_web_activity,suspicious_web_activity
+scenario,Random Forest,CASE-025,data_leakage,data_leakage
+scenario,Random Forest,CASE-018,data_leakage,data_leakage
+scenario,Random Forest,CASE-010,data_leakage,data_leakage
+scenario,Random Forest,CASE-016,suspicious_web_activity,suspicious_web_activity
+scenario,Random Forest,CASE-010,data_leakage,data_leakage
+scenario,Random Forest,CASE-029,timeline_anomaly,timeline_anomaly
+scenario,Random Forest,CASE-025,timeline_anomaly,timeline_anomaly
+scenario,Random Forest,CASE-028,data_leakage,timeline_anomaly
+scenario,Random Forest,CASE-029,data_leakage,data_leakage
+scenario,Random Forest,CASE-029,data_leakage,data_leakage
+scenario,Random Forest,CASE-029,timeline_anomaly,timeline_anomaly
+scenario,Random Forest,CASE-009,suspicious_web_activity,suspicious_web_activity
+scenario,Random Forest,CASE-025,timeline_anomaly,timeline_anomaly
+scenario,Random Forest,CASE-016,suspicious_web_activity,suspicious_web_activity
+scenario,Random Forest,CASE-028,timeline_anomaly,timeline_anomaly
+scenario,Random Forest,CASE-009,data_leakage,data_leakage
+scenario,Random Forest,CASE-025,suspicious_web_activity,suspicious_web_activity
+scenario,Random Forest,CASE-009,timeline_anomaly,timeline_anomaly
+scenario,Random Forest,CASE-016,timeline_anomaly,timeline_anomaly
+scenario,Random Forest,CASE-010,data_leakage,data_leakage
+scenario,Random Forest,CASE-018,suspicious_web_activity,suspicious_web_activity
+scenario,Random Forest,CASE-024,data_leakage,data_leakage
+scenario,Random Forest,CASE-024,suspicious_web_activity,suspicious_web_activity
+scenario,Random Forest,CASE-025,timeline_anomaly,timeline_anomaly
+scenario,Random Forest,CASE-029,data_leakage,data_leakage
+scenario,Random Forest,CASE-018,data_leakage,data_leakage
+scenario,Random Forest,CASE-010,timeline_anomaly,timeline_anomaly
+scenario,Random Forest,CASE-016,timeline_anomaly,timeline_anomaly
+scenario,Random Forest,CASE-010,suspicious_web_activity,suspicious_web_activity
+scenario,Random Forest,CASE-016,timeline_anomaly,timeline_anomaly
+scenario,Random Forest,CASE-028,data_leakage,data_leakage
+scenario,Random Forest,CASE-025,timeline_anomaly,timeline_anomaly
+scenario,Random Forest,CASE-028,data_leakage,data_leakage
+scenario,Random Forest,CASE-029,timeline_anomaly,timeline_anomaly
+scenario,Random Forest,CASE-025,data_leakage,data_leakage
+scenario,Random Forest,CASE-016,data_leakage,data_leakage
+scenario,Random Forest,CASE-010,data_leakage,data_leakage
+scenario,Random Forest,CASE-029,data_leakage,data_leakage
+scenario,Random Forest,CASE-018,suspicious_web_activity,suspicious_web_activity
+scenario,Random Forest,CASE-028,data_leakage,data_leakage
+scenario,Random Forest,CASE-025,data_leakage,data_leakage
+scenario,Random Forest,CASE-028,data_leakage,data_leakage
+scenario,Random Forest,CASE-025,data_leakage,data_leakage
+scenario,Random Forest,CASE-010,data_leakage,data_leakage
+scenario,Random Forest,CASE-016,data_leakage,data_leakage
+scenario,Random Forest,CASE-009,data_leakage,data_leakage
+scenario,Random Forest,CASE-029,timeline_anomaly,timeline_anomaly
+scenario,Random Forest,CASE-025,suspicious_web_activity,suspicious_web_activity
+scenario,Random Forest,CASE-024,data_leakage,data_leakage
+scenario,Random Forest,CASE-018,suspicious_web_activity,suspicious_web_activity
+scenario,Random Forest,CASE-010,data_leakage,data_leakage
+scenario,Random Forest,CASE-024,data_leakage,data_leakage
+scenario,Random Forest,CASE-018,suspicious_web_activity,suspicious_web_activity
+scenario,Random Forest,CASE-018,timeline_anomaly,timeline_anomaly
+scenario,Random Forest,CASE-025,data_leakage,data_leakage
+scenario,Random Forest,CASE-028,suspicious_web_activity,suspicious_web_activity
+scenario,Random Forest,CASE-025,data_leakage,data_leakage
+scenario,Random Forest,CASE-028,suspicious_web_activity,suspicious_web_activity
+scenario,Random Forest,CASE-024,data_leakage,data_leakage
+scenario,Random Forest,CASE-010,timeline_anomaly,timeline_anomaly
+scenario,Random Forest,CASE-009,suspicious_web_activity,suspicious_web_activity
+scenario,Random Forest,CASE-018,timeline_anomaly,timeline_anomaly
+scenario,Random Forest,CASE-009,suspicious_web_activity,suspicious_web_activity
+scenario,Random Forest,CASE-010,data_leakage,data_leakage
+scenario,Random Forest,CASE-016,data_leakage,data_leakage
+scenario,Random Forest,CASE-010,data_leakage,data_leakage
+scenario,Random Forest,CASE-016,data_leakage,data_leakage
+scenario,Random Forest,CASE-024,timeline_anomaly,timeline_anomaly
+scenario,Random Forest,CASE-016,suspicious_web_activity,suspicious_web_activity
+scenario,Random Forest,CASE-016,suspicious_web_activity,suspicious_web_activity
+scenario,Random Forest,CASE-025,timeline_anomaly,timeline_anomaly
+scenario,Random Forest,CASE-028,data_leakage,data_leakage
+scenario,Random Forest,CASE-018,suspicious_web_activity,suspicious_web_activity
+scenario,Random Forest,CASE-029,data_leakage,data_leakage
+scenario,Random Forest,CASE-028,suspicious_web_activity,suspicious_web_activity
+scenario,Random Forest,CASE-028,timeline_anomaly,timeline_anomaly
+scenario,Random Forest,CASE-018,data_leakage,data_leakage
+scenario,Random Forest,CASE-029,suspicious_web_activity,suspicious_web_activity
+scenario,Random Forest,CASE-028,data_leakage,data_leakage
+scenario,Random Forest,CASE-018,data_leakage,data_leakage
+scenario,Random Forest,CASE-024,suspicious_web_activity,suspicious_web_activity
+scenario,Random Forest,CASE-029,data_leakage,data_leakage
+scenario,Random Forest,CASE-010,timeline_anomaly,timeline_anomaly
+scenario,Random Forest,CASE-009,timeline_anomaly,timeline_anomaly
+scenario,Random Forest,CASE-024,timeline_anomaly,timeline_anomaly
+scenario,Random Forest,CASE-029,timeline_anomaly,timeline_anomaly
+scenario,Random Forest,CASE-029,data_leakage,data_leakage
+scenario,Random Forest,CASE-024,timeline_anomaly,timeline_anomaly
+scenario,Random Forest,CASE-028,timeline_anomaly,timeline_anomaly
+scenario,Random Forest,CASE-018,timeline_anomaly,timeline_anomaly
+scenario,Random Forest,CASE-029,data_leakage,data_leakage
+scenario,Random Forest,CASE-018,suspicious_web_activity,suspicious_web_activity
+scenario,Random Forest,CASE-025,suspicious_web_activity,suspicious_web_activity
+scenario,Random Forest,CASE-016,data_leakage,data_leakage
+scenario,Random Forest,CASE-028,data_leakage,data_leakage
+scenario,Random Forest,CASE-029,timeline_anomaly,timeline_anomaly
+scenario,XGBoost,CASE-029,suspicious_web_activity,suspicious_web_activity
+scenario,XGBoost,CASE-009,suspicious_web_activity,suspicious_web_activity
+scenario,XGBoost,CASE-010,timeline_anomaly,timeline_anomaly
+scenario,XGBoost,CASE-010,timeline_anomaly,timeline_anomaly
+scenario,XGBoost,CASE-024,timeline_anomaly,timeline_anomaly
+scenario,XGBoost,CASE-028,data_leakage,data_leakage
+scenario,XGBoost,CASE-029,timeline_anomaly,timeline_anomaly
+scenario,XGBoost,CASE-018,data_leakage,data_leakage
+scenario,XGBoost,CASE-029,data_leakage,data_leakage
+scenario,XGBoost,CASE-010,suspicious_web_activity,suspicious_web_activity
+scenario,XGBoost,CASE-025,timeline_anomaly,timeline_anomaly
+scenario,XGBoost,CASE-016,suspicious_web_activity,suspicious_web_activity
+scenario,XGBoost,CASE-018,suspicious_web_activity,suspicious_web_activity
+scenario,XGBoost,CASE-016,data_leakage,data_leakage
+scenario,XGBoost,CASE-009,suspicious_web_activity,suspicious_web_activity
+scenario,XGBoost,CASE-024,suspicious_web_activity,suspicious_web_activity
+scenario,XGBoost,CASE-029,data_leakage,data_leakage
+scenario,XGBoost,CASE-018,data_leakage,data_leakage
+scenario,XGBoost,CASE-016,suspicious_web_activity,suspicious_web_activity
+scenario,XGBoost,CASE-010,timeline_anomaly,timeline_anomaly
+scenario,XGBoost,CASE-009,suspicious_web_activity,suspicious_web_activity
+scenario,XGBoost,CASE-029,timeline_anomaly,timeline_anomaly
+scenario,XGBoost,CASE-024,suspicious_web_activity,suspicious_web_activity
+scenario,XGBoost,CASE-010,data_leakage,data_leakage
+scenario,XGBoost,CASE-016,timeline_anomaly,data_leakage
+scenario,XGBoost,CASE-009,timeline_anomaly,timeline_anomaly
+scenario,XGBoost,CASE-016,suspicious_web_activity,suspicious_web_activity
+scenario,XGBoost,CASE-025,data_leakage,data_leakage
+scenario,XGBoost,CASE-029,suspicious_web_activity,suspicious_web_activity
+scenario,XGBoost,CASE-029,data_leakage,data_leakage
+scenario,XGBoost,CASE-029,timeline_anomaly,timeline_anomaly
+scenario,XGBoost,CASE-028,suspicious_web_activity,suspicious_web_activity
+scenario,XGBoost,CASE-010,data_leakage,data_leakage
+scenario,XGBoost,CASE-028,timeline_anomaly,timeline_anomaly
+scenario,XGBoost,CASE-016,data_leakage,data_leakage
+scenario,XGBoost,CASE-016,suspicious_web_activity,suspicious_web_activity
+scenario,XGBoost,CASE-025,data_leakage,data_leakage
+scenario,XGBoost,CASE-025,suspicious_web_activity,suspicious_web_activity
+scenario,XGBoost,CASE-025,data_leakage,data_leakage
+scenario,XGBoost,CASE-028,suspicious_web_activity,suspicious_web_activity
+scenario,XGBoost,CASE-028,suspicious_web_activity,suspicious_web_activity
+scenario,XGBoost,CASE-024,timeline_anomaly,timeline_anomaly
+scenario,XGBoost,CASE-024,suspicious_web_activity,suspicious_web_activity
+scenario,XGBoost,CASE-025,data_leakage,data_leakage
+scenario,XGBoost,CASE-028,data_leakage,data_leakage
+scenario,XGBoost,CASE-016,timeline_anomaly,timeline_anomaly
+scenario,XGBoost,CASE-009,data_leakage,data_leakage
+scenario,XGBoost,CASE-009,data_leakage,data_leakage
+scenario,XGBoost,CASE-009,data_leakage,data_leakage
+scenario,XGBoost,CASE-024,data_leakage,data_leakage
+scenario,XGBoost,CASE-024,data_leakage,data_leakage
+scenario,XGBoost,CASE-028,timeline_anomaly,timeline_anomaly
+scenario,XGBoost,CASE-010,timeline_anomaly,timeline_anomaly
+scenario,XGBoost,CASE-010,data_leakage,data_leakage
+scenario,XGBoost,CASE-018,timeline_anomaly,timeline_anomaly
+scenario,XGBoost,CASE-029,suspicious_web_activity,suspicious_web_activity
+scenario,XGBoost,CASE-016,suspicious_web_activity,suspicious_web_activity
+scenario,XGBoost,CASE-018,suspicious_web_activity,suspicious_web_activity
+scenario,XGBoost,CASE-009,timeline_anomaly,timeline_anomaly
+scenario,XGBoost,CASE-009,suspicious_web_activity,suspicious_web_activity
+scenario,XGBoost,CASE-016,suspicious_web_activity,suspicious_web_activity
+scenario,XGBoost,CASE-010,timeline_anomaly,timeline_anomaly
+scenario,XGBoost,CASE-029,data_leakage,data_leakage
+scenario,XGBoost,CASE-018,timeline_anomaly,timeline_anomaly
+scenario,XGBoost,CASE-016,data_leakage,data_leakage
+scenario,XGBoost,CASE-028,data_leakage,data_leakage
+scenario,XGBoost,CASE-010,data_leakage,data_leakage
+scenario,XGBoost,CASE-025,data_leakage,data_leakage
+scenario,XGBoost,CASE-010,data_leakage,data_leakage
+scenario,XGBoost,CASE-010,suspicious_web_activity,suspicious_web_activity
+scenario,XGBoost,CASE-010,data_leakage,data_leakage
+scenario,XGBoost,CASE-025,timeline_anomaly,timeline_anomaly
+scenario,XGBoost,CASE-024,timeline_anomaly,timeline_anomaly
+scenario,XGBoost,CASE-029,timeline_anomaly,timeline_anomaly
+scenario,XGBoost,CASE-028,timeline_anomaly,timeline_anomaly
+scenario,XGBoost,CASE-009,suspicious_web_activity,suspicious_web_activity
+scenario,XGBoost,CASE-009,data_leakage,data_leakage
+scenario,XGBoost,CASE-009,data_leakage,data_leakage
+scenario,XGBoost,CASE-009,suspicious_web_activity,suspicious_web_activity
+scenario,XGBoost,CASE-028,data_leakage,data_leakage
+scenario,XGBoost,CASE-028,data_leakage,data_leakage
+scenario,XGBoost,CASE-029,data_leakage,data_leakage
+scenario,XGBoost,CASE-024,timeline_anomaly,timeline_anomaly
+scenario,XGBoost,CASE-029,suspicious_web_activity,suspicious_web_activity
+scenario,XGBoost,CASE-018,data_leakage,data_leakage
+scenario,XGBoost,CASE-010,timeline_anomaly,timeline_anomaly
+scenario,XGBoost,CASE-010,data_leakage,data_leakage
+scenario,XGBoost,CASE-016,suspicious_web_activity,suspicious_web_activity
+scenario,XGBoost,CASE-029,timeline_anomaly,timeline_anomaly
+scenario,XGBoost,CASE-029,data_leakage,data_leakage
+scenario,XGBoost,CASE-010,suspicious_web_activity,suspicious_web_activity
+scenario,XGBoost,CASE-010,data_leakage,data_leakage
+scenario,XGBoost,CASE-025,suspicious_web_activity,suspicious_web_activity
+scenario,XGBoost,CASE-025,timeline_anomaly,timeline_anomaly
+scenario,XGBoost,CASE-028,data_leakage,data_leakage
+scenario,XGBoost,CASE-029,suspicious_web_activity,suspicious_web_activity
+scenario,XGBoost,CASE-028,suspicious_web_activity,suspicious_web_activity
+scenario,XGBoost,CASE-010,timeline_anomaly,data_leakage
+scenario,XGBoost,CASE-029,data_leakage,data_leakage
+scenario,XGBoost,CASE-009,timeline_anomaly,timeline_anomaly
+scenario,XGBoost,CASE-010,timeline_anomaly,timeline_anomaly
+scenario,XGBoost,CASE-018,timeline_anomaly,timeline_anomaly
+scenario,XGBoost,CASE-009,suspicious_web_activity,suspicious_web_activity
+scenario,XGBoost,CASE-025,suspicious_web_activity,suspicious_web_activity
+scenario,XGBoost,CASE-009,timeline_anomaly,timeline_anomaly
+scenario,XGBoost,CASE-018,suspicious_web_activity,suspicious_web_activity
+scenario,XGBoost,CASE-024,timeline_anomaly,timeline_anomaly
+scenario,XGBoost,CASE-024,suspicious_web_activity,suspicious_web_activity
+scenario,XGBoost,CASE-009,data_leakage,data_leakage
+scenario,XGBoost,CASE-029,suspicious_web_activity,suspicious_web_activity
+scenario,XGBoost,CASE-028,timeline_anomaly,timeline_anomaly
+scenario,XGBoost,CASE-009,data_leakage,data_leakage
+scenario,XGBoost,CASE-029,suspicious_web_activity,suspicious_web_activity
+scenario,XGBoost,CASE-018,data_leakage,data_leakage
+scenario,XGBoost,CASE-024,data_leakage,data_leakage
+scenario,XGBoost,CASE-009,suspicious_web_activity,suspicious_web_activity
+scenario,XGBoost,CASE-025,timeline_anomaly,timeline_anomaly
+scenario,XGBoost,CASE-018,timeline_anomaly,timeline_anomaly
+scenario,XGBoost,CASE-016,data_leakage,data_leakage
+scenario,XGBoost,CASE-016,data_leakage,data_leakage
+scenario,XGBoost,CASE-009,data_leakage,data_leakage
+scenario,XGBoost,CASE-024,timeline_anomaly,timeline_anomaly
+scenario,XGBoost,CASE-016,data_leakage,data_leakage
+scenario,XGBoost,CASE-010,suspicious_web_activity,suspicious_web_activity
+scenario,XGBoost,CASE-010,suspicious_web_activity,suspicious_web_activity
+scenario,XGBoost,CASE-009,data_leakage,data_leakage
+scenario,XGBoost,CASE-010,suspicious_web_activity,suspicious_web_activity
+scenario,XGBoost,CASE-024,data_leakage,data_leakage
+scenario,XGBoost,CASE-025,suspicious_web_activity,suspicious_web_activity
+scenario,XGBoost,CASE-028,suspicious_web_activity,suspicious_web_activity
+scenario,XGBoost,CASE-025,data_leakage,data_leakage
+scenario,XGBoost,CASE-029,suspicious_web_activity,suspicious_web_activity
+scenario,XGBoost,CASE-010,suspicious_web_activity,suspicious_web_activity
+scenario,XGBoost,CASE-025,suspicious_web_activity,suspicious_web_activity
+scenario,XGBoost,CASE-009,timeline_anomaly,timeline_anomaly
+scenario,XGBoost,CASE-018,timeline_anomaly,timeline_anomaly
+scenario,XGBoost,CASE-028,suspicious_web_activity,suspicious_web_activity
+scenario,XGBoost,CASE-010,data_leakage,data_leakage
+scenario,XGBoost,CASE-010,suspicious_web_activity,suspicious_web_activity
+scenario,XGBoost,CASE-009,data_leakage,data_leakage
+scenario,XGBoost,CASE-016,data_leakage,data_leakage
+scenario,XGBoost,CASE-024,timeline_anomaly,data_leakage
+scenario,XGBoost,CASE-025,data_leakage,data_leakage
+scenario,XGBoost,CASE-009,data_leakage,data_leakage
+scenario,XGBoost,CASE-025,suspicious_web_activity,suspicious_web_activity
+scenario,XGBoost,CASE-025,data_leakage,data_leakage
+scenario,XGBoost,CASE-018,data_leakage,data_leakage
+scenario,XGBoost,CASE-010,data_leakage,data_leakage
+scenario,XGBoost,CASE-016,suspicious_web_activity,suspicious_web_activity
+scenario,XGBoost,CASE-010,data_leakage,data_leakage
+scenario,XGBoost,CASE-029,timeline_anomaly,timeline_anomaly
+scenario,XGBoost,CASE-025,timeline_anomaly,timeline_anomaly
+scenario,XGBoost,CASE-028,data_leakage,timeline_anomaly
+scenario,XGBoost,CASE-029,data_leakage,data_leakage
+scenario,XGBoost,CASE-029,data_leakage,data_leakage
+scenario,XGBoost,CASE-029,timeline_anomaly,timeline_anomaly
+scenario,XGBoost,CASE-009,suspicious_web_activity,suspicious_web_activity
+scenario,XGBoost,CASE-025,timeline_anomaly,timeline_anomaly
+scenario,XGBoost,CASE-016,suspicious_web_activity,suspicious_web_activity
+scenario,XGBoost,CASE-028,timeline_anomaly,timeline_anomaly
+scenario,XGBoost,CASE-009,data_leakage,data_leakage
+scenario,XGBoost,CASE-025,suspicious_web_activity,suspicious_web_activity
+scenario,XGBoost,CASE-009,timeline_anomaly,timeline_anomaly
+scenario,XGBoost,CASE-016,timeline_anomaly,timeline_anomaly
+scenario,XGBoost,CASE-010,data_leakage,data_leakage
+scenario,XGBoost,CASE-018,suspicious_web_activity,suspicious_web_activity
+scenario,XGBoost,CASE-024,data_leakage,data_leakage
+scenario,XGBoost,CASE-024,suspicious_web_activity,suspicious_web_activity
+scenario,XGBoost,CASE-025,timeline_anomaly,timeline_anomaly
+scenario,XGBoost,CASE-029,data_leakage,data_leakage
+scenario,XGBoost,CASE-018,data_leakage,data_leakage
+scenario,XGBoost,CASE-010,timeline_anomaly,timeline_anomaly
+scenario,XGBoost,CASE-016,timeline_anomaly,timeline_anomaly
+scenario,XGBoost,CASE-010,suspicious_web_activity,suspicious_web_activity
+scenario,XGBoost,CASE-016,timeline_anomaly,timeline_anomaly
+scenario,XGBoost,CASE-028,data_leakage,data_leakage
+scenario,XGBoost,CASE-025,timeline_anomaly,timeline_anomaly
+scenario,XGBoost,CASE-028,data_leakage,data_leakage
+scenario,XGBoost,CASE-029,timeline_anomaly,timeline_anomaly
+scenario,XGBoost,CASE-025,data_leakage,data_leakage
+scenario,XGBoost,CASE-016,data_leakage,data_leakage
+scenario,XGBoost,CASE-010,data_leakage,data_leakage
+scenario,XGBoost,CASE-029,data_leakage,data_leakage
+scenario,XGBoost,CASE-018,suspicious_web_activity,suspicious_web_activity
+scenario,XGBoost,CASE-028,data_leakage,data_leakage
+scenario,XGBoost,CASE-025,data_leakage,data_leakage
+scenario,XGBoost,CASE-028,data_leakage,data_leakage
+scenario,XGBoost,CASE-025,data_leakage,data_leakage
+scenario,XGBoost,CASE-010,data_leakage,data_leakage
+scenario,XGBoost,CASE-016,data_leakage,data_leakage
+scenario,XGBoost,CASE-009,data_leakage,data_leakage
+scenario,XGBoost,CASE-029,timeline_anomaly,timeline_anomaly
+scenario,XGBoost,CASE-025,suspicious_web_activity,suspicious_web_activity
+scenario,XGBoost,CASE-024,data_leakage,data_leakage
+scenario,XGBoost,CASE-018,suspicious_web_activity,suspicious_web_activity
+scenario,XGBoost,CASE-010,data_leakage,data_leakage
+scenario,XGBoost,CASE-024,data_leakage,data_leakage
+scenario,XGBoost,CASE-018,suspicious_web_activity,suspicious_web_activity
+scenario,XGBoost,CASE-018,timeline_anomaly,timeline_anomaly
+scenario,XGBoost,CASE-025,data_leakage,data_leakage
+scenario,XGBoost,CASE-028,suspicious_web_activity,suspicious_web_activity
+scenario,XGBoost,CASE-025,data_leakage,data_leakage
+scenario,XGBoost,CASE-028,suspicious_web_activity,suspicious_web_activity
+scenario,XGBoost,CASE-024,data_leakage,data_leakage
+scenario,XGBoost,CASE-010,timeline_anomaly,timeline_anomaly
+scenario,XGBoost,CASE-009,suspicious_web_activity,suspicious_web_activity
+scenario,XGBoost,CASE-018,timeline_anomaly,timeline_anomaly
+scenario,XGBoost,CASE-009,suspicious_web_activity,suspicious_web_activity
+scenario,XGBoost,CASE-010,data_leakage,data_leakage
+scenario,XGBoost,CASE-016,data_leakage,data_leakage
+scenario,XGBoost,CASE-010,data_leakage,data_leakage
+scenario,XGBoost,CASE-016,data_leakage,data_leakage
+scenario,XGBoost,CASE-024,timeline_anomaly,timeline_anomaly
+scenario,XGBoost,CASE-016,suspicious_web_activity,suspicious_web_activity
+scenario,XGBoost,CASE-016,suspicious_web_activity,suspicious_web_activity
+scenario,XGBoost,CASE-025,timeline_anomaly,timeline_anomaly
+scenario,XGBoost,CASE-028,data_leakage,data_leakage
+scenario,XGBoost,CASE-018,suspicious_web_activity,suspicious_web_activity
+scenario,XGBoost,CASE-029,data_leakage,data_leakage
+scenario,XGBoost,CASE-028,suspicious_web_activity,suspicious_web_activity
+scenario,XGBoost,CASE-028,timeline_anomaly,timeline_anomaly
+scenario,XGBoost,CASE-018,data_leakage,data_leakage
+scenario,XGBoost,CASE-029,suspicious_web_activity,suspicious_web_activity
+scenario,XGBoost,CASE-028,data_leakage,data_leakage
+scenario,XGBoost,CASE-018,data_leakage,data_leakage
+scenario,XGBoost,CASE-024,suspicious_web_activity,suspicious_web_activity
+scenario,XGBoost,CASE-029,data_leakage,data_leakage
+scenario,XGBoost,CASE-010,timeline_anomaly,timeline_anomaly
+scenario,XGBoost,CASE-009,timeline_anomaly,timeline_anomaly
+scenario,XGBoost,CASE-024,timeline_anomaly,timeline_anomaly
+scenario,XGBoost,CASE-029,timeline_anomaly,timeline_anomaly
+scenario,XGBoost,CASE-029,data_leakage,data_leakage
+scenario,XGBoost,CASE-024,timeline_anomaly,timeline_anomaly
+scenario,XGBoost,CASE-028,timeline_anomaly,timeline_anomaly
+scenario,XGBoost,CASE-018,timeline_anomaly,timeline_anomaly
+scenario,XGBoost,CASE-029,data_leakage,data_leakage
+scenario,XGBoost,CASE-018,suspicious_web_activity,suspicious_web_activity
+scenario,XGBoost,CASE-025,suspicious_web_activity,suspicious_web_activity
+scenario,XGBoost,CASE-016,data_leakage,data_leakage
+scenario,XGBoost,CASE-028,data_leakage,data_leakage
+scenario,XGBoost,CASE-029,timeline_anomaly,timeline_anomaly
+scenario,TF-IDF + Logistic Regression,CASE-029,suspicious_web_activity,suspicious_web_activity
+scenario,TF-IDF + Logistic Regression,CASE-009,suspicious_web_activity,suspicious_web_activity
+scenario,TF-IDF + Logistic Regression,CASE-010,timeline_anomaly,timeline_anomaly
+scenario,TF-IDF + Logistic Regression,CASE-010,timeline_anomaly,timeline_anomaly
+scenario,TF-IDF + Logistic Regression,CASE-024,timeline_anomaly,timeline_anomaly
+scenario,TF-IDF + Logistic Regression,CASE-028,data_leakage,data_leakage
+scenario,TF-IDF + Logistic Regression,CASE-029,timeline_anomaly,timeline_anomaly
+scenario,TF-IDF + Logistic Regression,CASE-018,data_leakage,data_leakage
+scenario,TF-IDF + Logistic Regression,CASE-029,data_leakage,data_leakage
+scenario,TF-IDF + Logistic Regression,CASE-010,suspicious_web_activity,suspicious_web_activity
+scenario,TF-IDF + Logistic Regression,CASE-025,timeline_anomaly,timeline_anomaly
+scenario,TF-IDF + Logistic Regression,CASE-016,suspicious_web_activity,suspicious_web_activity
+scenario,TF-IDF + Logistic Regression,CASE-018,suspicious_web_activity,suspicious_web_activity
+scenario,TF-IDF + Logistic Regression,CASE-016,data_leakage,data_leakage
+scenario,TF-IDF + Logistic Regression,CASE-009,suspicious_web_activity,suspicious_web_activity
+scenario,TF-IDF + Logistic Regression,CASE-024,suspicious_web_activity,suspicious_web_activity
+scenario,TF-IDF + Logistic Regression,CASE-029,data_leakage,data_leakage
+scenario,TF-IDF + Logistic Regression,CASE-018,data_leakage,data_leakage
+scenario,TF-IDF + Logistic Regression,CASE-016,suspicious_web_activity,suspicious_web_activity
+scenario,TF-IDF + Logistic Regression,CASE-010,timeline_anomaly,timeline_anomaly
+scenario,TF-IDF + Logistic Regression,CASE-009,suspicious_web_activity,suspicious_web_activity
+scenario,TF-IDF + Logistic Regression,CASE-029,timeline_anomaly,timeline_anomaly
+scenario,TF-IDF + Logistic Regression,CASE-024,suspicious_web_activity,suspicious_web_activity
+scenario,TF-IDF + Logistic Regression,CASE-010,data_leakage,data_leakage
+scenario,TF-IDF + Logistic Regression,CASE-016,timeline_anomaly,timeline_anomaly
+scenario,TF-IDF + Logistic Regression,CASE-009,timeline_anomaly,timeline_anomaly
+scenario,TF-IDF + Logistic Regression,CASE-016,suspicious_web_activity,suspicious_web_activity
+scenario,TF-IDF + Logistic Regression,CASE-025,data_leakage,data_leakage
+scenario,TF-IDF + Logistic Regression,CASE-029,suspicious_web_activity,suspicious_web_activity
+scenario,TF-IDF + Logistic Regression,CASE-029,data_leakage,data_leakage
+scenario,TF-IDF + Logistic Regression,CASE-029,timeline_anomaly,timeline_anomaly
+scenario,TF-IDF + Logistic Regression,CASE-028,suspicious_web_activity,suspicious_web_activity
+scenario,TF-IDF + Logistic Regression,CASE-010,data_leakage,data_leakage
+scenario,TF-IDF + Logistic Regression,CASE-028,timeline_anomaly,timeline_anomaly
+scenario,TF-IDF + Logistic Regression,CASE-016,data_leakage,data_leakage
+scenario,TF-IDF + Logistic Regression,CASE-016,suspicious_web_activity,suspicious_web_activity
+scenario,TF-IDF + Logistic Regression,CASE-025,data_leakage,data_leakage
+scenario,TF-IDF + Logistic Regression,CASE-025,suspicious_web_activity,suspicious_web_activity
+scenario,TF-IDF + Logistic Regression,CASE-025,data_leakage,data_leakage
+scenario,TF-IDF + Logistic Regression,CASE-028,suspicious_web_activity,suspicious_web_activity
+scenario,TF-IDF + Logistic Regression,CASE-028,suspicious_web_activity,suspicious_web_activity
+scenario,TF-IDF + Logistic Regression,CASE-024,timeline_anomaly,timeline_anomaly
+scenario,TF-IDF + Logistic Regression,CASE-024,suspicious_web_activity,suspicious_web_activity
+scenario,TF-IDF + Logistic Regression,CASE-025,data_leakage,data_leakage
+scenario,TF-IDF + Logistic Regression,CASE-028,data_leakage,data_leakage
+scenario,TF-IDF + Logistic Regression,CASE-016,timeline_anomaly,timeline_anomaly
+scenario,TF-IDF + Logistic Regression,CASE-009,data_leakage,data_leakage
+scenario,TF-IDF + Logistic Regression,CASE-009,data_leakage,data_leakage
+scenario,TF-IDF + Logistic Regression,CASE-009,data_leakage,data_leakage
+scenario,TF-IDF + Logistic Regression,CASE-024,data_leakage,data_leakage
+scenario,TF-IDF + Logistic Regression,CASE-024,data_leakage,data_leakage
+scenario,TF-IDF + Logistic Regression,CASE-028,timeline_anomaly,timeline_anomaly
+scenario,TF-IDF + Logistic Regression,CASE-010,timeline_anomaly,timeline_anomaly
+scenario,TF-IDF + Logistic Regression,CASE-010,data_leakage,data_leakage
+scenario,TF-IDF + Logistic Regression,CASE-018,timeline_anomaly,timeline_anomaly
+scenario,TF-IDF + Logistic Regression,CASE-029,suspicious_web_activity,suspicious_web_activity
+scenario,TF-IDF + Logistic Regression,CASE-016,suspicious_web_activity,suspicious_web_activity
+scenario,TF-IDF + Logistic Regression,CASE-018,suspicious_web_activity,suspicious_web_activity
+scenario,TF-IDF + Logistic Regression,CASE-009,timeline_anomaly,timeline_anomaly
+scenario,TF-IDF + Logistic Regression,CASE-009,suspicious_web_activity,suspicious_web_activity
+scenario,TF-IDF + Logistic Regression,CASE-016,suspicious_web_activity,suspicious_web_activity
+scenario,TF-IDF + Logistic Regression,CASE-010,timeline_anomaly,timeline_anomaly
+scenario,TF-IDF + Logistic Regression,CASE-029,data_leakage,data_leakage
+scenario,TF-IDF + Logistic Regression,CASE-018,timeline_anomaly,timeline_anomaly
+scenario,TF-IDF + Logistic Regression,CASE-016,data_leakage,data_leakage
+scenario,TF-IDF + Logistic Regression,CASE-028,data_leakage,data_leakage
+scenario,TF-IDF + Logistic Regression,CASE-010,data_leakage,data_leakage
+scenario,TF-IDF + Logistic Regression,CASE-025,data_leakage,data_leakage
+scenario,TF-IDF + Logistic Regression,CASE-010,data_leakage,data_leakage
+scenario,TF-IDF + Logistic Regression,CASE-010,suspicious_web_activity,suspicious_web_activity
+scenario,TF-IDF + Logistic Regression,CASE-010,data_leakage,data_leakage
+scenario,TF-IDF + Logistic Regression,CASE-025,timeline_anomaly,timeline_anomaly
+scenario,TF-IDF + Logistic Regression,CASE-024,timeline_anomaly,timeline_anomaly
+scenario,TF-IDF + Logistic Regression,CASE-029,timeline_anomaly,timeline_anomaly
+scenario,TF-IDF + Logistic Regression,CASE-028,timeline_anomaly,timeline_anomaly
+scenario,TF-IDF + Logistic Regression,CASE-009,suspicious_web_activity,suspicious_web_activity
+scenario,TF-IDF + Logistic Regression,CASE-009,data_leakage,data_leakage
+scenario,TF-IDF + Logistic Regression,CASE-009,data_leakage,data_leakage
+scenario,TF-IDF + Logistic Regression,CASE-009,suspicious_web_activity,suspicious_web_activity
+scenario,TF-IDF + Logistic Regression,CASE-028,data_leakage,data_leakage
+scenario,TF-IDF + Logistic Regression,CASE-028,data_leakage,data_leakage
+scenario,TF-IDF + Logistic Regression,CASE-029,data_leakage,data_leakage
+scenario,TF-IDF + Logistic Regression,CASE-024,timeline_anomaly,timeline_anomaly
+scenario,TF-IDF + Logistic Regression,CASE-029,suspicious_web_activity,suspicious_web_activity
+scenario,TF-IDF + Logistic Regression,CASE-018,data_leakage,data_leakage
+scenario,TF-IDF + Logistic Regression,CASE-010,timeline_anomaly,timeline_anomaly
+scenario,TF-IDF + Logistic Regression,CASE-010,data_leakage,data_leakage
+scenario,TF-IDF + Logistic Regression,CASE-016,suspicious_web_activity,suspicious_web_activity
+scenario,TF-IDF + Logistic Regression,CASE-029,timeline_anomaly,timeline_anomaly
+scenario,TF-IDF + Logistic Regression,CASE-029,data_leakage,data_leakage
+scenario,TF-IDF + Logistic Regression,CASE-010,suspicious_web_activity,suspicious_web_activity
+scenario,TF-IDF + Logistic Regression,CASE-010,data_leakage,data_leakage
+scenario,TF-IDF + Logistic Regression,CASE-025,suspicious_web_activity,suspicious_web_activity
+scenario,TF-IDF + Logistic Regression,CASE-025,timeline_anomaly,timeline_anomaly
+scenario,TF-IDF + Logistic Regression,CASE-028,data_leakage,data_leakage
+scenario,TF-IDF + Logistic Regression,CASE-029,suspicious_web_activity,suspicious_web_activity
+scenario,TF-IDF + Logistic Regression,CASE-028,suspicious_web_activity,suspicious_web_activity
+scenario,TF-IDF + Logistic Regression,CASE-010,timeline_anomaly,timeline_anomaly
+scenario,TF-IDF + Logistic Regression,CASE-029,data_leakage,data_leakage
+scenario,TF-IDF + Logistic Regression,CASE-009,timeline_anomaly,timeline_anomaly
+scenario,TF-IDF + Logistic Regression,CASE-010,timeline_anomaly,timeline_anomaly
+scenario,TF-IDF + Logistic Regression,CASE-018,timeline_anomaly,timeline_anomaly
+scenario,TF-IDF + Logistic Regression,CASE-009,suspicious_web_activity,suspicious_web_activity
+scenario,TF-IDF + Logistic Regression,CASE-025,suspicious_web_activity,suspicious_web_activity
+scenario,TF-IDF + Logistic Regression,CASE-009,timeline_anomaly,timeline_anomaly
+scenario,TF-IDF + Logistic Regression,CASE-018,suspicious_web_activity,suspicious_web_activity
+scenario,TF-IDF + Logistic Regression,CASE-024,timeline_anomaly,timeline_anomaly
+scenario,TF-IDF + Logistic Regression,CASE-024,suspicious_web_activity,suspicious_web_activity
+scenario,TF-IDF + Logistic Regression,CASE-009,data_leakage,data_leakage
+scenario,TF-IDF + Logistic Regression,CASE-029,suspicious_web_activity,suspicious_web_activity
+scenario,TF-IDF + Logistic Regression,CASE-028,timeline_anomaly,timeline_anomaly
+scenario,TF-IDF + Logistic Regression,CASE-009,data_leakage,data_leakage
+scenario,TF-IDF + Logistic Regression,CASE-029,suspicious_web_activity,suspicious_web_activity
+scenario,TF-IDF + Logistic Regression,CASE-018,data_leakage,data_leakage
+scenario,TF-IDF + Logistic Regression,CASE-024,data_leakage,data_leakage
+scenario,TF-IDF + Logistic Regression,CASE-009,suspicious_web_activity,suspicious_web_activity
+scenario,TF-IDF + Logistic Regression,CASE-025,timeline_anomaly,timeline_anomaly
+scenario,TF-IDF + Logistic Regression,CASE-018,timeline_anomaly,timeline_anomaly
+scenario,TF-IDF + Logistic Regression,CASE-016,data_leakage,data_leakage
+scenario,TF-IDF + Logistic Regression,CASE-016,data_leakage,data_leakage
+scenario,TF-IDF + Logistic Regression,CASE-009,data_leakage,data_leakage
+scenario,TF-IDF + Logistic Regression,CASE-024,timeline_anomaly,timeline_anomaly
+scenario,TF-IDF + Logistic Regression,CASE-016,data_leakage,data_leakage
+scenario,TF-IDF + Logistic Regression,CASE-010,suspicious_web_activity,suspicious_web_activity
+scenario,TF-IDF + Logistic Regression,CASE-010,suspicious_web_activity,suspicious_web_activity
+scenario,TF-IDF + Logistic Regression,CASE-009,data_leakage,data_leakage
+scenario,TF-IDF + Logistic Regression,CASE-010,suspicious_web_activity,suspicious_web_activity
+scenario,TF-IDF + Logistic Regression,CASE-024,data_leakage,data_leakage
+scenario,TF-IDF + Logistic Regression,CASE-025,suspicious_web_activity,suspicious_web_activity
+scenario,TF-IDF + Logistic Regression,CASE-028,suspicious_web_activity,suspicious_web_activity
+scenario,TF-IDF + Logistic Regression,CASE-025,data_leakage,data_leakage
+scenario,TF-IDF + Logistic Regression,CASE-029,suspicious_web_activity,suspicious_web_activity
+scenario,TF-IDF + Logistic Regression,CASE-010,suspicious_web_activity,suspicious_web_activity
+scenario,TF-IDF + Logistic Regression,CASE-025,suspicious_web_activity,suspicious_web_activity
+scenario,TF-IDF + Logistic Regression,CASE-009,timeline_anomaly,timeline_anomaly
+scenario,TF-IDF + Logistic Regression,CASE-018,timeline_anomaly,timeline_anomaly
+scenario,TF-IDF + Logistic Regression,CASE-028,suspicious_web_activity,suspicious_web_activity
+scenario,TF-IDF + Logistic Regression,CASE-010,data_leakage,data_leakage
+scenario,TF-IDF + Logistic Regression,CASE-010,suspicious_web_activity,suspicious_web_activity
+scenario,TF-IDF + Logistic Regression,CASE-009,data_leakage,data_leakage
+scenario,TF-IDF + Logistic Regression,CASE-016,data_leakage,data_leakage
+scenario,TF-IDF + Logistic Regression,CASE-024,timeline_anomaly,timeline_anomaly
+scenario,TF-IDF + Logistic Regression,CASE-025,data_leakage,data_leakage
+scenario,TF-IDF + Logistic Regression,CASE-009,data_leakage,data_leakage
+scenario,TF-IDF + Logistic Regression,CASE-025,suspicious_web_activity,suspicious_web_activity
+scenario,TF-IDF + Logistic Regression,CASE-025,data_leakage,data_leakage
+scenario,TF-IDF + Logistic Regression,CASE-018,data_leakage,data_leakage
+scenario,TF-IDF + Logistic Regression,CASE-010,data_leakage,data_leakage
+scenario,TF-IDF + Logistic Regression,CASE-016,suspicious_web_activity,suspicious_web_activity
+scenario,TF-IDF + Logistic Regression,CASE-010,data_leakage,data_leakage
+scenario,TF-IDF + Logistic Regression,CASE-029,timeline_anomaly,timeline_anomaly
+scenario,TF-IDF + Logistic Regression,CASE-025,timeline_anomaly,timeline_anomaly
+scenario,TF-IDF + Logistic Regression,CASE-028,data_leakage,data_leakage
+scenario,TF-IDF + Logistic Regression,CASE-029,data_leakage,data_leakage
+scenario,TF-IDF + Logistic Regression,CASE-029,data_leakage,data_leakage
+scenario,TF-IDF + Logistic Regression,CASE-029,timeline_anomaly,timeline_anomaly
+scenario,TF-IDF + Logistic Regression,CASE-009,suspicious_web_activity,suspicious_web_activity
+scenario,TF-IDF + Logistic Regression,CASE-025,timeline_anomaly,timeline_anomaly
+scenario,TF-IDF + Logistic Regression,CASE-016,suspicious_web_activity,suspicious_web_activity
+scenario,TF-IDF + Logistic Regression,CASE-028,timeline_anomaly,timeline_anomaly
+scenario,TF-IDF + Logistic Regression,CASE-009,data_leakage,data_leakage
+scenario,TF-IDF + Logistic Regression,CASE-025,suspicious_web_activity,suspicious_web_activity
+scenario,TF-IDF + Logistic Regression,CASE-009,timeline_anomaly,timeline_anomaly
+scenario,TF-IDF + Logistic Regression,CASE-016,timeline_anomaly,timeline_anomaly
+scenario,TF-IDF + Logistic Regression,CASE-010,data_leakage,data_leakage
+scenario,TF-IDF + Logistic Regression,CASE-018,suspicious_web_activity,suspicious_web_activity
+scenario,TF-IDF + Logistic Regression,CASE-024,data_leakage,data_leakage
+scenario,TF-IDF + Logistic Regression,CASE-024,suspicious_web_activity,suspicious_web_activity
+scenario,TF-IDF + Logistic Regression,CASE-025,timeline_anomaly,timeline_anomaly
+scenario,TF-IDF + Logistic Regression,CASE-029,data_leakage,data_leakage
+scenario,TF-IDF + Logistic Regression,CASE-018,data_leakage,data_leakage
+scenario,TF-IDF + Logistic Regression,CASE-010,timeline_anomaly,timeline_anomaly
+scenario,TF-IDF + Logistic Regression,CASE-016,timeline_anomaly,timeline_anomaly
+scenario,TF-IDF + Logistic Regression,CASE-010,suspicious_web_activity,suspicious_web_activity
+scenario,TF-IDF + Logistic Regression,CASE-016,timeline_anomaly,timeline_anomaly
+scenario,TF-IDF + Logistic Regression,CASE-028,data_leakage,data_leakage
+scenario,TF-IDF + Logistic Regression,CASE-025,timeline_anomaly,timeline_anomaly
+scenario,TF-IDF + Logistic Regression,CASE-028,data_leakage,data_leakage
+scenario,TF-IDF + Logistic Regression,CASE-029,timeline_anomaly,timeline_anomaly
+scenario,TF-IDF + Logistic Regression,CASE-025,data_leakage,data_leakage
+scenario,TF-IDF + Logistic Regression,CASE-016,data_leakage,data_leakage
+scenario,TF-IDF + Logistic Regression,CASE-010,data_leakage,data_leakage
+scenario,TF-IDF + Logistic Regression,CASE-029,data_leakage,data_leakage
+scenario,TF-IDF + Logistic Regression,CASE-018,suspicious_web_activity,suspicious_web_activity
+scenario,TF-IDF + Logistic Regression,CASE-028,data_leakage,data_leakage
+scenario,TF-IDF + Logistic Regression,CASE-025,data_leakage,data_leakage
+scenario,TF-IDF + Logistic Regression,CASE-028,data_leakage,data_leakage
+scenario,TF-IDF + Logistic Regression,CASE-025,data_leakage,data_leakage
+scenario,TF-IDF + Logistic Regression,CASE-010,data_leakage,data_leakage
+scenario,TF-IDF + Logistic Regression,CASE-016,data_leakage,data_leakage
+scenario,TF-IDF + Logistic Regression,CASE-009,data_leakage,data_leakage
+scenario,TF-IDF + Logistic Regression,CASE-029,timeline_anomaly,timeline_anomaly
+scenario,TF-IDF + Logistic Regression,CASE-025,suspicious_web_activity,suspicious_web_activity
+scenario,TF-IDF + Logistic Regression,CASE-024,data_leakage,data_leakage
+scenario,TF-IDF + Logistic Regression,CASE-018,suspicious_web_activity,suspicious_web_activity
+scenario,TF-IDF + Logistic Regression,CASE-010,data_leakage,data_leakage
+scenario,TF-IDF + Logistic Regression,CASE-024,data_leakage,data_leakage
+scenario,TF-IDF + Logistic Regression,CASE-018,suspicious_web_activity,suspicious_web_activity
+scenario,TF-IDF + Logistic Regression,CASE-018,timeline_anomaly,timeline_anomaly
+scenario,TF-IDF + Logistic Regression,CASE-025,data_leakage,data_leakage
+scenario,TF-IDF + Logistic Regression,CASE-028,suspicious_web_activity,suspicious_web_activity
+scenario,TF-IDF + Logistic Regression,CASE-025,data_leakage,data_leakage
+scenario,TF-IDF + Logistic Regression,CASE-028,suspicious_web_activity,suspicious_web_activity
+scenario,TF-IDF + Logistic Regression,CASE-024,data_leakage,data_leakage
+scenario,TF-IDF + Logistic Regression,CASE-010,timeline_anomaly,timeline_anomaly
+scenario,TF-IDF + Logistic Regression,CASE-009,suspicious_web_activity,suspicious_web_activity
+scenario,TF-IDF + Logistic Regression,CASE-018,timeline_anomaly,timeline_anomaly
+scenario,TF-IDF + Logistic Regression,CASE-009,suspicious_web_activity,suspicious_web_activity
+scenario,TF-IDF + Logistic Regression,CASE-010,data_leakage,data_leakage
+scenario,TF-IDF + Logistic Regression,CASE-016,data_leakage,data_leakage
+scenario,TF-IDF + Logistic Regression,CASE-010,data_leakage,data_leakage
+scenario,TF-IDF + Logistic Regression,CASE-016,data_leakage,data_leakage
+scenario,TF-IDF + Logistic Regression,CASE-024,timeline_anomaly,timeline_anomaly
+scenario,TF-IDF + Logistic Regression,CASE-016,suspicious_web_activity,suspicious_web_activity
+scenario,TF-IDF + Logistic Regression,CASE-016,suspicious_web_activity,suspicious_web_activity
+scenario,TF-IDF + Logistic Regression,CASE-025,timeline_anomaly,timeline_anomaly
+scenario,TF-IDF + Logistic Regression,CASE-028,data_leakage,data_leakage
+scenario,TF-IDF + Logistic Regression,CASE-018,suspicious_web_activity,suspicious_web_activity
+scenario,TF-IDF + Logistic Regression,CASE-029,data_leakage,data_leakage
+scenario,TF-IDF + Logistic Regression,CASE-028,suspicious_web_activity,suspicious_web_activity
+scenario,TF-IDF + Logistic Regression,CASE-028,timeline_anomaly,timeline_anomaly
+scenario,TF-IDF + Logistic Regression,CASE-018,data_leakage,data_leakage
+scenario,TF-IDF + Logistic Regression,CASE-029,suspicious_web_activity,suspicious_web_activity
+scenario,TF-IDF + Logistic Regression,CASE-028,data_leakage,data_leakage
+scenario,TF-IDF + Logistic Regression,CASE-018,data_leakage,data_leakage
+scenario,TF-IDF + Logistic Regression,CASE-024,suspicious_web_activity,suspicious_web_activity
+scenario,TF-IDF + Logistic Regression,CASE-029,data_leakage,data_leakage
+scenario,TF-IDF + Logistic Regression,CASE-010,timeline_anomaly,timeline_anomaly
+scenario,TF-IDF + Logistic Regression,CASE-009,timeline_anomaly,timeline_anomaly
+scenario,TF-IDF + Logistic Regression,CASE-024,timeline_anomaly,timeline_anomaly
+scenario,TF-IDF + Logistic Regression,CASE-029,timeline_anomaly,timeline_anomaly
+scenario,TF-IDF + Logistic Regression,CASE-029,data_leakage,data_leakage
+scenario,TF-IDF + Logistic Regression,CASE-024,timeline_anomaly,timeline_anomaly
+scenario,TF-IDF + Logistic Regression,CASE-028,timeline_anomaly,timeline_anomaly
+scenario,TF-IDF + Logistic Regression,CASE-018,timeline_anomaly,timeline_anomaly
+scenario,TF-IDF + Logistic Regression,CASE-029,data_leakage,data_leakage
+scenario,TF-IDF + Logistic Regression,CASE-018,suspicious_web_activity,suspicious_web_activity
+scenario,TF-IDF + Logistic Regression,CASE-025,suspicious_web_activity,suspicious_web_activity
+scenario,TF-IDF + Logistic Regression,CASE-016,data_leakage,data_leakage
+scenario,TF-IDF + Logistic Regression,CASE-028,data_leakage,data_leakage
+scenario,TF-IDF + Logistic Regression,CASE-029,timeline_anomaly,timeline_anomaly
+scenario,Transformer embeddings + Logistic Regression,CASE-029,suspicious_web_activity,suspicious_web_activity
+scenario,Transformer embeddings + Logistic Regression,CASE-009,suspicious_web_activity,suspicious_web_activity
+scenario,Transformer embeddings + Logistic Regression,CASE-010,timeline_anomaly,timeline_anomaly
+scenario,Transformer embeddings + Logistic Regression,CASE-010,timeline_anomaly,timeline_anomaly
+scenario,Transformer embeddings + Logistic Regression,CASE-024,timeline_anomaly,timeline_anomaly
+scenario,Transformer embeddings + Logistic Regression,CASE-028,data_leakage,data_leakage
+scenario,Transformer embeddings + Logistic Regression,CASE-029,timeline_anomaly,timeline_anomaly
+scenario,Transformer embeddings + Logistic Regression,CASE-018,data_leakage,data_leakage
+scenario,Transformer embeddings + Logistic Regression,CASE-029,data_leakage,data_leakage
+scenario,Transformer embeddings + Logistic Regression,CASE-010,suspicious_web_activity,suspicious_web_activity
+scenario,Transformer embeddings + Logistic Regression,CASE-025,timeline_anomaly,timeline_anomaly
+scenario,Transformer embeddings + Logistic Regression,CASE-016,suspicious_web_activity,suspicious_web_activity
+scenario,Transformer embeddings + Logistic Regression,CASE-018,suspicious_web_activity,suspicious_web_activity
+scenario,Transformer embeddings + Logistic Regression,CASE-016,data_leakage,data_leakage
+scenario,Transformer embeddings + Logistic Regression,CASE-009,suspicious_web_activity,suspicious_web_activity
+scenario,Transformer embeddings + Logistic Regression,CASE-024,suspicious_web_activity,suspicious_web_activity
+scenario,Transformer embeddings + Logistic Regression,CASE-029,data_leakage,data_leakage
+scenario,Transformer embeddings + Logistic Regression,CASE-018,data_leakage,data_leakage
+scenario,Transformer embeddings + Logistic Regression,CASE-016,suspicious_web_activity,suspicious_web_activity
+scenario,Transformer embeddings + Logistic Regression,CASE-010,timeline_anomaly,timeline_anomaly
+scenario,Transformer embeddings + Logistic Regression,CASE-009,suspicious_web_activity,suspicious_web_activity
+scenario,Transformer embeddings + Logistic Regression,CASE-029,timeline_anomaly,timeline_anomaly
+scenario,Transformer embeddings + Logistic Regression,CASE-024,suspicious_web_activity,suspicious_web_activity
+scenario,Transformer embeddings + Logistic Regression,CASE-010,data_leakage,data_leakage
+scenario,Transformer embeddings + Logistic Regression,CASE-016,timeline_anomaly,timeline_anomaly
+scenario,Transformer embeddings + Logistic Regression,CASE-009,timeline_anomaly,timeline_anomaly
+scenario,Transformer embeddings + Logistic Regression,CASE-016,suspicious_web_activity,suspicious_web_activity
+scenario,Transformer embeddings + Logistic Regression,CASE-025,data_leakage,data_leakage
+scenario,Transformer embeddings + Logistic Regression,CASE-029,suspicious_web_activity,suspicious_web_activity
+scenario,Transformer embeddings + Logistic Regression,CASE-029,data_leakage,data_leakage
+scenario,Transformer embeddings + Logistic Regression,CASE-029,timeline_anomaly,timeline_anomaly
+scenario,Transformer embeddings + Logistic Regression,CASE-028,suspicious_web_activity,suspicious_web_activity
+scenario,Transformer embeddings + Logistic Regression,CASE-010,data_leakage,data_leakage
+scenario,Transformer embeddings + Logistic Regression,CASE-028,timeline_anomaly,timeline_anomaly
+scenario,Transformer embeddings + Logistic Regression,CASE-016,data_leakage,data_leakage
+scenario,Transformer embeddings + Logistic Regression,CASE-016,suspicious_web_activity,suspicious_web_activity
+scenario,Transformer embeddings + Logistic Regression,CASE-025,data_leakage,data_leakage
+scenario,Transformer embeddings + Logistic Regression,CASE-025,suspicious_web_activity,suspicious_web_activity
+scenario,Transformer embeddings + Logistic Regression,CASE-025,data_leakage,data_leakage
+scenario,Transformer embeddings + Logistic Regression,CASE-028,suspicious_web_activity,suspicious_web_activity
+scenario,Transformer embeddings + Logistic Regression,CASE-028,suspicious_web_activity,suspicious_web_activity
+scenario,Transformer embeddings + Logistic Regression,CASE-024,timeline_anomaly,timeline_anomaly
+scenario,Transformer embeddings + Logistic Regression,CASE-024,suspicious_web_activity,suspicious_web_activity
+scenario,Transformer embeddings + Logistic Regression,CASE-025,data_leakage,data_leakage
+scenario,Transformer embeddings + Logistic Regression,CASE-028,data_leakage,data_leakage
+scenario,Transformer embeddings + Logistic Regression,CASE-016,timeline_anomaly,timeline_anomaly
+scenario,Transformer embeddings + Logistic Regression,CASE-009,data_leakage,data_leakage
+scenario,Transformer embeddings + Logistic Regression,CASE-009,data_leakage,data_leakage
+scenario,Transformer embeddings + Logistic Regression,CASE-009,data_leakage,data_leakage
+scenario,Transformer embeddings + Logistic Regression,CASE-024,data_leakage,data_leakage
+scenario,Transformer embeddings + Logistic Regression,CASE-024,data_leakage,data_leakage
+scenario,Transformer embeddings + Logistic Regression,CASE-028,timeline_anomaly,timeline_anomaly
+scenario,Transformer embeddings + Logistic Regression,CASE-010,timeline_anomaly,timeline_anomaly
+scenario,Transformer embeddings + Logistic Regression,CASE-010,data_leakage,data_leakage
+scenario,Transformer embeddings + Logistic Regression,CASE-018,timeline_anomaly,timeline_anomaly
+scenario,Transformer embeddings + Logistic Regression,CASE-029,suspicious_web_activity,suspicious_web_activity
+scenario,Transformer embeddings + Logistic Regression,CASE-016,suspicious_web_activity,suspicious_web_activity
+scenario,Transformer embeddings + Logistic Regression,CASE-018,suspicious_web_activity,suspicious_web_activity
+scenario,Transformer embeddings + Logistic Regression,CASE-009,timeline_anomaly,timeline_anomaly
+scenario,Transformer embeddings + Logistic Regression,CASE-009,suspicious_web_activity,suspicious_web_activity
+scenario,Transformer embeddings + Logistic Regression,CASE-016,suspicious_web_activity,suspicious_web_activity
+scenario,Transformer embeddings + Logistic Regression,CASE-010,timeline_anomaly,timeline_anomaly
+scenario,Transformer embeddings + Logistic Regression,CASE-029,data_leakage,data_leakage
+scenario,Transformer embeddings + Logistic Regression,CASE-018,timeline_anomaly,timeline_anomaly
+scenario,Transformer embeddings + Logistic Regression,CASE-016,data_leakage,data_leakage
+scenario,Transformer embeddings + Logistic Regression,CASE-028,data_leakage,data_leakage
+scenario,Transformer embeddings + Logistic Regression,CASE-010,data_leakage,timeline_anomaly
+scenario,Transformer embeddings + Logistic Regression,CASE-025,data_leakage,data_leakage
+scenario,Transformer embeddings + Logistic Regression,CASE-010,data_leakage,data_leakage
+scenario,Transformer embeddings + Logistic Regression,CASE-010,suspicious_web_activity,suspicious_web_activity
+scenario,Transformer embeddings + Logistic Regression,CASE-010,data_leakage,data_leakage
+scenario,Transformer embeddings + Logistic Regression,CASE-025,timeline_anomaly,timeline_anomaly
+scenario,Transformer embeddings + Logistic Regression,CASE-024,timeline_anomaly,timeline_anomaly
+scenario,Transformer embeddings + Logistic Regression,CASE-029,timeline_anomaly,timeline_anomaly
+scenario,Transformer embeddings + Logistic Regression,CASE-028,timeline_anomaly,timeline_anomaly
+scenario,Transformer embeddings + Logistic Regression,CASE-009,suspicious_web_activity,suspicious_web_activity
+scenario,Transformer embeddings + Logistic Regression,CASE-009,data_leakage,data_leakage
+scenario,Transformer embeddings + Logistic Regression,CASE-009,data_leakage,data_leakage
+scenario,Transformer embeddings + Logistic Regression,CASE-009,suspicious_web_activity,suspicious_web_activity
+scenario,Transformer embeddings + Logistic Regression,CASE-028,data_leakage,data_leakage
+scenario,Transformer embeddings + Logistic Regression,CASE-028,data_leakage,data_leakage
+scenario,Transformer embeddings + Logistic Regression,CASE-029,data_leakage,data_leakage
+scenario,Transformer embeddings + Logistic Regression,CASE-024,timeline_anomaly,timeline_anomaly
+scenario,Transformer embeddings + Logistic Regression,CASE-029,suspicious_web_activity,suspicious_web_activity
+scenario,Transformer embeddings + Logistic Regression,CASE-018,data_leakage,data_leakage
+scenario,Transformer embeddings + Logistic Regression,CASE-010,timeline_anomaly,timeline_anomaly
+scenario,Transformer embeddings + Logistic Regression,CASE-010,data_leakage,data_leakage
+scenario,Transformer embeddings + Logistic Regression,CASE-016,suspicious_web_activity,suspicious_web_activity
+scenario,Transformer embeddings + Logistic Regression,CASE-029,timeline_anomaly,timeline_anomaly
+scenario,Transformer embeddings + Logistic Regression,CASE-029,data_leakage,data_leakage
+scenario,Transformer embeddings + Logistic Regression,CASE-010,suspicious_web_activity,suspicious_web_activity
+scenario,Transformer embeddings + Logistic Regression,CASE-010,data_leakage,data_leakage
+scenario,Transformer embeddings + Logistic Regression,CASE-025,suspicious_web_activity,suspicious_web_activity
+scenario,Transformer embeddings + Logistic Regression,CASE-025,timeline_anomaly,timeline_anomaly
+scenario,Transformer embeddings + Logistic Regression,CASE-028,data_leakage,data_leakage
+scenario,Transformer embeddings + Logistic Regression,CASE-029,suspicious_web_activity,suspicious_web_activity
+scenario,Transformer embeddings + Logistic Regression,CASE-028,suspicious_web_activity,suspicious_web_activity
+scenario,Transformer embeddings + Logistic Regression,CASE-010,timeline_anomaly,timeline_anomaly
+scenario,Transformer embeddings + Logistic Regression,CASE-029,data_leakage,data_leakage
+scenario,Transformer embeddings + Logistic Regression,CASE-009,timeline_anomaly,timeline_anomaly
+scenario,Transformer embeddings + Logistic Regression,CASE-010,timeline_anomaly,timeline_anomaly
+scenario,Transformer embeddings + Logistic Regression,CASE-018,timeline_anomaly,timeline_anomaly
+scenario,Transformer embeddings + Logistic Regression,CASE-009,suspicious_web_activity,suspicious_web_activity
+scenario,Transformer embeddings + Logistic Regression,CASE-025,suspicious_web_activity,suspicious_web_activity
+scenario,Transformer embeddings + Logistic Regression,CASE-009,timeline_anomaly,timeline_anomaly
+scenario,Transformer embeddings + Logistic Regression,CASE-018,suspicious_web_activity,suspicious_web_activity
+scenario,Transformer embeddings + Logistic Regression,CASE-024,timeline_anomaly,timeline_anomaly
+scenario,Transformer embeddings + Logistic Regression,CASE-024,suspicious_web_activity,suspicious_web_activity
+scenario,Transformer embeddings + Logistic Regression,CASE-009,data_leakage,data_leakage
+scenario,Transformer embeddings + Logistic Regression,CASE-029,suspicious_web_activity,suspicious_web_activity
+scenario,Transformer embeddings + Logistic Regression,CASE-028,timeline_anomaly,timeline_anomaly
+scenario,Transformer embeddings + Logistic Regression,CASE-009,data_leakage,data_leakage
+scenario,Transformer embeddings + Logistic Regression,CASE-029,suspicious_web_activity,suspicious_web_activity
+scenario,Transformer embeddings + Logistic Regression,CASE-018,data_leakage,data_leakage
+scenario,Transformer embeddings + Logistic Regression,CASE-024,data_leakage,data_leakage
+scenario,Transformer embeddings + Logistic Regression,CASE-009,suspicious_web_activity,suspicious_web_activity
+scenario,Transformer embeddings + Logistic Regression,CASE-025,timeline_anomaly,timeline_anomaly
+scenario,Transformer embeddings + Logistic Regression,CASE-018,timeline_anomaly,timeline_anomaly
+scenario,Transformer embeddings + Logistic Regression,CASE-016,data_leakage,data_leakage
+scenario,Transformer embeddings + Logistic Regression,CASE-016,data_leakage,data_leakage
+scenario,Transformer embeddings + Logistic Regression,CASE-009,data_leakage,data_leakage
+scenario,Transformer embeddings + Logistic Regression,CASE-024,timeline_anomaly,timeline_anomaly
+scenario,Transformer embeddings + Logistic Regression,CASE-016,data_leakage,data_leakage
+scenario,Transformer embeddings + Logistic Regression,CASE-010,suspicious_web_activity,suspicious_web_activity
+scenario,Transformer embeddings + Logistic Regression,CASE-010,suspicious_web_activity,suspicious_web_activity
+scenario,Transformer embeddings + Logistic Regression,CASE-009,data_leakage,data_leakage
+scenario,Transformer embeddings + Logistic Regression,CASE-010,suspicious_web_activity,suspicious_web_activity
+scenario,Transformer embeddings + Logistic Regression,CASE-024,data_leakage,data_leakage
+scenario,Transformer embeddings + Logistic Regression,CASE-025,suspicious_web_activity,suspicious_web_activity
+scenario,Transformer embeddings + Logistic Regression,CASE-028,suspicious_web_activity,suspicious_web_activity
+scenario,Transformer embeddings + Logistic Regression,CASE-025,data_leakage,data_leakage
+scenario,Transformer embeddings + Logistic Regression,CASE-029,suspicious_web_activity,suspicious_web_activity
+scenario,Transformer embeddings + Logistic Regression,CASE-010,suspicious_web_activity,suspicious_web_activity
+scenario,Transformer embeddings + Logistic Regression,CASE-025,suspicious_web_activity,suspicious_web_activity
+scenario,Transformer embeddings + Logistic Regression,CASE-009,timeline_anomaly,timeline_anomaly
+scenario,Transformer embeddings + Logistic Regression,CASE-018,timeline_anomaly,timeline_anomaly
+scenario,Transformer embeddings + Logistic Regression,CASE-028,suspicious_web_activity,suspicious_web_activity
+scenario,Transformer embeddings + Logistic Regression,CASE-010,data_leakage,data_leakage
+scenario,Transformer embeddings + Logistic Regression,CASE-010,suspicious_web_activity,suspicious_web_activity
+scenario,Transformer embeddings + Logistic Regression,CASE-009,data_leakage,data_leakage
+scenario,Transformer embeddings + Logistic Regression,CASE-016,data_leakage,data_leakage
+scenario,Transformer embeddings + Logistic Regression,CASE-024,timeline_anomaly,timeline_anomaly
+scenario,Transformer embeddings + Logistic Regression,CASE-025,data_leakage,data_leakage
+scenario,Transformer embeddings + Logistic Regression,CASE-009,data_leakage,data_leakage
+scenario,Transformer embeddings + Logistic Regression,CASE-025,suspicious_web_activity,suspicious_web_activity
+scenario,Transformer embeddings + Logistic Regression,CASE-025,data_leakage,data_leakage
+scenario,Transformer embeddings + Logistic Regression,CASE-018,data_leakage,data_leakage
+scenario,Transformer embeddings + Logistic Regression,CASE-010,data_leakage,data_leakage
+scenario,Transformer embeddings + Logistic Regression,CASE-016,suspicious_web_activity,suspicious_web_activity
+scenario,Transformer embeddings + Logistic Regression,CASE-010,data_leakage,data_leakage
+scenario,Transformer embeddings + Logistic Regression,CASE-029,timeline_anomaly,timeline_anomaly
+scenario,Transformer embeddings + Logistic Regression,CASE-025,timeline_anomaly,timeline_anomaly
+scenario,Transformer embeddings + Logistic Regression,CASE-028,data_leakage,data_leakage
+scenario,Transformer embeddings + Logistic Regression,CASE-029,data_leakage,data_leakage
+scenario,Transformer embeddings + Logistic Regression,CASE-029,data_leakage,data_leakage
+scenario,Transformer embeddings + Logistic Regression,CASE-029,timeline_anomaly,timeline_anomaly
+scenario,Transformer embeddings + Logistic Regression,CASE-009,suspicious_web_activity,suspicious_web_activity
+scenario,Transformer embeddings + Logistic Regression,CASE-025,timeline_anomaly,timeline_anomaly
+scenario,Transformer embeddings + Logistic Regression,CASE-016,suspicious_web_activity,suspicious_web_activity
+scenario,Transformer embeddings + Logistic Regression,CASE-028,timeline_anomaly,timeline_anomaly
+scenario,Transformer embeddings + Logistic Regression,CASE-009,data_leakage,data_leakage
+scenario,Transformer embeddings + Logistic Regression,CASE-025,suspicious_web_activity,suspicious_web_activity
+scenario,Transformer embeddings + Logistic Regression,CASE-009,timeline_anomaly,timeline_anomaly
+scenario,Transformer embeddings + Logistic Regression,CASE-016,timeline_anomaly,timeline_anomaly
+scenario,Transformer embeddings + Logistic Regression,CASE-010,data_leakage,data_leakage
+scenario,Transformer embeddings + Logistic Regression,CASE-018,suspicious_web_activity,suspicious_web_activity
+scenario,Transformer embeddings + Logistic Regression,CASE-024,data_leakage,data_leakage
+scenario,Transformer embeddings + Logistic Regression,CASE-024,suspicious_web_activity,timeline_anomaly
+scenario,Transformer embeddings + Logistic Regression,CASE-025,timeline_anomaly,timeline_anomaly
+scenario,Transformer embeddings + Logistic Regression,CASE-029,data_leakage,data_leakage
+scenario,Transformer embeddings + Logistic Regression,CASE-018,data_leakage,data_leakage
+scenario,Transformer embeddings + Logistic Regression,CASE-010,timeline_anomaly,timeline_anomaly
+scenario,Transformer embeddings + Logistic Regression,CASE-016,timeline_anomaly,timeline_anomaly
+scenario,Transformer embeddings + Logistic Regression,CASE-010,suspicious_web_activity,suspicious_web_activity
+scenario,Transformer embeddings + Logistic Regression,CASE-016,timeline_anomaly,timeline_anomaly
+scenario,Transformer embeddings + Logistic Regression,CASE-028,data_leakage,data_leakage
+scenario,Transformer embeddings + Logistic Regression,CASE-025,timeline_anomaly,timeline_anomaly
+scenario,Transformer embeddings + Logistic Regression,CASE-028,data_leakage,data_leakage
+scenario,Transformer embeddings + Logistic Regression,CASE-029,timeline_anomaly,timeline_anomaly
+scenario,Transformer embeddings + Logistic Regression,CASE-025,data_leakage,data_leakage
+scenario,Transformer embeddings + Logistic Regression,CASE-016,data_leakage,data_leakage
+scenario,Transformer embeddings + Logistic Regression,CASE-010,data_leakage,data_leakage
+scenario,Transformer embeddings + Logistic Regression,CASE-029,data_leakage,data_leakage
+scenario,Transformer embeddings + Logistic Regression,CASE-018,suspicious_web_activity,suspicious_web_activity
+scenario,Transformer embeddings + Logistic Regression,CASE-028,data_leakage,data_leakage
+scenario,Transformer embeddings + Logistic Regression,CASE-025,data_leakage,data_leakage
+scenario,Transformer embeddings + Logistic Regression,CASE-028,data_leakage,data_leakage
+scenario,Transformer embeddings + Logistic Regression,CASE-025,data_leakage,data_leakage
+scenario,Transformer embeddings + Logistic Regression,CASE-010,data_leakage,data_leakage
+scenario,Transformer embeddings + Logistic Regression,CASE-016,data_leakage,data_leakage
+scenario,Transformer embeddings + Logistic Regression,CASE-009,data_leakage,data_leakage
+scenario,Transformer embeddings + Logistic Regression,CASE-029,timeline_anomaly,timeline_anomaly
+scenario,Transformer embeddings + Logistic Regression,CASE-025,suspicious_web_activity,suspicious_web_activity
+scenario,Transformer embeddings + Logistic Regression,CASE-024,data_leakage,data_leakage
+scenario,Transformer embeddings + Logistic Regression,CASE-018,suspicious_web_activity,suspicious_web_activity
+scenario,Transformer embeddings + Logistic Regression,CASE-010,data_leakage,data_leakage
+scenario,Transformer embeddings + Logistic Regression,CASE-024,data_leakage,data_leakage
+scenario,Transformer embeddings + Logistic Regression,CASE-018,suspicious_web_activity,suspicious_web_activity
+scenario,Transformer embeddings + Logistic Regression,CASE-018,timeline_anomaly,timeline_anomaly
+scenario,Transformer embeddings + Logistic Regression,CASE-025,data_leakage,data_leakage
+scenario,Transformer embeddings + Logistic Regression,CASE-028,suspicious_web_activity,suspicious_web_activity
+scenario,Transformer embeddings + Logistic Regression,CASE-025,data_leakage,data_leakage
+scenario,Transformer embeddings + Logistic Regression,CASE-028,suspicious_web_activity,suspicious_web_activity
+scenario,Transformer embeddings + Logistic Regression,CASE-024,data_leakage,data_leakage
+scenario,Transformer embeddings + Logistic Regression,CASE-010,timeline_anomaly,timeline_anomaly
+scenario,Transformer embeddings + Logistic Regression,CASE-009,suspicious_web_activity,suspicious_web_activity
+scenario,Transformer embeddings + Logistic Regression,CASE-018,timeline_anomaly,timeline_anomaly
+scenario,Transformer embeddings + Logistic Regression,CASE-009,suspicious_web_activity,suspicious_web_activity
+scenario,Transformer embeddings + Logistic Regression,CASE-010,data_leakage,data_leakage
+scenario,Transformer embeddings + Logistic Regression,CASE-016,data_leakage,data_leakage
+scenario,Transformer embeddings + Logistic Regression,CASE-010,data_leakage,data_leakage
+scenario,Transformer embeddings + Logistic Regression,CASE-016,data_leakage,data_leakage
+scenario,Transformer embeddings + Logistic Regression,CASE-024,timeline_anomaly,timeline_anomaly
+scenario,Transformer embeddings + Logistic Regression,CASE-016,suspicious_web_activity,suspicious_web_activity
+scenario,Transformer embeddings + Logistic Regression,CASE-016,suspicious_web_activity,suspicious_web_activity
+scenario,Transformer embeddings + Logistic Regression,CASE-025,timeline_anomaly,timeline_anomaly
+scenario,Transformer embeddings + Logistic Regression,CASE-028,data_leakage,data_leakage
+scenario,Transformer embeddings + Logistic Regression,CASE-018,suspicious_web_activity,suspicious_web_activity
+scenario,Transformer embeddings + Logistic Regression,CASE-029,data_leakage,data_leakage
+scenario,Transformer embeddings + Logistic Regression,CASE-028,suspicious_web_activity,suspicious_web_activity
+scenario,Transformer embeddings + Logistic Regression,CASE-028,timeline_anomaly,timeline_anomaly
+scenario,Transformer embeddings + Logistic Regression,CASE-018,data_leakage,data_leakage
+scenario,Transformer embeddings + Logistic Regression,CASE-029,suspicious_web_activity,suspicious_web_activity
+scenario,Transformer embeddings + Logistic Regression,CASE-028,data_leakage,data_leakage
+scenario,Transformer embeddings + Logistic Regression,CASE-018,data_leakage,data_leakage
+scenario,Transformer embeddings + Logistic Regression,CASE-024,suspicious_web_activity,suspicious_web_activity
+scenario,Transformer embeddings + Logistic Regression,CASE-029,data_leakage,data_leakage
+scenario,Transformer embeddings + Logistic Regression,CASE-010,timeline_anomaly,timeline_anomaly
+scenario,Transformer embeddings + Logistic Regression,CASE-009,timeline_anomaly,timeline_anomaly
+scenario,Transformer embeddings + Logistic Regression,CASE-024,timeline_anomaly,timeline_anomaly
+scenario,Transformer embeddings + Logistic Regression,CASE-029,timeline_anomaly,timeline_anomaly
+scenario,Transformer embeddings + Logistic Regression,CASE-029,data_leakage,data_leakage
+scenario,Transformer embeddings + Logistic Regression,CASE-024,timeline_anomaly,timeline_anomaly
+scenario,Transformer embeddings + Logistic Regression,CASE-028,timeline_anomaly,timeline_anomaly
+scenario,Transformer embeddings + Logistic Regression,CASE-018,timeline_anomaly,timeline_anomaly
+scenario,Transformer embeddings + Logistic Regression,CASE-029,data_leakage,data_leakage
+scenario,Transformer embeddings + Logistic Regression,CASE-018,suspicious_web_activity,suspicious_web_activity
+scenario,Transformer embeddings + Logistic Regression,CASE-025,suspicious_web_activity,suspicious_web_activity
+scenario,Transformer embeddings + Logistic Regression,CASE-016,data_leakage,data_leakage
+scenario,Transformer embeddings + Logistic Regression,CASE-028,data_leakage,data_leakage
+scenario,Transformer embeddings + Logistic Regression,CASE-029,timeline_anomaly,timeline_anomaly
