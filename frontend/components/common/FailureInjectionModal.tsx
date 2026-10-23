@@ -45,10 +45,10 @@ export const FailureInjectionModal: React.FC<FailureInjectionModalProps> = ({
             </div>
             <div>
               <h3 className="text-base font-bold text-cyber-text">
-                Inject Simulated Tool Failure
+                Simulate Telemetry Disruption &amp; Evasion
               </h3>
               <span className="text-[11px] font-mono text-amber-400 uppercase tracking-wider block">
-                Demonstration Feature · Seeded Cases Only
+                Autonomous Resilience &amp; Replanning Verification
               </span>
             </div>
           </div>

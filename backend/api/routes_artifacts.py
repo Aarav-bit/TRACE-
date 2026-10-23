@@ -2,8 +2,9 @@ import shutil
 from pathlib import Path
 from typing import List
 from fastapi import APIRouter, Depends, HTTPException, UploadFile, File
+from fastapi.responses import FileResponse
 from sqlalchemy.orm import Session
-from backend.config import STORAGE_DIR, MAX_UPLOAD_SIZE_BYTES
+from backend.config import STORAGE_DIR, MAX_UPLOAD_SIZE_BYTES, BASE_DIR
 from backend.database.models import Case, Artifact, EvidenceEvent
 from backend.database.schemas import ArtifactResponse
 from backend.database.session import get_db
@@ -13,6 +14,19 @@ from backend.forensic.parsers.evtx_parser import parse_evtx_file
 from backend.forensic.parsers.zip_parser import safe_extract_zip
 
 router = APIRouter(prefix="/api/cases/{case_id}/artifacts", tags=["artifacts"])
+
+sample_router = APIRouter(prefix="/api/sample-evidence", tags=["sample-evidence"])
+
+@sample_router.get("/download")
+def download_sample_evidence_bundle():
+    zip_path = BASE_DIR / "data" / "sample_evidence" / "incident_triage_bundle.zip"
+    if not zip_path.exists():
+        raise HTTPException(status_code=404, detail="Sample evidence bundle not found on disk")
+    return FileResponse(
+        path=str(zip_path),
+        filename="incident_triage_bundle.zip",
+        media_type="application/zip",
+    )
 
 @router.get("", response_model=List[ArtifactResponse])
 def list_artifacts(case_id: str, db: Session = Depends(get_db)):

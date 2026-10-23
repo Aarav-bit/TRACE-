@@ -10,15 +10,21 @@ import {
   Compass,
   FileSearch,
   CheckCircle2,
-  Clock,
   HardDrive,
   FileText,
   AlertTriangle,
-  RotateCcw,
-  ExternalLink,
-  ChevronRight,
+  Download,
+  FolderOpen,
+  ArrowRight,
+  ShieldCheck,
+  Cpu,
 } from "lucide-react";
-import { fetchCases, seedDemoCase, startInvestigation, resetDemoEnvironment } from "@/lib/api";
+import {
+  fetchCases,
+  seedDemoCase,
+  startInvestigation,
+  getSampleEvidenceDownloadUrl,
+} from "@/lib/api";
 import { Case } from "@/lib/types";
 import { StatusBadge } from "@/components/common/StatusBadge";
 
@@ -26,7 +32,7 @@ export default function OverviewDashboard() {
   const router = useRouter();
   const [cases, setCases] = useState<Case[]>([]);
   const [isLoading, setIsLoading] = useState(true);
-  const [isLaunchingDemo, setIsLaunchingDemo] = useState(false);
+  const [isLaunchingBenchmark, setIsLaunchingBenchmark] = useState(false);
 
   useEffect(() => {
     loadCases();
@@ -44,8 +50,8 @@ export default function OverviewDashboard() {
     }
   };
 
-  const handleRunDemo = async (type: "complete" | "degraded") => {
-    setIsLaunchingDemo(true);
+  const handleRunBenchmark = async (type: "complete" | "degraded") => {
+    setIsLaunchingBenchmark(true);
     try {
       const seedRes = await seedDemoCase(type);
       const inv = await startInvestigation(seedRes.case_id, {
@@ -53,13 +59,12 @@ export default function OverviewDashboard() {
       });
       router.push(`/investigations/${inv.id}`);
     } catch (err) {
-      console.error("Failed to start demo:", err);
+      console.error("Failed to start benchmark:", err);
     } finally {
-      setIsLaunchingDemo(false);
+      setIsLaunchingBenchmark(false);
     }
   };
 
-  // Calculate high-level metrics
   const totalArtifacts = cases.reduce((acc, c) => acc + (c.artifact_count || 0), 0);
   const totalFindings = cases.reduce((acc, c) => acc + (c.finding_count || 0), 0);
   const totalEvents = cases.reduce((acc, c) => acc + (c.event_count || 0), 0);
@@ -69,53 +74,53 @@ export default function OverviewDashboard() {
       {/* Hero Welcome Banner */}
       <div className="rounded-xl border border-cyber-border bg-gradient-to-r from-cyber-card via-cyber-surface to-cyber-card p-8 shadow-xl relative overflow-hidden">
         <div className="absolute right-0 top-0 bottom-0 w-96 bg-gradient-to-l from-sky-950/30 to-transparent pointer-events-none" />
-        
+
         <div className="max-w-3xl relative z-10 space-y-4">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-950/80 border border-sky-700/60 text-sky-300 text-xs font-mono">
             <ShieldAlert className="w-3.5 h-3.5 text-sky-400" />
-            <span>Autonomous Incident Investigation Engine</span>
+            <span>Autonomous DFIR & Threat Reconstruction Platform</span>
           </div>
 
           <h1 className="text-3xl font-extrabold text-cyber-text tracking-tight sm:text-4xl">
-            Don&apos;t just detect. <br />
+            Don&apos;t just detect alerts. <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 via-sky-300 to-emerald-400">
-              Investigate, verify, explain.
+              Investigate, correlate, verify, explain.
             </span>
           </h1>
 
           <p className="text-sm text-cyber-muted leading-relaxed">
-            TRACE deploys a single adaptive AI agent that coordinates deterministic forensic tools,
-            reconstructs process lineage, adapts to failures, and independently validates findings
-            against source evidence before producing cryptographic incident reports.
+            TRACE ingest raw endpoint telemetry (Windows Security EVTX, Sysmon logs, command executions, and triage archives),
+            plans an adaptive forensic investigation, reconstructs parent-child execution lineages, and independently
+            validates all conclusions against source evidence records before generating audit-ready forensic reports.
           </p>
 
-          {/* Call to Actions */}
+          {/* Primary Call to Actions */}
           <div className="flex flex-wrap items-center gap-3 pt-2">
-            <button
-              onClick={() => handleRunDemo("complete")}
-              disabled={isLaunchingDemo}
-              className="px-5 py-2.5 rounded-lg bg-sky-500 hover:bg-sky-400 text-black font-bold text-xs tracking-wide flex items-center gap-2 shadow-lg shadow-sky-950/50 transition-all cursor-pointer disabled:opacity-50"
-            >
-              <Play className="w-4 h-4 fill-black" />
-              <span>{isLaunchingDemo ? "Initializing Engine..." : "Run Complete Demo (Case A)"}</span>
-            </button>
-
-            <button
-              onClick={() => handleRunDemo("degraded")}
-              disabled={isLaunchingDemo}
-              className="px-4 py-2.5 rounded-lg bg-cyber-surface hover:bg-cyber-panel border border-amber-600/60 text-amber-300 font-semibold text-xs flex items-center gap-2 transition-colors cursor-pointer"
-            >
-              <AlertTriangle className="w-4 h-4 text-amber-400" />
-              <span>Run Degraded Evidence Demo (Case B)</span>
-            </button>
-
             <Link
               href="/investigations"
-              className="px-4 py-2.5 rounded-lg bg-cyber-surface hover:bg-cyber-panel border border-cyber-border text-cyber-text font-semibold text-xs flex items-center gap-2 transition-colors"
+              className="px-5 py-2.5 rounded-lg bg-sky-500 hover:bg-sky-400 text-black font-bold text-xs tracking-wide flex items-center gap-2 shadow-lg shadow-sky-950/50 transition-all cursor-pointer"
             >
-              <Plus className="w-4 h-4 text-sky-400" />
-              <span>New Investigation</span>
+              <Plus className="w-4 h-4" />
+              <span>Start New Case & Upload Evidence</span>
             </Link>
+
+            <a
+              href={getSampleEvidenceDownloadUrl()}
+              download="incident_triage_bundle.zip"
+              className="px-4 py-2.5 rounded-lg bg-cyber-surface hover:bg-cyber-panel border border-sky-600/60 text-sky-300 font-semibold text-xs flex items-center gap-2 transition-colors cursor-pointer"
+            >
+              <Download className="w-4 h-4 text-sky-400" />
+              <span>Download Presentation Evidence (.zip)</span>
+            </a>
+
+            <button
+              onClick={() => handleRunBenchmark("complete")}
+              disabled={isLaunchingBenchmark}
+              className="px-4 py-2.5 rounded-lg bg-cyber-surface hover:bg-cyber-panel border border-cyber-border text-cyber-muted hover:text-cyber-text font-semibold text-xs flex items-center gap-2 transition-colors cursor-pointer disabled:opacity-50"
+            >
+              <Play className="w-4 h-4 text-emerald-400" />
+              <span>{isLaunchingBenchmark ? "Launching..." : "Benchmark Case"}</span>
+            </button>
           </div>
         </div>
       </div>
@@ -125,7 +130,7 @@ export default function OverviewDashboard() {
         <div className="p-5 rounded-lg bg-cyber-card border border-cyber-border flex items-center justify-between">
           <div>
             <span className="text-xs font-mono text-cyber-dim uppercase tracking-wider block">
-              Total Cases
+              Active Cases
             </span>
             <span className="text-2xl font-bold font-mono text-cyber-text mt-1 block">
               {cases.length}
@@ -167,7 +172,7 @@ export default function OverviewDashboard() {
         <div className="p-5 rounded-lg bg-cyber-card border border-cyber-border flex items-center justify-between">
           <div>
             <span className="text-xs font-mono text-cyber-dim uppercase tracking-wider block">
-              Verified Claims
+              Substantiated Findings
             </span>
             <span className="text-2xl font-bold font-mono text-sky-400 mt-1 block">
               {totalFindings}
@@ -179,7 +184,7 @@ export default function OverviewDashboard() {
         </div>
       </div>
 
-      {/* Recent Cases Section */}
+      {/* Recent Investigations Table */}
       <div className="space-y-4">
         <div className="flex items-center justify-between">
           <div>
@@ -187,14 +192,14 @@ export default function OverviewDashboard() {
               Recent Incident Investigations
             </h2>
             <p className="text-xs text-cyber-dim font-mono">
-              Persistent cases stored in local SQLite repository
+              Persistent cases managed in local SQLite evidence repository
             </p>
           </div>
           <Link
             href="/investigations"
             className="text-xs text-sky-400 hover:text-sky-300 font-mono flex items-center gap-1"
           >
-            View all &rarr;
+            Create Case &rarr;
           </Link>
         </div>
 
@@ -203,7 +208,7 @@ export default function OverviewDashboard() {
             <Compass className="w-8 h-8 text-cyber-dim mx-auto" />
             <h3 className="text-sm font-semibold text-cyber-text">No cases created yet</h3>
             <p className="text-xs text-cyber-dim max-w-sm mx-auto">
-              Click &quot;Run Complete Demo&quot; to load the pre-packaged synthetic PowerShell incident package.
+              Click &quot;Start New Case & Upload Evidence&quot; to ingest your first forensic log file.
             </p>
           </div>
         ) : (
@@ -212,10 +217,10 @@ export default function OverviewDashboard() {
               <table className="w-full text-left border-collapse text-xs">
                 <thead>
                   <tr className="border-b border-cyber-border bg-cyber-surface/60 font-mono text-[11px] text-cyber-dim uppercase">
-                    <th className="p-3.5 pl-5">Case Name</th>
+                    <th className="p-3.5 pl-5">Case Identifier</th>
                     <th className="p-3.5">Status</th>
-                    <th className="p-3.5">Artifacts</th>
-                    <th className="p-3.5">Findings</th>
+                    <th className="p-3.5">Artifacts Ingested</th>
+                    <th className="p-3.5">Verified Claims</th>
                     <th className="p-3.5">Created Date</th>
                     <th className="p-3.5 text-right pr-5">Actions</th>
                   </tr>
@@ -226,9 +231,9 @@ export default function OverviewDashboard() {
                       <td className="p-3.5 pl-5">
                         <div className="font-semibold text-cyber-text flex items-center gap-2">
                           <span>{c.name}</span>
-                          {c.is_demo && (
-                            <span className="text-[10px] font-mono px-1.5 py-0.2 rounded bg-sky-950 text-sky-400 border border-sky-800">
-                              {c.demo_type === "degraded" ? "DEGRADED DEMO" : "SYNTHETIC DEMO"}
+                          {c.demo_type === "degraded" && (
+                            <span className="text-[10px] font-mono px-1.5 py-0.2 rounded bg-amber-950 text-amber-400 border border-amber-800">
+                              DEGRADED BENCHMARK
                             </span>
                           )}
                         </div>
@@ -240,7 +245,7 @@ export default function OverviewDashboard() {
                         <StatusBadge status={c.status} size="sm" />
                       </td>
                       <td className="p-3.5 font-mono text-cyber-muted">
-                        {c.artifact_count} file{c.artifact_count === 1 ? "" : "s"} ({c.event_count} events)
+                        {c.artifact_count} file{c.artifact_count === 1 ? "" : "s"} ({c.event_count} records)
                       </td>
                       <td className="p-3.5 font-mono text-sky-400 font-bold">
                         {c.finding_count} verified

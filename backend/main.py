@@ -8,7 +8,7 @@ from backend.synthetic.cases import seed_synthetic_case
 # Import all approved tools to trigger registry initialization
 import backend.tools
 from backend.api.routes_cases import router as cases_router, demo_router
-from backend.api.routes_artifacts import router as artifacts_router
+from backend.api.routes_artifacts import router as artifacts_router, sample_router
 from backend.api.routes_investigations import router as investigations_router
 from backend.api.routes_evidence import router as evidence_router
 from backend.api.routes_tools import router as tools_router
@@ -62,6 +62,7 @@ app.add_middleware(
 # Include API Routers
 app.include_router(cases_router)
 app.include_router(demo_router)
+app.include_router(sample_router)
 app.include_router(artifacts_router)
 app.include_router(investigations_router)
 app.include_router(evidence_router)

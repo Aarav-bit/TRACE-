@@ -11,15 +11,14 @@ import {
   History,
   Wrench,
   Settings,
-  Sparkles,
 } from "lucide-react";
 
 const NAV_ITEMS = [
-  { label: "Overview", href: "/", icon: LayoutDashboard },
-  { label: "Investigations", href: "/investigations", icon: Compass },
+  { label: "Dashboard", href: "/", icon: LayoutDashboard },
+  { label: "Case Intake & Ingestion", href: "/investigations", icon: Compass },
   { label: "Evidence Explorer", href: "/evidence", icon: FileSearch },
-  { label: "Investigation History", href: "/history", icon: History },
-  { label: "Forensic Tools", href: "/tools", icon: Wrench },
+  { label: "Audit & Chain of Custody", href: "/history", icon: History },
+  { label: "Forensic Tool Registry", href: "/tools", icon: Wrench },
   { label: "Settings", href: "/settings", icon: Settings },
 ];
 
@@ -39,11 +38,11 @@ export const Sidebar: React.FC = () => {
               TRACE
             </span>
             <span className="text-[10px] font-mono px-1.5 py-0.2 rounded bg-sky-950 text-sky-300 border border-sky-800">
-              v1.0
+              DFIR
             </span>
           </div>
           <p className="text-[10px] text-cyber-muted font-mono tracking-tight">
-            Autonomous Cyber Evidence
+            Threat Reconstruction & Cyber Evidence
           </p>
         </div>
       </div>
@@ -51,7 +50,7 @@ export const Sidebar: React.FC = () => {
       {/* Navigation Links */}
       <nav className="flex-1 p-3 space-y-1 overflow-y-auto">
         <div className="px-3 py-2 text-[10px] font-mono uppercase text-cyber-dim tracking-wider">
-          Workspace Navigation
+          Forensics Workspace
         </div>
         {NAV_ITEMS.map((item) => {
           const Icon = item.icon;
@@ -79,12 +78,12 @@ export const Sidebar: React.FC = () => {
           <div className="flex items-center justify-between text-[11px] font-mono text-cyber-muted mb-1">
             <span className="flex items-center gap-1.5">
               <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-              Engine Status
+              Investigation Core
             </span>
-            <span className="text-emerald-400 font-bold">READY</span>
+            <span className="text-emerald-400 font-bold">ACTIVE</span>
           </div>
           <p className="text-[10px] text-cyber-dim leading-relaxed">
-            Deterministic Demo mode active. Offline investigation and verifier operational.
+            Deterministic verifier online. SHA-256 chain of custody and artifact provenance active.
           </p>
         </div>
       </div>

@@ -68,10 +68,10 @@ export default function SettingsPage() {
                   checked={llmProvider === "deterministic"}
                   onChange={() => setLlmProvider("deterministic")}
                 />
-                <span className="font-bold text-xs">Deterministic Demo Mode (Recommended)</span>
+                <span className="font-bold text-xs">Autonomous Local Engine (Recommended)</span>
               </div>
               <p className="text-[11px] text-cyber-dim leading-relaxed ml-5">
-                100% offline. Coordinates real forensic tools and deterministic independent verifier without external LLM dependencies.
+                100% private and offline. Triages real forensic evidence using rule-based threat heuristics, parent-child ancestry builders, and deterministic independent verification without external API keys.
               </p>
             </label>
 

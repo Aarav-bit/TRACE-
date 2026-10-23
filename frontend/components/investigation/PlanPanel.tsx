@@ -109,13 +109,13 @@ export const PlanPanel: React.FC<PlanPanelProps> = ({
           </button>
         </div>
 
-        {/* Demo-only Failure Injection Trigger */}
+        {/* Adversarial Disruption / Failure Resilience Test */}
         <button
           onClick={onOpenFailureInjection}
           className="w-full mt-2 flex items-center justify-center gap-2 p-2 rounded bg-amber-950/30 hover:bg-amber-950/50 border border-amber-700/60 text-xs text-amber-300 font-medium transition-colors"
         >
           <AlertTriangle className="w-3.5 h-3.5 text-amber-400" />
-          <span>Inject Tool Failure (Demo Control)</span>
+          <span>Simulate Stream Disruption / Resilience Test</span>
         </button>
       </div>
 

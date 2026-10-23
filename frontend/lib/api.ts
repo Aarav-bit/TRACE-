@@ -173,3 +173,7 @@ export function getReportHtmlUrl(caseId: string): string {
 export function getInvestigationEventsUrl(investigationId: string): string {
   return `${API_BASE}/investigations/${investigationId}/events`;
 }
+
+export function getSampleEvidenceDownloadUrl(): string {
+  return `${API_BASE}/sample-evidence/download`;
+}

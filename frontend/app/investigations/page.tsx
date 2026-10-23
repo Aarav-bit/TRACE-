@@ -1,21 +1,27 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { useRouter } from "next/navigation";
 import {
   Upload,
   FileCheck,
   Play,
   AlertCircle,
-  FileArchive,
   FileCode,
   HardDrive,
   Trash2,
   CheckCircle2,
   ArrowRight,
   ShieldCheck,
+  Download,
+  Info,
 } from "lucide-react";
-import { createCase, uploadArtifacts, startInvestigation, seedDemoCase } from "@/lib/api";
+import {
+  createCase,
+  uploadArtifacts,
+  startInvestigation,
+  getSampleEvidenceDownloadUrl,
+} from "@/lib/api";
 import { Artifact, Case } from "@/lib/types";
 
 export default function CreateInvestigationPage() {
@@ -56,22 +62,10 @@ export default function CreateInvestigationPage() {
     setFiles((prev) => prev.filter((_, i) => i !== idx));
   };
 
-  const handleLoadDemo = async () => {
-    setIsSubmitting(true);
-    try {
-      const res = await seedDemoCase("complete");
-      const inv = await startInvestigation(res.case_id, { mode });
-      router.push(`/investigations/${inv.id}`);
-    } catch (err: any) {
-      setErrorMsg(err.message || "Failed to load demo case");
-      setIsSubmitting(false);
-    }
-  };
-
   const handleCreateCaseAndUpload = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!caseName.trim() || !objective.trim()) {
-      setErrorMsg("Case name and objective are required.");
+      setErrorMsg("Case name and investigation objective are required.");
       return;
     }
 
@@ -87,7 +81,7 @@ export default function CreateInvestigationPage() {
         is_demo: false,
       });
 
-      // Step 2: Upload Artifacts if any
+      // Step 2: Upload and Hash Artifacts
       let uploaded: Artifact[] = [];
       if (files.length > 0) {
         uploaded = await uploadArtifacts(newCase.id, files);
@@ -96,7 +90,7 @@ export default function CreateInvestigationPage() {
       setCreatedCase(newCase);
       setArtifactsManifest(uploaded);
     } catch (err: any) {
-      setErrorMsg(err.message || "Failed to create case");
+      setErrorMsg(err.message || "Failed to create case or parse evidence files.");
     } finally {
       setIsSubmitting(false);
     }
@@ -112,35 +106,35 @@ export default function CreateInvestigationPage() {
       });
       router.push(`/investigations/${inv.id}`);
     } catch (err: any) {
-      setErrorMsg(err.message || "Failed to launch investigation agent");
+      setErrorMsg(err.message || "Failed to launch autonomous investigation agent.");
       setIsStartingInv(false);
     }
   };
 
-  // If case is created, render SCREEN C: Evidence Manifest
+  // SCREEN C: Evidence Manifest & Chain of Custody Validation
   if (createdCase) {
     return (
       <div className="p-8 max-w-5xl mx-auto space-y-6 animate-in fade-in duration-200">
         <div className="flex items-center justify-between border-b border-cyber-border pb-4">
           <div>
             <span className="text-[10px] font-mono uppercase tracking-wider text-emerald-400 font-bold px-2 py-0.5 rounded bg-emerald-950 border border-emerald-800">
-              Evidence Manifest Verified
+              Evidence Ingested & Hashed
             </span>
             <h1 className="text-xl font-bold text-cyber-text mt-1">
               {createdCase.name}
             </h1>
             <p className="text-xs text-cyber-muted font-mono">
-              UUID: {createdCase.id} &bull; Mode: {mode.toUpperCase()}
+              Case UUID: {createdCase.id} &bull; Mode: {mode.toUpperCase()}
             </p>
           </div>
 
           <button
             onClick={handleStartInvestigation}
             disabled={isStartingInv}
-            className="px-5 py-2.5 rounded-lg bg-sky-500 hover:bg-sky-400 text-black font-bold text-xs flex items-center gap-2 shadow-lg transition-all cursor-pointer disabled:opacity-50"
+            className="px-6 py-2.5 rounded-lg bg-sky-500 hover:bg-sky-400 text-black font-bold text-xs flex items-center gap-2 shadow-lg shadow-sky-950/50 transition-all cursor-pointer disabled:opacity-50"
           >
             <Play className="w-4 h-4 fill-black" />
-            <span>{isStartingInv ? "Starting Agent..." : "Start Investigation"}</span>
+            <span>{isStartingInv ? "Starting Investigation..." : "Launch Autonomous Investigation"}</span>
           </button>
         </div>
 
@@ -148,16 +142,16 @@ export default function CreateInvestigationPage() {
         <div className="space-y-3">
           <div className="flex items-center justify-between">
             <h2 className="text-sm font-semibold text-cyber-text">
-              Ingested Forensic Artifacts ({artifactsManifest.length})
+              Ingested Forensic Manifest ({artifactsManifest.length} source file{artifactsManifest.length === 1 ? "" : "s"})
             </h2>
             <span className="text-xs font-mono text-emerald-400 flex items-center gap-1">
-              <ShieldCheck className="w-4 h-4" /> Cryptographic SHA-256 Validated
+              <ShieldCheck className="w-4 h-4" /> Cryptographic SHA-256 Validated &amp; Preserved Read-Only
             </span>
           </div>
 
           {artifactsManifest.length === 0 ? (
             <div className="p-8 rounded-lg bg-cyber-card border border-cyber-border text-center text-xs text-cyber-dim">
-              No artifact files were attached. Investigation will proceed with system baseline telemetry.
+              No physical artifact files attached. Investigation will query baseline telemetry.
             </div>
           ) : (
             <div className="rounded-lg border border-cyber-border bg-cyber-card overflow-hidden">
@@ -168,7 +162,7 @@ export default function CreateInvestigationPage() {
                     <th className="p-3">Type</th>
                     <th className="p-3">Size</th>
                     <th className="p-3">SHA-256 Digest</th>
-                    <th className="p-3">Parser</th>
+                    <th className="p-3">Parser Engine</th>
                     <th className="p-3">Records</th>
                     <th className="p-3 pr-4">Status</th>
                   </tr>
@@ -180,7 +174,7 @@ export default function CreateInvestigationPage() {
                         {art.original_filename}
                       </td>
                       <td className="p-3 text-cyber-dim uppercase">{art.artifact_type}</td>
-                      <td className="p-3 text-cyber-dim">{art.file_size} B</td>
+                      <td className="p-3 text-cyber-dim">{art.file_size.toLocaleString()} B</td>
                       <td className="p-3 text-emerald-400 text-[11px] font-mono">
                         {art.sha256.slice(0, 16)}...{art.sha256.slice(-8)}
                       </td>
@@ -202,28 +196,40 @@ export default function CreateInvestigationPage() {
     );
   }
 
-  // SCREEN B: Create Investigation Form
+  // SCREEN B: Case Intake & File Upload Form
   return (
     <div className="p-8 max-w-4xl mx-auto space-y-6 animate-in fade-in duration-200">
-      <div className="flex items-center justify-between border-b border-cyber-border pb-4">
-        <div>
-          <h1 className="text-xl font-bold text-cyber-text">
-            Create Forensic Investigation
-          </h1>
-          <p className="text-xs text-cyber-muted font-mono">
-            Define incident objective and ingest endpoint evidence
-          </p>
+      <div className="border-b border-cyber-border pb-4">
+        <h1 className="text-xl font-bold text-cyber-text">
+          Forensic Case Intake &amp; Evidence Ingestion
+        </h1>
+        <p className="text-xs text-cyber-muted font-mono mt-0.5">
+          Establish case parameters, ingest raw endpoint artifacts, and compute cryptographic chain-of-custody hashes
+        </p>
+      </div>
+
+      {/* Presentation Evidence Download Banner */}
+      <div className="p-4 rounded-lg bg-sky-950/30 border border-sky-800/80 flex items-start justify-between gap-4">
+        <div className="flex items-start gap-3">
+          <Info className="w-5 h-5 text-sky-400 mt-0.5 shrink-0" />
+          <div className="text-xs">
+            <span className="font-bold text-sky-300 block mb-0.5">
+              Demonstration Evidence Package Available
+            </span>
+            <p className="text-cyber-muted leading-relaxed">
+              To demonstrate real-time evidence ingestion to judges, download our prepared incident triage archive (ZIP containing Windows Security 4688 logs, Sysmon file &amp; network records, and PowerShell 4104 script block telemetry), then drag and drop it into the upload box below.
+            </p>
+          </div>
         </div>
 
-        <button
-          type="button"
-          onClick={handleLoadDemo}
-          disabled={isSubmitting}
-          className="px-4 py-2 rounded-lg bg-cyber-surface hover:bg-cyber-panel border border-sky-600/60 text-sky-300 font-semibold text-xs flex items-center gap-1.5 transition-colors cursor-pointer"
+        <a
+          href={getSampleEvidenceDownloadUrl()}
+          download="incident_triage_bundle.zip"
+          className="px-4 py-2 rounded-md bg-sky-500 hover:bg-sky-400 text-black font-bold text-xs flex items-center gap-2 shrink-0 transition-colors cursor-pointer"
         >
-          <Play className="w-3.5 h-3.5 fill-sky-300" />
-          <span>Load Demo Case (Quick Launch)</span>
-        </button>
+          <Download className="w-4 h-4" />
+          <span>Download Package (.zip)</span>
+        </a>
       </div>
 
       {errorMsg && (
@@ -237,12 +243,12 @@ export default function CreateInvestigationPage() {
         {/* Case Name */}
         <div>
           <label className="block text-xs font-semibold text-cyber-text uppercase tracking-wider mb-1.5">
-            Case Name *
+            Case Title &amp; Incident Identifier *
           </label>
           <input
             type="text"
             required
-            placeholder="e.g. Incident 2026-1024: Unauthorized PowerShell Execution"
+            placeholder="e.g. INC-2026-9402: Suspicious Administrative Execution & Payload Staging"
             value={caseName}
             onChange={(e) => setCaseName(e.target.value)}
             className="w-full bg-cyber-card border border-cyber-border rounded-lg px-4 py-2.5 text-xs text-cyber-text focus:outline-none focus:border-sky-500 font-mono"
@@ -252,7 +258,7 @@ export default function CreateInvestigationPage() {
         {/* Objective */}
         <div>
           <label className="block text-xs font-semibold text-cyber-text uppercase tracking-wider mb-1.5">
-            Investigation Objective *
+            Investigation Objective &amp; Scope *
           </label>
           <textarea
             required
@@ -262,14 +268,14 @@ export default function CreateInvestigationPage() {
             className="w-full bg-cyber-card border border-cyber-border rounded-lg p-3 text-xs text-cyber-text focus:outline-none focus:border-sky-500 font-mono leading-relaxed"
           />
           <span className="text-[11px] text-cyber-dim block mt-1">
-            The adaptive agent uses this stated goal to formulate hypotheses and determine investigation bounds.
+            The autonomous investigator uses this objective to focus evidence querying, formulate hypotheses, and identify evidentiary gaps.
           </span>
         </div>
 
         {/* Investigation Mode */}
         <div>
           <label className="block text-xs font-semibold text-cyber-text uppercase tracking-wider mb-1.5">
-            Agent Mode
+            Investigation Reasoning Engine
           </label>
           <div className="grid grid-cols-2 gap-3">
             <div
@@ -282,14 +288,14 @@ export default function CreateInvestigationPage() {
             >
               <div className="flex items-center justify-between mb-1">
                 <span className="font-bold text-xs text-cyber-text">
-                  Deterministic Demo Mode
+                  Local Deterministic Engine
                 </span>
                 <span className="text-[10px] font-mono px-1.5 py-0.2 rounded bg-emerald-950 text-emerald-400 border border-emerald-800">
-                  NO API KEY NEEDED
+                  100% PRIVATE &bull; NO API KEY
                 </span>
               </div>
               <p className="text-[11px] text-cyber-dim leading-normal">
-                Real bounded control loop, rule-based adaptive planning, actual tool execution, and deterministic verifier.
+                Analyzes live evidence using rule-based threat heuristics, parent-child process tree builders, and the independent verifier.
               </p>
             </div>
 
@@ -303,14 +309,14 @@ export default function CreateInvestigationPage() {
             >
               <div className="flex items-center justify-between mb-1">
                 <span className="font-bold text-xs text-cyber-text">
-                  Adaptive AI Mode
+                  Adaptive AI Mode (LLM)
                 </span>
                 <span className="text-[10px] font-mono px-1.5 py-0.2 rounded bg-sky-950 text-sky-400 border border-sky-800">
-                  GEMINI / LLM
+                  GEMINI / OPENAI
                 </span>
               </div>
               <p className="text-[11px] text-cyber-dim leading-normal">
-                Uses configured LLM with structured tool calling; falls back to deterministic planning automatically.
+                Uses configured LLM with structured tool calling for hypothesis generation; falls back to deterministic planning automatically.
               </p>
             </div>
           </div>
@@ -319,7 +325,7 @@ export default function CreateInvestigationPage() {
         {/* Evidence Upload Zone */}
         <div>
           <label className="block text-xs font-semibold text-cyber-text uppercase tracking-wider mb-1.5">
-            Forensic Evidence Upload
+            Forensic Evidence Upload (Drag &amp; Drop)
           </label>
           <div
             onDragOver={(e) => e.preventDefault()}
@@ -336,10 +342,10 @@ export default function CreateInvestigationPage() {
             <label htmlFor="file-upload" className="cursor-pointer block">
               <Upload className="w-8 h-8 text-sky-400 mx-auto mb-2" />
               <span className="text-xs font-semibold text-cyber-text block">
-                Drag and drop forensic files here, or browse
+                Drag and drop forensic log files or archives here, or browse
               </span>
               <span className="text-[11px] text-cyber-dim font-mono block mt-1">
-                Supports Windows EVTX, Sysmon JSON/JSONL, Command CSV, and ZIP evidence packages (Max 50MB)
+                Supports Windows EVTX (.evtx), Sysmon/Security JSON/JSONL, Command CSV, and ZIP triage bundles (Up to 50MB)
               </span>
             </label>
           </div>
@@ -348,7 +354,7 @@ export default function CreateInvestigationPage() {
           {files.length > 0 && (
             <div className="mt-3 space-y-2">
               <span className="text-xs font-mono text-cyber-dim">
-                Attached Files ({files.length}):
+                Attached Artifacts ({files.length}):
               </span>
               {files.map((file, idx) => (
                 <div
@@ -380,9 +386,9 @@ export default function CreateInvestigationPage() {
           <button
             type="submit"
             disabled={isSubmitting}
-            className="px-6 py-2.5 rounded-lg bg-sky-500 hover:bg-sky-400 text-black font-bold text-xs flex items-center gap-2 shadow-lg transition-all cursor-pointer disabled:opacity-50"
+            className="px-6 py-2.5 rounded-lg bg-sky-500 hover:bg-sky-400 text-black font-bold text-xs flex items-center gap-2 shadow-lg shadow-sky-950/50 transition-all cursor-pointer disabled:opacity-50"
           >
-            <span>{isSubmitting ? "Processing Evidence..." : "Create Case & Validate Manifest"}</span>
+            <span>{isSubmitting ? "Ingesting & Hashing Evidence..." : "Ingest Evidence & Validate Manifest"}</span>
             <ArrowRight className="w-4 h-4" />
           </button>
         </div>
