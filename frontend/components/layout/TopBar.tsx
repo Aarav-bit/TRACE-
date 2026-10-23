@@ -4,10 +4,9 @@ import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import {
   FolderOpen,
-  Download,
   Plus,
 } from "lucide-react";
-import { fetchCases, getSampleEvidenceDownloadUrl } from "@/lib/api";
+import { fetchCases } from "@/lib/api";
 import { Case } from "@/lib/types";
 
 interface TopBarProps {
@@ -77,17 +76,6 @@ export const TopBar: React.FC<TopBarProps> = ({
             </select>
           </div>
         )}
-
-        {/* Download Sample Evidence package */}
-        <a
-          href={getSampleEvidenceDownloadUrl()}
-          download="incident_triage_bundle.zip"
-          title="Download presentation incident triage bundle (.zip)"
-          className="flex items-center gap-1.5 px-3 py-1.5 rounded-md bg-cyber-surface hover:bg-cyber-panel border border-cyber-border text-xs text-cyber-text transition-colors"
-        >
-          <Download className="w-3.5 h-3.5 text-sky-400" />
-          <span className="hidden sm:inline font-mono text-[11px]">Evidence (.zip)</span>
-        </a>
 
         {/* New Investigation Button */}
         <Link

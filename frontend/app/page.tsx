@@ -7,20 +7,17 @@ import {
   FileCheck2,
   HardDrive,
   CheckCircle2,
-  Download,
   Plus,
-  Play,
   ArrowRight,
   ShieldCheck,
 } from "lucide-react";
-import { fetchCases, seedDemoCase, getSampleEvidenceDownloadUrl } from "@/lib/api";
+import { fetchCases } from "@/lib/api";
 import { Case } from "@/lib/types";
 import { StatusBadge } from "@/components/common/StatusBadge";
 
 export default function OverviewDashboard() {
   const [cases, setCases] = useState<Case[]>([]);
   const [isLoading, setIsLoading] = useState(true);
-  const [isLaunchingBenchmark, setIsLaunchingBenchmark] = useState(false);
 
   useEffect(() => {
     loadCases();
@@ -69,15 +66,6 @@ export default function OverviewDashboard() {
             <Plus className="w-4 h-4" />
             <span>Start New Case</span>
           </Link>
-
-          <a
-            href={getSampleEvidenceDownloadUrl()}
-            download="incident_triage_bundle.zip"
-            className="px-4 py-2 rounded-lg bg-cyber-surface hover:bg-cyber-panel border border-cyber-border text-cyber-text font-medium text-xs flex items-center gap-2 transition-colors cursor-pointer"
-          >
-            <Download className="w-4 h-4 text-sky-400" />
-            <span>Download Presentation Evidence (.zip)</span>
-          </a>
         </div>
       </div>
 

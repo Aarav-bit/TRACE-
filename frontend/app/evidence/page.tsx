@@ -46,7 +46,7 @@ function EvidenceExplorerContent() {
       .then((data) => {
         setCases(data);
         if (!selectedCaseId && data.length > 0) {
-          const defaultCase = data.find((c) => c.is_demo) || data[0];
+          const defaultCase = data[0];
           setSelectedCaseId(defaultCase.id);
         }
       })
@@ -98,7 +98,7 @@ function EvidenceExplorerContent() {
               >
                 {cases.map((c) => (
                   <option key={c.id} value={c.id} className="bg-cyber-surface text-cyber-text">
-                    {c.name} {c.is_demo ? "(Demo)" : ""}
+                    {c.name}
                   </option>
                 ))}
               </select>

@@ -20,7 +20,6 @@ import {
   createCase,
   uploadArtifacts,
   startInvestigation,
-  getSampleEvidenceDownloadUrl,
 } from "@/lib/api";
 import { Artifact, Case } from "@/lib/types";
 
@@ -206,32 +205,6 @@ export default function CreateInvestigationPage() {
         <p className="text-xs text-cyber-muted font-mono mt-0.5">
           Establish case parameters, ingest raw endpoint artifacts, and compute cryptographic chain-of-custody hashes
         </p>
-      </div>
-
-      {/* Presentation Evidence Download Banner */}
-      <div className="p-3.5 rounded-lg bg-cyber-card border border-cyber-border flex items-center justify-between gap-4">
-        <div className="flex items-center gap-3">
-          <div className="w-8 h-8 rounded-md bg-sky-950/50 border border-sky-800/60 flex items-center justify-center shrink-0">
-            <Download className="w-4 h-4 text-sky-400" />
-          </div>
-          <div>
-            <span className="font-semibold text-xs text-cyber-text block">
-              Sample Presentation Evidence Package
-            </span>
-            <p className="text-[11px] text-cyber-dim leading-normal">
-              Pre-packaged incident triage archive containing real Windows Security, Sysmon, and PowerShell telemetry.
-            </p>
-          </div>
-        </div>
-
-        <a
-          href={getSampleEvidenceDownloadUrl()}
-          download="incident_triage_bundle.zip"
-          className="px-3.5 py-1.5 rounded-md bg-sky-500 hover:bg-sky-400 text-black font-semibold text-xs flex items-center gap-2 shrink-0 transition-colors cursor-pointer"
-        >
-          <Download className="w-3.5 h-3.5" />
-          <span>Download .zip</span>
-        </a>
       </div>
 
       {errorMsg && (
