@@ -390,7 +390,7 @@ const sizeTarget = (gl: WebGL2RenderingContext, target: any, width: number, heig
 };
 
 const buildAtlas = (gl: WebGL2RenderingContext, characters: string, fontFamily: string) => {
-  const list = [...new Set([...characters].filter(char => char !== '\n' && char !== '\r'))];
+  const list = Array.from(new Set(Array.from(characters).filter(char => char !== '\n' && char !== '\r')));
   if (!list.length) list.push(' ');
   const font = `300 ${Math.round(ATLAS_CELL_H * FONT_SCALE)}px ${fontFamily}`;
   const columns = Math.min(ATLAS_COLUMNS, list.length);

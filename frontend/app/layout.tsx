@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { TopBar } from "@/components/layout/TopBar";
+import { TopNavbar } from "@/components/layout/TopNavbar";
 import GradientASCII from "@/components/common/GradientASCII";
 
 export const metadata: Metadata = {
@@ -34,7 +34,7 @@ export default function RootLayout({
         </div>
 
         {/* Top Floating Pill Navigation Bar (Matching Screenshot) */}
-        <TopBar />
+        <TopNavbar />
 
         {/* Main Content Viewport */}
         <main className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 relative z-10">

@@ -10,6 +10,11 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        accent: "#6366f1",
+        "accent-hover": "#4f46e5",
+        navy: "#0f172a",
+        "ink-secondary": "#475569",
+        "ink-muted": "#94a3b8",
         cyber: {
           bg: "#0B0F17",           // Soft deep graphite
           card: "#111726",         // Clean slate container
