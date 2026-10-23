@@ -19,13 +19,13 @@ export const FindingsBrowser: React.FC<FindingsBrowserProps> = ({ findings, onSe
   return (
     <div className="flex flex-col h-full bg-cyber-bg p-6 space-y-4 overflow-y-auto">
       {/* Header & Filter Tabs */}
-      <div className="flex items-center justify-between pb-3 border-b border-cyber-border">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-3 border-b border-cyber-border gap-3">
         <div>
           <h2 className="text-sm font-bold text-cyber-text">
             Independent Deterministic Findings
           </h2>
           <p className="text-xs text-cyber-dim font-mono">
-            Evaluated by the verification subsystem decoupled from LLM confidence
+            Every claim is validated by the verifier against primary evidence record UUIDs
           </p>
         </div>
 
@@ -34,7 +34,7 @@ export const FindingsBrowser: React.FC<FindingsBrowserProps> = ({ findings, onSe
             <button
               key={status}
               onClick={() => setFilter(status)}
-              className={`px-3 py-1 rounded capitalize transition-colors ${
+              className={`px-3 py-1 rounded capitalize transition-colors cursor-pointer ${
                 filter === status
                   ? "bg-sky-500 text-black font-bold"
                   : "text-cyber-muted hover:text-cyber-text"
