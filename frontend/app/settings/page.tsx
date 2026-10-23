@@ -15,6 +15,7 @@ import {
   AlertCircle,
   CheckCircle2,
   Lock,
+  Trash2,
 } from "lucide-react";
 import {
   fetchSettings,
@@ -23,6 +24,7 @@ import {
   purgeAllCases,
   SettingsData,
 } from "@/lib/api";
+import { SpotlightCard } from "@/components/reactbits/SpotlightCard";
 
 export default function SettingsPage() {
   const [llmProvider, setLlmProvider] = useState<string>("nvidia");
@@ -75,7 +77,7 @@ export default function SettingsPage() {
         tool_timeout_seconds: toolTimeout,
       });
       setInitialData(updated);
-      setNvidiaKey(""); // Clear secret input after saving
+      setNvidiaKey("");
       setIsSaved(true);
       setTimeout(() => setIsSaved(false), 3000);
     } catch (e) {
@@ -128,296 +130,285 @@ export default function SettingsPage() {
   };
 
   return (
-    <div className="p-8 max-w-4xl mx-auto space-y-6 animate-in fade-in duration-200">
+    <div className="max-w-5xl mx-auto space-y-6 animate-in fade-in duration-300">
       {/* Header */}
-      <div className="border-b border-cyber-border pb-4">
-        <div className="flex items-center gap-2.5">
-          <Settings className="w-5 h-5 text-sky-400" />
-          <h1 className="text-xl font-bold text-cyber-text tracking-wide">
-            Investigation Engine & Model Settings
-          </h1>
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+        <div>
+          <div className="flex items-center gap-2">
+            <h1 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
+              Investigation Settings
+            </h1>
+            <span className="px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-lime-100 text-lime-800 border border-lime-200">
+              AI &amp; Limits
+            </span>
+          </div>
+          <p className="text-xs sm:text-sm text-slate-500 mt-1">
+            Configure adaptive reasoning models, NVIDIA Nemotron 120B NIM integration, and telemetry limits.
+          </p>
         </div>
-        <p className="text-xs text-cyber-muted font-mono mt-1">
-          Configure adaptive reasoning models, NVIDIA Nemotron 120B NIM integration, execution bounds, and telemetry thresholds.
-        </p>
+
+        {isSaved && (
+          <div className="px-4 py-2 rounded-full bg-emerald-50 text-emerald-800 border border-emerald-200 text-xs font-semibold flex items-center gap-1.5 shadow-sm">
+            <Check className="w-4 h-4 text-emerald-600" />
+            <span>Settings Saved Successfully</span>
+          </div>
+        )}
       </div>
 
       <form onSubmit={handleSave} className="space-y-6">
-        {/* Agent Operational Mode */}
-        <div className="p-5 rounded-lg bg-cyber-card border border-cyber-border space-y-4">
+        {/* Card 1: Primary Intelligence Mode */}
+        <SpotlightCard className="p-6 sm:p-8 space-y-4">
           <div className="flex items-center justify-between">
-            <div className="flex items-center gap-2 text-sm font-bold text-cyber-text">
-              <Cpu className="w-4 h-4 text-sky-400" />
-              <span>Primary Investigation Intelligence Mode</span>
-            </div>
-            <span className="text-[10px] font-mono text-cyber-dim uppercase tracking-wider">
+            <h2 className="text-sm font-bold text-slate-900 uppercase tracking-wider">
+              1. Reasoning Intelligence Mode
+            </h2>
+            <span className="text-[11px] font-mono font-medium text-slate-400">
               Autonomous Adaptive Agent
             </span>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-3.5">
-            {/* NVIDIA Nemotron Option */}
-            <label
-              className={`p-4 rounded-lg border cursor-pointer transition-all ${
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {/* NVIDIA Option */}
+            <div
+              onClick={() => setLlmProvider("nvidia")}
+              className={`p-5 rounded-2xl border-2 transition-all cursor-pointer relative flex flex-col justify-between ${
                 llmProvider === "nvidia" || llmProvider === "nemotron"
-                  ? "bg-emerald-950/20 border-emerald-500/80 shadow-[0_0_15px_rgba(16,185,129,0.15)]"
-                  : "bg-cyber-surface/60 border-cyber-border hover:border-cyber-border/80 text-cyber-muted"
+                  ? "border-lime-500 bg-lime-50/40 shadow-md"
+                  : "border-slate-200 bg-white hover:border-slate-300"
               }`}
             >
-              <div className="flex items-start justify-between gap-2 mb-2">
-                <div className="flex items-center gap-2">
-                  <input
-                    type="radio"
-                    name="provider"
-                    value="nvidia"
-                    checked={llmProvider === "nvidia" || llmProvider === "nemotron"}
-                    onChange={() => setLlmProvider("nvidia")}
-                    className="accent-emerald-400"
-                  />
-                  <span className="font-bold text-xs text-cyber-text">
-                    NVIDIA Nemotron 3.5 Super VL
+              <div>
+                <div className="flex items-center justify-between mb-2">
+                  <div className="p-2 rounded-xl bg-lime-100 text-lime-800">
+                    <Sparkles className="w-4 h-4 text-lime-700" />
+                  </div>
+                  <span className="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-lime-200 text-lime-900 font-mono">
+                    120B REASONING
                   </span>
                 </div>
-                <span className="text-[9px] font-mono font-bold px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
-                  120B REASONING
-                </span>
+                <h3 className="text-sm font-bold text-slate-900">
+                  NVIDIA Nemotron 3.5 Super VL
+                </h3>
+                <p className="text-[11px] text-slate-500 mt-1 leading-relaxed">
+                  Vision-language reasoning model on NVIDIA NIM API. Performs structured multi-step forensic hypothesis testing, parent-child deductions, and MITRE threat mapping.
+                </p>
               </div>
-              <p className="text-[11px] text-cyber-dim leading-relaxed pl-5">
-                Flagship vision-language reasoning model hosted on NVIDIA NIM. Performs structured multi-step forensic hypothesis testing, parent-child process deductions, and MITRE threat mapping.
-              </p>
-            </label>
 
-            {/* Deterministic / Local Engine Option */}
-            <label
-              className={`p-4 rounded-lg border cursor-pointer transition-all ${
+              <div className="mt-4 pt-3 border-t border-slate-100/80 flex items-center justify-between text-[10px] text-slate-400 font-mono">
+                <span>nvidia/nemotron-3.5-super-vl-120b</span>
+                {(llmProvider === "nvidia" || llmProvider === "nemotron") && (
+                  <CheckCircle2 className="w-4 h-4 text-lime-600" />
+                )}
+              </div>
+            </div>
+
+            {/* Deterministic Option */}
+            <div
+              onClick={() => setLlmProvider("deterministic")}
+              className={`p-5 rounded-2xl border-2 transition-all cursor-pointer relative flex flex-col justify-between ${
                 llmProvider === "deterministic"
-                  ? "bg-sky-950/20 border-sky-500/80 shadow-[0_0_15px_rgba(56,189,248,0.15)]"
-                  : "bg-cyber-surface/60 border-cyber-border hover:border-cyber-border/80 text-cyber-muted"
+                  ? "border-sky-500 bg-sky-50/40 shadow-md"
+                  : "border-slate-200 bg-white hover:border-slate-300"
               }`}
             >
-              <div className="flex items-start justify-between gap-2 mb-2">
-                <div className="flex items-center gap-2">
-                  <input
-                    type="radio"
-                    name="provider"
-                    value="deterministic"
-                    checked={llmProvider === "deterministic"}
-                    onChange={() => setLlmProvider("deterministic")}
-                    className="accent-sky-400"
-                  />
-                  <span className="font-bold text-xs text-cyber-text">
-                    Autonomous Local DFIR Engine
+              <div>
+                <div className="flex items-center justify-between mb-2">
+                  <div className="p-2 rounded-xl bg-sky-100 text-sky-800">
+                    <Cpu className="w-4 h-4 text-sky-700" />
+                  </div>
+                  <span className="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-sky-100 text-sky-800 font-mono">
+                    OFFLINE / LOCAL
                   </span>
                 </div>
-                <span className="text-[9px] font-mono font-bold px-2 py-0.5 rounded bg-sky-500/20 text-sky-300 border border-sky-500/30">
-                  OFFLINE / PRIVATE
-                </span>
+                <h3 className="text-sm font-bold text-slate-900">
+                  Autonomous Local DFIR Engine
+                </h3>
+                <p className="text-[11px] text-slate-500 mt-1 leading-relaxed">
+                  Zero external dependencies. Dynamic rule-based heuristics, regex LOLBin anomaly detection, and deterministic claim verifications inside local process memory.
+                </p>
               </div>
-              <p className="text-[11px] text-cyber-dim leading-relaxed pl-5">
-                Zero external dependencies. Dynamic rule-based threat heuristics, regex LOLBin anomaly detection, and deterministic claim verifications directly inside local process memory.
-              </p>
-            </label>
-          </div>
-        </div>
 
-        {/* NVIDIA Configuration Panel (Visible when NVIDIA selected or configured) */}
+              <div className="mt-4 pt-3 border-t border-slate-100/80 flex items-center justify-between text-[10px] text-slate-400 font-mono">
+                <span>Zero Cloud Dependency</span>
+                {llmProvider === "deterministic" && (
+                  <CheckCircle2 className="w-4 h-4 text-sky-600" />
+                )}
+              </div>
+            </div>
+          </div>
+        </SpotlightCard>
+
+        {/* Card 2: NVIDIA NIM API Configuration */}
         {(llmProvider === "nvidia" || llmProvider === "nemotron") && (
-          <div className="p-5 rounded-lg bg-cyber-card border border-emerald-900/40 space-y-4">
-            <div className="flex items-center justify-between border-b border-cyber-border/60 pb-3">
+          <SpotlightCard className="p-6 sm:p-8 space-y-4">
+            <div className="flex items-center justify-between border-b border-slate-100 pb-3">
               <div className="flex items-center gap-2">
-                <Sparkles className="w-4 h-4 text-emerald-400" />
-                <span className="text-xs font-bold text-cyber-text tracking-wide uppercase">
-                  NVIDIA NIM API Configuration
-                </span>
+                <Sparkles className="w-4 h-4 text-lime-600" />
+                <h2 className="text-sm font-bold text-slate-900 uppercase tracking-wider">
+                  2. NVIDIA NIM API Credentials
+                </h2>
               </div>
               <a
                 href="https://build.nvidia.com/nvidia/nemotron-3.5-super-vl-120b-a12b"
                 target="_blank"
                 rel="noreferrer"
-                className="text-[11px] text-emerald-400 hover:text-emerald-300 flex items-center gap-1 font-mono transition-colors"
+                className="text-xs text-lime-700 hover:text-lime-800 flex items-center gap-1 font-semibold transition-colors"
               >
                 <span>Get API Key at build.nvidia.com</span>
-                <ExternalLink className="w-3 h-3" />
+                <ExternalLink className="w-3.5 h-3.5" />
               </a>
             </div>
 
-            {/* Key Status Banner */}
-            <div className="flex items-center justify-between p-3 rounded bg-cyber-surface border border-cyber-border text-xs">
-              <div className="flex items-center gap-2">
-                <Lock className="w-4 h-4 text-cyber-muted" />
+            {/* Key Status Pill */}
+            <div className="flex items-center justify-between p-3.5 rounded-2xl bg-slate-50 border border-slate-200 text-xs">
+              <div className="flex items-center gap-2.5">
+                <Lock className="w-4 h-4 text-slate-400" />
                 <div>
-                  <div className="font-mono text-cyber-text text-xs flex items-center gap-2">
-                    <span>Key Status:</span>
-                    {initialData?.nvidia_api_key_configured ? (
-                      <span className="text-emerald-400 font-bold flex items-center gap-1">
-                        <CheckCircle2 className="w-3.5 h-3.5" />
-                        Configured ({initialData.nvidia_api_key_masked})
-                      </span>
-                    ) : (
-                      <span className="text-amber-400 font-semibold">
-                        Not configured (Enter key below or falls back to local engine)
-                      </span>
-                    )}
-                  </div>
+                  <span className="font-semibold text-slate-700">Server Configuration: </span>
+                  <span className="font-mono text-slate-900 font-bold">
+                    {initialData?.nvidia_api_key_configured ? "Configured (Active on Server)" : "Not Set (Fallback to Local DFIR)"}
+                  </span>
                 </div>
               </div>
-              <button
-                type="button"
-                onClick={handleTestNvidia}
-                disabled={isTesting || (!nvidiaKey && !initialData?.nvidia_api_key_configured)}
-                className="px-3 py-1.5 rounded bg-emerald-950/60 hover:bg-emerald-900 border border-emerald-500/40 text-emerald-300 text-xs font-mono font-bold flex items-center gap-1.5 transition-colors disabled:opacity-40 cursor-pointer"
-              >
-                <Activity className={`w-3.5 h-3.5 ${isTesting ? "animate-spin" : ""}`} />
-                <span>{isTesting ? "Pinging NIM..." : "Test Connection"}</span>
-              </button>
+              {initialData?.nvidia_api_key_configured && (
+                <span className="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-emerald-100 text-emerald-800 border border-emerald-200">
+                  Ready
+                </span>
+              )}
             </div>
 
-            {testResult && (
-              <div
-                className={`p-3 rounded border text-xs font-mono flex items-start gap-2 ${
-                  testResult.success
-                    ? "bg-emerald-950/30 border-emerald-500 text-emerald-300"
-                    : "bg-red-950/30 border-red-500 text-red-300"
-                }`}
-              >
-                {testResult.success ? (
-                  <CheckCircle2 className="w-4 h-4 shrink-0 mt-0.5" />
-                ) : (
-                  <AlertCircle className="w-4 h-4 shrink-0 mt-0.5" />
-                )}
-                <div>
-                  <div className="font-bold">
-                    {testResult.success ? "Connection Verified" : "Connection Error"}
-                  </div>
-                  <div className="text-[11px] mt-0.5">
-                    {testResult.success ? testResult.message : testResult.error}
-                  </div>
-                </div>
-              </div>
-            )}
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-1">
+            {/* Inputs */}
+            <div className="space-y-4 pt-1">
               <div>
-                <label className="block text-xs font-mono text-cyber-muted mb-1.5">
-                  NVIDIA API Key (Bearer Token)
+                <label className="block text-xs font-semibold text-slate-700 mb-1.5">
+                  Update NVIDIA API Key (Bearer Token)
                 </label>
-                <div className="relative">
-                  <Key className="w-3.5 h-3.5 absolute left-3 top-3 text-cyber-dim" />
+                <div className="flex gap-2">
                   <input
                     type="password"
-                    placeholder={
-                      initialData?.nvidia_api_key_configured
-                        ? "Enter new key to replace existing"
-                        : "nvapi-..."
-                    }
                     value={nvidiaKey}
                     onChange={(e) => setNvidiaKey(e.target.value)}
-                    className="w-full bg-cyber-surface border border-cyber-border rounded pl-9 pr-3 py-2 text-xs font-mono text-cyber-text placeholder:text-cyber-dim focus:outline-none focus:border-emerald-500"
+                    placeholder="nvapi-..."
+                    className="flex-1 px-4 py-2.5 rounded-2xl bg-slate-50 border border-slate-200 text-slate-900 text-xs focus:bg-white focus:border-slate-400 focus:outline-none transition-all placeholder:text-slate-400 font-mono"
                   />
+                  <button
+                    type="button"
+                    onClick={handleTestNvidia}
+                    disabled={isTesting}
+                    className="px-5 py-2.5 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-800 text-xs font-semibold transition-all border border-slate-200 flex items-center gap-1.5 shadow-sm cursor-pointer disabled:opacity-50"
+                  >
+                    <Activity className={`w-3.5 h-3.5 text-lime-600 ${isTesting ? "animate-spin" : ""}`} />
+                    <span>{isTesting ? "Testing..." : "Test Connection"}</span>
+                  </button>
                 </div>
-                <span className="text-[10px] text-cyber-dim block mt-1">
-                  Stored securely in local environment variable and encrypted process RAM.
-                </span>
               </div>
 
+              {testResult && (
+                <div
+                  className={`p-3.5 rounded-2xl text-xs flex items-center gap-2 ${
+                    testResult.success
+                      ? "bg-emerald-50 text-emerald-800 border border-emerald-200"
+                      : "bg-rose-50 text-rose-800 border border-rose-200"
+                  }`}
+                >
+                  {testResult.success ? (
+                    <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
+                  ) : (
+                    <AlertCircle className="w-4 h-4 text-rose-600 shrink-0" />
+                  )}
+                  <span>{testResult.success ? testResult.message : testResult.error}</span>
+                </div>
+              )}
+
               <div>
-                <label className="block text-xs font-mono text-cyber-muted mb-1.5">
-                  Target NIM Model Identifier
+                <label className="block text-xs font-semibold text-slate-700 mb-1.5">
+                  Model Endpoint Name
                 </label>
                 <input
                   type="text"
                   value={nvidiaModel}
                   onChange={(e) => setNvidiaModel(e.target.value)}
-                  className="w-full bg-cyber-surface border border-cyber-border rounded px-3 py-2 text-xs font-mono text-emerald-400 focus:outline-none focus:border-emerald-500"
+                  className="w-full px-4 py-2.5 rounded-2xl bg-slate-50 border border-slate-200 text-slate-900 text-xs focus:bg-white focus:border-slate-400 focus:outline-none transition-all font-mono"
                 />
-                <span className="text-[10px] text-cyber-dim block mt-1">
-                  Default: <code className="text-emerald-400">nvidia/nemotron-3.5-super-vl-120b-a12b</code>
-                </span>
               </div>
             </div>
-          </div>
+          </SpotlightCard>
         )}
 
-        {/* Safety Limits & Watchdog Timeouts */}
-        <div className="p-5 rounded-lg bg-cyber-card border border-cyber-border space-y-4">
-          <div className="flex items-center gap-2 text-sm font-bold text-cyber-text">
-            <Shield className="w-4 h-4 text-sky-400" />
-            <span>Agent Guardrails & Autonomous Safety Limits</span>
-          </div>
+        {/* Card 3: Execution Bounds & Safety Limits */}
+        <SpotlightCard className="p-6 sm:p-8 space-y-4">
+          <h2 className="text-sm font-bold text-slate-900 uppercase tracking-wider">
+            3. Investigation Safety Bounds
+          </h2>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
-              <label className="block text-xs font-mono text-cyber-muted mb-1">
-                Max Investigation Steps
+              <label className="block text-xs font-semibold text-slate-700 mb-1.5">
+                Maximum Iteration Steps
               </label>
               <input
                 type="number"
                 min={5}
-                max={30}
+                max={50}
                 value={maxSteps}
                 onChange={(e) => setMaxSteps(Number(e.target.value))}
-                className="w-full bg-cyber-surface border border-cyber-border rounded px-3 py-2 text-xs font-mono text-cyber-text focus:outline-none focus:border-sky-500"
+                className="w-full px-4 py-2.5 rounded-2xl bg-slate-50 border border-slate-200 text-slate-900 text-xs focus:bg-white focus:border-slate-400 focus:outline-none transition-all font-mono"
               />
-              <span className="text-[10px] text-cyber-dim block mt-1">
-                Upper bound for agent action loops to prevent runaway planning.
+              <span className="text-[10px] text-slate-400 mt-1 block">
+                Prevents infinite investigative loops. Default: 15.
               </span>
             </div>
 
             <div>
-              <label className="block text-xs font-mono text-cyber-muted mb-1">
-                Tool Execution Timeout (Seconds)
+              <label className="block text-xs font-semibold text-slate-700 mb-1.5">
+                Forensic Tool Timeout (Seconds)
               </label>
               <input
                 type="number"
                 min={5}
-                max={60}
+                max={120}
                 value={toolTimeout}
                 onChange={(e) => setToolTimeout(Number(e.target.value))}
-                className="w-full bg-cyber-surface border border-cyber-border rounded px-3 py-2 text-xs font-mono text-cyber-text focus:outline-none focus:border-sky-500"
+                className="w-full px-4 py-2.5 rounded-2xl bg-slate-50 border border-slate-200 text-slate-900 text-xs focus:bg-white focus:border-slate-400 focus:outline-none transition-all font-mono"
               />
-              <span className="text-[10px] text-cyber-dim block mt-1">
-                Subprocess watchdog deadline before triggering error classification.
+              <span className="text-[10px] text-slate-400 mt-1 block">
+                Maximum execution duration for TSK or Volatility 3 commands.
               </span>
             </div>
           </div>
-        </div>
+        </SpotlightCard>
 
-        {/* Workspace Data Management */}
-        <div className="p-4 rounded-lg bg-cyber-card border border-cyber-border flex items-center justify-between">
-          <div>
-            <span className="text-xs font-semibold text-cyber-text block">
-              Workspace Case Purge
-            </span>
-            <p className="text-xs text-cyber-dim mt-0.5">
-              Permanently purges all cases, evidence artifacts, and investigative findings.
-            </p>
+        {/* Card 4: Database Maintenance */}
+        <SpotlightCard className="p-6 sm:p-8 space-y-4">
+          <div className="flex items-center justify-between">
+            <div>
+              <h2 className="text-sm font-bold text-slate-900 uppercase tracking-wider">
+                Database Management
+              </h2>
+              <p className="text-xs text-slate-500 mt-0.5">
+                Purge all cases, ingested evidence, and findings to reset the workspace to pristine zero state.
+              </p>
+            </div>
+
+            <button
+              type="button"
+              onClick={handlePurgeAll}
+              disabled={isResetting}
+              className="px-4 py-2 rounded-full bg-rose-50 hover:bg-rose-100 text-rose-700 border border-rose-200 text-xs font-semibold flex items-center gap-1.5 transition-all cursor-pointer shadow-sm disabled:opacity-50"
+            >
+              <Trash2 className="w-3.5 h-3.5" />
+              <span>Purge All Records</span>
+            </button>
           </div>
+        </SpotlightCard>
 
-          <button
-            type="button"
-            onClick={handlePurgeAll}
-            disabled={isResetting}
-            className="px-3.5 py-1.5 rounded bg-cyber-surface hover:bg-rose-950/40 border border-cyber-border hover:border-rose-800 text-xs text-cyber-muted hover:text-rose-300 font-mono flex items-center gap-1.5 transition-colors cursor-pointer disabled:opacity-50"
-          >
-            <RotateCcw className={`w-3.5 h-3.5 ${isResetting ? "animate-spin" : ""}`} />
-            <span>Purge All Data</span>
-          </button>
-        </div>
-
-        {/* Save Button */}
-        <div className="flex justify-end gap-3 pt-4 border-t border-cyber-border">
+        {/* Save Bar */}
+        <div className="flex justify-end pt-2">
           <button
             type="submit"
-            className="px-6 py-2.5 rounded-lg bg-sky-500 hover:bg-sky-400 text-black font-bold text-xs flex items-center gap-2 transition-all shadow-sm cursor-pointer"
+            className="px-8 py-3 rounded-full bg-[#111317] hover:bg-black text-white text-xs font-bold shadow-lg hover:scale-105 active:scale-95 transition-all cursor-pointer"
           >
-            {isSaved ? (
-              <>
-                <Check className="w-4 h-4" />
-                <span>Configuration Saved</span>
-              </>
-            ) : (
-              <span>Save Configuration</span>
-            )}
+            Save Configuration Changes
           </button>
         </div>
       </form>

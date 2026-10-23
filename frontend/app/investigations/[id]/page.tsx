@@ -12,6 +12,7 @@ import {
   FileText,
   AlertTriangle,
   RotateCcw,
+  Sparkles,
 } from "lucide-react";
 import {
   fetchInvestigation,
@@ -79,20 +80,16 @@ export default function LiveInvestigationCenter() {
   useEffect(() => {
     if (!investigationId) return;
 
-    // Load initial investigation state from DB
     fetchInvestigation(investigationId)
       .then((inv) => {
         setInvestigation(inv);
         setActions(inv.actions || []);
         setIsPaused(inv.status === "paused");
         if (inv.current_hypothesis) setCurrentHypothesis(inv.current_hypothesis);
-
-        // Load associated evidence data
         refreshCaseData(inv.case_id);
       })
       .catch((err) => console.error("Failed to load investigation:", err));
 
-    // Connect Server-Sent Events (SSE)
     const eventsUrl = getInvestigationEventsUrl(investigationId);
     const es = new EventSource(eventsUrl);
     sseRef.current = es;
@@ -119,7 +116,6 @@ export default function LiveInvestigationCenter() {
           setActions((prev) =>
             prev.map((a) => (a.id === finishedAct.id || a.sequence_number === finishedAct.sequence_number ? { ...a, ...finishedAct } : a))
           );
-          // Refresh findings and graph as new actions complete
           if (investigation?.case_id) {
             refreshCaseData(investigation.case_id);
           }
@@ -180,71 +176,71 @@ export default function LiveInvestigationCenter() {
 
   if (!investigation) {
     return (
-      <div className="flex items-center justify-center h-full text-cyber-muted font-mono text-xs">
-        Loading Investigation Workspace...
+      <div className="flex items-center justify-center h-full text-slate-400 font-mono text-xs">
+        Loading Autonomous Investigation Center...
       </div>
     );
   }
 
   return (
-    <div className="flex flex-col h-full overflow-hidden bg-cyber-bg">
+    <div className="flex flex-col h-full overflow-hidden bg-slate-50/50 rounded-[28px] border border-slate-200/80 shadow-sm">
       {/* Top Workspace Tab Bar */}
-      <div className="h-12 border-b border-cyber-border bg-cyber-card px-6 flex items-center justify-between shrink-0">
-        <div className="flex items-center gap-1 text-xs">
+      <div className="h-14 border-b border-slate-200/80 bg-white px-6 flex items-center justify-between shrink-0">
+        <div className="flex items-center gap-2 overflow-x-auto">
           <button
             onClick={() => setActiveTab("trace")}
-            className={`px-3 py-1.5 rounded-md flex items-center gap-2 transition-colors ${
+            className={`px-3.5 py-1.5 rounded-full text-xs font-semibold flex items-center gap-1.5 transition-all cursor-pointer ${
               activeTab === "trace"
-                ? "bg-cyber-surface text-sky-400 font-semibold"
-                : "text-cyber-muted hover:text-cyber-text"
+                ? "bg-[#111317] text-white shadow-sm"
+                : "bg-slate-100 hover:bg-slate-200 text-slate-600"
             }`}
           >
-            <Activity className="w-3.5 h-3.5" />
+            <Activity className="w-3.5 h-3.5 text-lime-400" />
             <span>Live Trace ({actions.length})</span>
           </button>
 
           <button
             onClick={() => setActiveTab("timeline")}
-            className={`px-3 py-1.5 rounded-md flex items-center gap-2 transition-colors ${
+            className={`px-3.5 py-1.5 rounded-full text-xs font-semibold flex items-center gap-1.5 transition-all cursor-pointer ${
               activeTab === "timeline"
-                ? "bg-cyber-surface text-sky-400 font-semibold"
-                : "text-cyber-muted hover:text-cyber-text"
+                ? "bg-[#111317] text-white shadow-sm"
+                : "bg-slate-100 hover:bg-slate-200 text-slate-600"
             }`}
           >
-            <FileSearch className="w-3.5 h-3.5" />
+            <FileSearch className="w-3.5 h-3.5 text-sky-400" />
             <span>Timeline ({timelineEvents.length})</span>
           </button>
 
           <button
             onClick={() => setActiveTab("process")}
-            className={`px-3 py-1.5 rounded-md flex items-center gap-2 transition-colors ${
+            className={`px-3.5 py-1.5 rounded-full text-xs font-semibold flex items-center gap-1.5 transition-all cursor-pointer ${
               activeTab === "process"
-                ? "bg-cyber-surface text-sky-400 font-semibold"
-                : "text-cyber-muted hover:text-cyber-text"
+                ? "bg-[#111317] text-white shadow-sm"
+                : "bg-slate-100 hover:bg-slate-200 text-slate-600"
             }`}
           >
-            <GitBranch className="w-3.5 h-3.5" />
+            <GitBranch className="w-3.5 h-3.5 text-purple-400" />
             <span>Process Tree</span>
           </button>
 
           <button
             onClick={() => setActiveTab("graph")}
-            className={`px-3 py-1.5 rounded-md flex items-center gap-2 transition-colors ${
+            className={`px-3.5 py-1.5 rounded-full text-xs font-semibold flex items-center gap-1.5 transition-all cursor-pointer ${
               activeTab === "graph"
-                ? "bg-cyber-surface text-sky-400 font-semibold"
-                : "text-cyber-muted hover:text-cyber-text"
+                ? "bg-[#111317] text-white shadow-sm"
+                : "bg-slate-100 hover:bg-slate-200 text-slate-600"
             }`}
           >
-            <Network className="w-3.5 h-3.5" />
+            <Network className="w-3.5 h-3.5 text-amber-400" />
             <span>Evidence Graph</span>
           </button>
 
           <button
             onClick={() => setActiveTab("findings")}
-            className={`px-3 py-1.5 rounded-md flex items-center gap-2 transition-colors ${
+            className={`px-3.5 py-1.5 rounded-full text-xs font-semibold flex items-center gap-1.5 transition-all cursor-pointer ${
               activeTab === "findings"
-                ? "bg-cyber-surface text-emerald-400 font-semibold"
-                : "text-cyber-muted hover:text-cyber-text"
+                ? "bg-[#111317] text-white shadow-sm"
+                : "bg-slate-100 hover:bg-slate-200 text-slate-600"
             }`}
           >
             <ShieldCheck className="w-3.5 h-3.5 text-emerald-400" />
@@ -257,10 +253,10 @@ export default function LiveInvestigationCenter() {
           href={getReportHtmlUrl(investigation.case_id)}
           target="_blank"
           rel="noopener noreferrer"
-          className="px-3 py-1.5 rounded-md bg-cyber-surface hover:bg-cyber-panel border border-cyber-border text-xs text-cyber-text font-medium flex items-center gap-1.5 transition-colors"
+          className="px-4 py-1.5 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-semibold flex items-center gap-1.5 transition-colors border border-slate-200 shadow-sm"
         >
-          <FileText className="w-3.5 h-3.5 text-sky-400" />
-          <span>Export Report</span>
+          <FileText className="w-3.5 h-3.5 text-slate-600" />
+          <span>Export Forensic Report</span>
         </a>
       </div>
 
@@ -281,7 +277,7 @@ export default function LiveInvestigationCenter() {
         </div>
 
         {/* Center Panel: Active Tab View (6 cols) */}
-        <div className="lg:col-span-6 h-full overflow-hidden border-r border-cyber-border">
+        <div className="lg:col-span-6 h-full overflow-hidden border-r border-slate-200/80 bg-white">
           {activeTab === "trace" && (
             <LiveTrace
               actions={actions}
@@ -305,14 +301,14 @@ export default function LiveInvestigationCenter() {
           )}
 
           {activeTab === "graph" && (
-            <EvidenceGraph
-              graphData={evidenceGraphData}
-              onSelectNode={(node) => {
-                if (node?.metadata?.evidence_id) {
-                  handleSelectEvidenceId(node.metadata.evidence_id);
-                }
-              }}
-            />
+            <div className="p-4 sm:p-6 h-full">
+              <EvidenceGraph
+                graphData={evidenceGraphData}
+                onSelectNode={(node) => {
+                  if (node.id) handleSelectEvidenceId(node.id);
+                }}
+              />
+            </div>
           )}
 
           {activeTab === "findings" && (
@@ -323,7 +319,7 @@ export default function LiveInvestigationCenter() {
           )}
         </div>
 
-        {/* Right Panel: Verified Findings & Entities (3 cols) */}
+        {/* Right Panel: Verified Findings Summary (3 cols) */}
         <div className="hidden lg:block lg:col-span-3 h-full overflow-hidden">
           <FindingsSummary
             findings={findings}
@@ -332,19 +328,23 @@ export default function LiveInvestigationCenter() {
         </div>
       </div>
 
-      {/* Slide-over Evidence Drawer */}
-      <EvidenceDrawer
-        event={selectedEvent}
-        onClose={() => setSelectedEvent(null)}
-      />
+      {/* Evidence Drawer Overlay */}
+      {selectedEvent && (
+        <EvidenceDrawer
+          event={selectedEvent}
+          onClose={() => setSelectedEvent(null)}
+        />
+      )}
 
-      {/* Demo Failure Injection Modal */}
-      <FailureInjectionModal
-        investigationId={investigation.id}
-        isOpen={isFailureModalOpen}
-        onClose={() => setIsFailureModalOpen(false)}
-        onSuccess={() => {}}
-      />
+      {/* Failure Injection Modal */}
+      {isFailureModalOpen && (
+        <FailureInjectionModal
+          isOpen={isFailureModalOpen}
+          onClose={() => setIsFailureModalOpen(false)}
+          onSuccess={() => setIsFailureModalOpen(false)}
+          investigationId={investigationId}
+        />
+      )}
     </div>
   );
 }

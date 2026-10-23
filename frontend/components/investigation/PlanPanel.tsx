@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import {
   Pause,
@@ -7,6 +9,7 @@ import {
   Lightbulb,
   CheckCircle,
   Clock,
+  Sparkles,
 } from "lucide-react";
 import { Investigation } from "@/lib/types";
 
@@ -46,135 +49,117 @@ export const PlanPanel: React.FC<PlanPanelProps> = ({
   const isRunning = investigation.status === "running";
 
   return (
-    <div className="flex flex-col h-full bg-cyber-card border-r border-cyber-border overflow-y-auto p-4 space-y-5">
+    <div className="flex flex-col h-full bg-white border-r border-slate-200/80 overflow-y-auto p-5 space-y-5">
       {/* Investigation Meta */}
       <div className="space-y-2">
         <div className="flex items-center justify-between text-xs">
-          <span className="text-[10px] font-mono uppercase tracking-wider text-sky-400 font-semibold px-2 py-0.5 rounded bg-sky-950/40 border border-sky-800/40">
+          <span className="text-[10px] font-bold uppercase tracking-wider text-lime-800 px-2.5 py-1 rounded-full bg-lime-100 border border-lime-200">
             {currentPhase || "Reconnaissance"}
           </span>
-          <span className="text-[11px] font-mono text-cyber-dim">
+          <span className="text-[11px] font-mono text-slate-400 font-semibold">
             {stepsUsed}/{maxSteps} steps
           </span>
         </div>
 
-        <div className="flex items-center gap-2">
-          {investigation.mode === "ai" ? (
-            <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-cyber-surface border border-cyber-border text-emerald-400 flex items-center gap-1.5">
-              <span className="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
-              NVIDIA Nemotron 120B
-            </span>
-          ) : (
-            <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-cyber-surface border border-cyber-border text-sky-400 flex items-center gap-1.5">
-              <span className="w-1.5 h-1.5 rounded-full bg-sky-400"></span>
-              Local Forensic Engine
-            </span>
-          )}
-        </div>
-
-        <div>
-          <h2 className="text-xs font-semibold text-cyber-muted uppercase tracking-wider mb-1">
-            Objective
-          </h2>
-          <p className="text-xs text-cyber-text leading-relaxed p-2.5 rounded bg-cyber-surface/40 border border-cyber-border">
-            {investigation.objective}
-          </p>
+        {/* Progress Bar */}
+        <div className="w-full bg-slate-100 rounded-full h-1.5 overflow-hidden">
+          <div
+            className="bg-lime-400 h-1.5 rounded-full transition-all duration-300"
+            style={{ width: `${Math.min(100, (stepsUsed / maxSteps) * 100)}%` }}
+          />
         </div>
       </div>
 
-      {/* Current Hypothesis */}
-      <div>
-        <div className="flex items-center gap-1.5 text-xs font-medium text-cyber-muted mb-1.5">
-          <Lightbulb className="w-3.5 h-3.5 text-amber-400" />
-          <span>Working Hypothesis</span>
+      {/* Dynamic Hypothesis Card */}
+      <div className="p-4 rounded-2xl bg-slate-50 border border-slate-200/80 space-y-2">
+        <div className="flex items-center gap-1.5 text-xs font-bold text-slate-800">
+          <Lightbulb className="w-3.5 h-3.5 text-amber-500" />
+          <span>Active Investigative Hypothesis</span>
         </div>
-        <div className="p-2.5 rounded bg-cyber-surface/40 border border-cyber-border text-xs text-cyber-text leading-relaxed">
-          {currentHypothesis || "Synthesizing forensic indicators..."}
-        </div>
+        <p className="text-xs text-slate-600 leading-relaxed font-sans">
+          {currentHypothesis || "Reconstructing attack chain from telemetry..."}
+        </p>
       </div>
 
-      {/* Investigation Controls */}
-      <div>
-        <h3 className="text-xs font-medium text-cyber-muted uppercase tracking-wider mb-2">
-          Controls
-        </h3>
-        <div className="grid grid-cols-2 gap-2">
-          {isPaused ? (
-            <button
-              onClick={onResume}
-              className="flex items-center justify-center gap-2 p-2 rounded bg-emerald-600 hover:bg-emerald-500 text-black font-semibold text-xs transition-colors cursor-pointer"
-            >
-              <Play className="w-3.5 h-3.5 fill-black" /> Resume
-            </button>
-          ) : (
-            <button
-              onClick={onPause}
-              disabled={investigation.status !== "running"}
-              className="flex items-center justify-center gap-2 p-2 rounded bg-cyber-surface hover:bg-cyber-panel border border-cyber-border text-xs text-cyber-text transition-colors disabled:opacity-40 cursor-pointer"
-            >
-              <Pause className="w-3.5 h-3.5" /> Pause
-            </button>
-          )}
-
-          <button
-            onClick={onStop}
-            disabled={investigation.status === "completed" || investigation.status === "stopped"}
-            className="flex items-center justify-center gap-2 p-2 rounded bg-cyber-surface hover:bg-rose-950/40 border border-cyber-border hover:border-rose-800 text-xs text-cyber-muted hover:text-rose-300 transition-colors disabled:opacity-40 cursor-pointer"
-          >
-            <Square className="w-3.5 h-3.5" /> Stop
-          </button>
-        </div>
-
-        {/* Adversarial Disruption / Failure Resilience Test */}
-        <button
-          onClick={onOpenFailureInjection}
-          className="w-full mt-2 flex items-center justify-center gap-2 p-2 rounded bg-cyber-surface hover:bg-cyber-panel border border-cyber-border text-xs text-cyber-muted hover:text-cyber-text transition-colors cursor-pointer"
-        >
-          <AlertTriangle className="w-3.5 h-3.5 text-amber-400" />
-          <span>Simulate Stream Disruption</span>
-        </button>
-      </div>
-
-      {/* Planned Steps Progression */}
-      <div className="flex-1">
-        <h3 className="text-xs font-semibold text-cyber-muted uppercase tracking-wider mb-3">
-          Adaptive Investigation Plan
-        </h3>
+      {/* Planned Steps List */}
+      <div className="space-y-2.5">
+        <h4 className="text-[10px] font-mono uppercase text-slate-400 font-bold tracking-wider">
+          Forensic Plan Steps
+        </h4>
         <div className="space-y-2">
-          {DEFAULT_PLANNED_STEPS.map((stepDesc, idx) => {
+          {DEFAULT_PLANNED_STEPS.map((step, idx) => {
             const isCompleted = idx < stepsUsed;
             const isCurrent = idx === stepsUsed && isRunning;
             return (
               <div
                 key={idx}
-                className={`p-2.5 rounded border text-xs flex items-start gap-2.5 transition-colors ${
+                className={`p-2.5 rounded-xl border text-xs flex items-center gap-2.5 transition-all ${
                   isCurrent
-                    ? "bg-sky-950/50 border-sky-600 text-sky-200"
+                    ? "bg-lime-50/70 border-lime-300 text-slate-900 font-semibold shadow-sm"
                     : isCompleted
-                    ? "bg-cyber-surface/40 border-cyber-border/80 text-cyber-muted"
-                    : "bg-cyber-bg/40 border-cyber-border/40 text-cyber-dim"
+                    ? "bg-slate-50 border-slate-200/60 text-slate-500"
+                    : "bg-white border-slate-100 text-slate-400"
                 }`}
               >
-                <div className="mt-0.5">
-                  {isCompleted ? (
-                    <CheckCircle className="w-3.5 h-3.5 text-emerald-400" />
-                  ) : isCurrent ? (
-                    <span className="w-3.5 h-3.5 rounded-full border-2 border-sky-400 border-t-transparent animate-spin block" />
-                  ) : (
-                    <Clock className="w-3.5 h-3.5 text-cyber-dim" />
-                  )}
-                </div>
-                <div className="flex-1 leading-snug">
-                  <span className="font-mono text-[10px] text-cyber-dim mr-1.5">
-                    STEP {idx + 1}
-                  </span>
-                  <span>{stepDesc}</span>
-                </div>
+                {isCompleted ? (
+                  <CheckCircle className="w-3.5 h-3.5 text-emerald-500 shrink-0" />
+                ) : isCurrent ? (
+                  <Clock className="w-3.5 h-3.5 text-lime-600 animate-spin shrink-0" />
+                ) : (
+                  <div className="w-3.5 h-3.5 rounded-full border border-slate-300 shrink-0" />
+                )}
+                <span className="truncate leading-tight">{step}</span>
               </div>
             );
           })}
         </div>
       </div>
+
+      {/* Investigation Controls */}
+      <div className="pt-2 border-t border-slate-100 space-y-2">
+        <h4 className="text-[10px] font-mono uppercase text-slate-400 font-bold tracking-wider">
+          Runtime Controls
+        </h4>
+        <div className="grid grid-cols-2 gap-2">
+          {isPaused ? (
+            <button
+              onClick={onResume}
+              className="p-2 rounded-xl bg-lime-50 hover:bg-lime-100 border border-lime-200 text-lime-800 text-xs font-semibold flex items-center justify-center gap-1.5 transition-all cursor-pointer"
+            >
+              <Play className="w-3 h-3 fill-lime-600 text-lime-600" />
+              <span>Resume</span>
+            </button>
+          ) : (
+            <button
+              onClick={onPause}
+              disabled={!isRunning}
+              className="p-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-semibold flex items-center justify-center gap-1.5 transition-all disabled:opacity-40 cursor-pointer"
+            >
+              <Pause className="w-3 h-3 text-slate-600" />
+              <span>Pause</span>
+            </button>
+          )}
+
+          <button
+            onClick={onStop}
+            disabled={!isRunning && !isPaused}
+            className="p-2 rounded-xl bg-rose-50 hover:bg-rose-100 border border-rose-200 text-rose-700 text-xs font-semibold flex items-center justify-center gap-1.5 transition-all disabled:opacity-40 cursor-pointer"
+          >
+            <Square className="w-3 h-3 fill-rose-600 text-rose-600" />
+            <span>Conclude</span>
+          </button>
+        </div>
+
+        <button
+          onClick={onOpenFailureInjection}
+          className="w-full mt-2 p-2 rounded-xl bg-slate-50 hover:bg-slate-100 border border-slate-200 text-slate-600 text-xs font-medium flex items-center justify-center gap-1.5 transition-all cursor-pointer"
+        >
+          <AlertTriangle className="w-3 h-3 text-amber-500" />
+          <span>Failure Injection</span>
+        </button>
+      </div>
     </div>
   );
 };
+
+export default PlanPanel;

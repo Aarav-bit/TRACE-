@@ -10,7 +10,7 @@ import ReactFlow, {
   MarkerType,
 } from "reactflow";
 import "reactflow/dist/style.css";
-import { Info, User, Terminal, HardDrive, ShieldCheck } from "lucide-react";
+import { Info, User, Terminal, HardDrive, ShieldCheck, Network } from "lucide-react";
 
 interface EvidenceGraphProps {
   graphData: {
@@ -23,7 +23,7 @@ interface EvidenceGraphProps {
 export const EvidenceGraph: React.FC<EvidenceGraphProps> = ({ graphData, onSelectNode }) => {
   if (!graphData || !graphData.nodes || graphData.nodes.length === 0) {
     return (
-      <div className="p-12 text-center text-xs text-cyber-dim bg-cyber-card border border-cyber-border rounded-lg m-6">
+      <div className="p-12 text-center text-xs text-slate-400 bg-white border border-slate-200 rounded-2xl m-6">
         No correlation relationships generated yet. Run the multi-pivot correlation tool or launch an investigation.
       </div>
     );
@@ -33,122 +33,108 @@ export const EvidenceGraph: React.FC<EvidenceGraphProps> = ({ graphData, onSelec
   const flowNodes: Node[] = useMemo(() => {
     return graphData.nodes.map((n, idx) => {
       const type = n.data?.type || n.type || "entity";
-      let bg = "#111726";
-      let border = "#1E293B";
-      let text = "#F8FAFC";
+      let badgeBg = "bg-slate-100 text-slate-700 border-slate-200";
       let typeLabel = "Entity";
 
       if (type.includes("user")) {
-        bg = "#064E3B";
-        border = "#10B981";
+        badgeBg = "bg-emerald-100 text-emerald-800 border-emerald-200";
         typeLabel = "User Account";
       } else if (type.includes("process")) {
-        bg = "#0C2B4E";
-        border = "#38BDF8";
+        badgeBg = "bg-sky-100 text-sky-800 border-sky-200";
         typeLabel = "Process Execution";
       } else if (type.includes("file")) {
-        bg = "#451A03";
-        border = "#F59E0B";
-        typeLabel = "File Activity";
-      } else if (type.includes("finding")) {
-        bg = "#2E1065";
-        border = "#A855F7";
-        typeLabel = "Verified Finding";
+        badgeBg = "bg-amber-100 text-amber-800 border-amber-200";
+        typeLabel = "File Dropper";
+      } else if (type.includes("network")) {
+        badgeBg = "bg-purple-100 text-purple-800 border-purple-200";
+        typeLabel = "C2 / Socket";
       }
 
       return {
         id: n.id,
-        position: n.position || { x: (idx % 3) * 280 + 50, y: Math.floor(idx / 3) * 160 + 60 },
+        position: n.position || { x: (idx % 3) * 280 + 50, y: Math.floor(idx / 3) * 160 + 50 },
         data: {
           label: (
-            <div className="p-3 font-mono text-xs select-none">
-              <span className="text-[9px] uppercase font-bold tracking-wider block opacity-75 mb-1">
+            <div className="p-3 text-left">
+              <span className={`text-[9px] uppercase font-bold tracking-wider px-2 py-0.5 rounded-full border inline-block mb-1 ${badgeBg}`}>
                 {typeLabel}
               </span>
-              <span className="font-bold block leading-snug truncate" title={n.data?.label || n.id}>
+              <div className="font-mono text-xs font-bold text-slate-900 truncate max-w-[200px]">
                 {n.data?.label || n.id}
-              </span>
+              </div>
+              {n.data?.subtitle && (
+                <div className="font-mono text-[10px] text-slate-500 truncate mt-0.5 max-w-[200px]">
+                  {n.data.subtitle}
+                </div>
+              )}
             </div>
           ),
-          raw: n.data,
         },
         style: {
-          backgroundColor: bg,
-          border: `1.5px solid ${border}`,
-          borderRadius: "8px",
-          color: text,
-          width: 240,
-          boxShadow: "0 4px 14px rgba(0,0,0,0.4)",
+          background: "#ffffff",
+          border: "1px solid #e2e8f0",
+          borderRadius: "16px",
+          boxShadow: "0 4px 16px rgba(0,0,0,0.04)",
+          minWidth: 200,
         },
       };
     });
-  }, [graphData.nodes]);
+  }, [graphData]);
 
-  // Format React Flow edges with labels and arrows
   const flowEdges: Edge[] = useMemo(() => {
-    return graphData.edges.map((e) => ({
-      id: e.id,
+    return (graphData.edges || []).map((e, idx) => ({
+      id: e.id || `edge-${idx}`,
       source: e.source,
       target: e.target,
-      label: e.label,
-      animated: e.animated || false,
-      style: { stroke: "#38BDF8", strokeWidth: 1.5 },
-      labelStyle: { fill: "#94A3B8", fontWeight: 600, fontSize: 10, fontFamily: "monospace" },
-      labelBgStyle: { fill: "#111726", stroke: "#1E293B" },
+      label: e.label || e.relation || "",
+      labelStyle: { fill: "#64748b", fontSize: 10, fontFamily: "monospace", fontWeight: 600 },
+      labelBgStyle: { fill: "#f8fafc", fillOpacity: 0.9, rx: 6, ry: 6 },
+      labelBgPadding: [6, 4] as [number, number],
+      style: { stroke: "#94a3b8", strokeWidth: 1.5 },
+      animated: true,
       markerEnd: {
         type: MarkerType.ArrowClosed,
-        color: "#38BDF8",
+        color: "#64748b",
         width: 14,
         height: 14,
       },
     }));
-  }, [graphData.edges]);
+  }, [graphData]);
 
   return (
-    <div className="w-full h-full bg-cyber-bg relative">
-      {/* Floating Legend */}
-      <div className="absolute top-4 left-4 z-10 p-3 rounded-lg bg-cyber-card/90 backdrop-blur-md border border-cyber-border shadow-lg space-y-2 text-xs">
-        <div className="flex items-center gap-1.5 font-bold text-cyber-text text-[11px] uppercase tracking-wider font-mono">
-          <Info className="w-3.5 h-3.5 text-sky-400" />
-          <span>Graph Legend</span>
-        </div>
-        <div className="grid grid-cols-2 gap-x-4 gap-y-1.5 text-[11px] font-mono">
-          <div className="flex items-center gap-1.5 text-emerald-400">
-            <span className="w-2.5 h-2.5 rounded-full bg-emerald-500" />
-            <span>User Accounts</span>
-          </div>
-          <div className="flex items-center gap-1.5 text-sky-400">
-            <span className="w-2.5 h-2.5 rounded-full bg-sky-500" />
-            <span>Processes</span>
-          </div>
-          <div className="flex items-center gap-1.5 text-amber-400">
-            <span className="w-2.5 h-2.5 rounded-full bg-amber-500" />
-            <span>Files &amp; Payloads</span>
-          </div>
-          <div className="flex items-center gap-1.5 text-purple-400">
-            <span className="w-2.5 h-2.5 rounded-full bg-purple-500" />
-            <span>Verified Findings</span>
-          </div>
-        </div>
-        <div className="text-[10px] text-cyber-dim pt-1 border-t border-cyber-border/60">
-          Click any node to inspect its raw forensic log record.
-        </div>
-      </div>
-
+    <div className="relative w-full h-full min-h-[500px] bg-slate-50/50 rounded-2xl overflow-hidden border border-slate-200/80">
       <ReactFlow
         nodes={flowNodes}
         edges={flowEdges}
-        onNodeClick={(_, node) => onSelectNode && onSelectNode(node.data?.raw)}
         fitView
+        onNodeClick={(_, node) => onSelectNode && onSelectNode(node)}
       >
-        <Background color="#1E293B" gap={20} size={1} />
-        <Controls className="bg-cyber-surface border border-cyber-border fill-cyber-text" />
+        <Background color="#cbd5e1" gap={20} size={1} />
+        <Controls className="bg-white rounded-xl shadow-md border border-slate-200" />
         <MiniMap
-          nodeColor={() => "#38BDF8"}
-          maskColor="rgba(11, 15, 23, 0.85)"
-          className="bg-cyber-card border border-cyber-border rounded"
+          nodeColor="#94a3b8"
+          maskColor="rgba(241, 245, 249, 0.7)"
+          className="bg-white rounded-xl shadow-md border border-slate-200"
         />
       </ReactFlow>
+
+      {/* Floating Legend Badge */}
+      <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-md border border-slate-200 p-3 rounded-2xl shadow-sm flex items-center gap-3 text-[11px] font-medium z-10">
+        <span className="flex items-center gap-1 text-slate-700">
+          <span className="w-2.5 h-2.5 rounded-full bg-emerald-500" /> User
+        </span>
+        <span className="flex items-center gap-1 text-slate-700">
+          <span className="w-2.5 h-2.5 rounded-full bg-sky-500" /> Process
+        </span>
+        <span className="flex items-center gap-1 text-slate-700">
+          <span className="w-2.5 h-2.5 rounded-full bg-amber-500" /> File
+        </span>
+        <span className="flex items-center gap-1 text-slate-700">
+          <span className="w-2.5 h-2.5 rounded-full bg-purple-500" /> Network
+        </span>
+      </div>
     </div>
   );
 };
+
+export default EvidenceGraph;

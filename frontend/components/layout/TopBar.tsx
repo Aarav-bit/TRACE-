@@ -5,6 +5,9 @@ import Link from "next/link";
 import {
   FolderOpen,
   Plus,
+  Search,
+  Sparkles,
+  ChevronDown,
 } from "lucide-react";
 import { fetchCases } from "@/lib/api";
 import { Case } from "@/lib/types";
@@ -16,12 +19,13 @@ interface TopBarProps {
 }
 
 export const TopBar: React.FC<TopBarProps> = ({
-  currentTitle = "Overview",
+  currentTitle = "Dashboard",
   activeCaseId,
   onCaseChange,
 }) => {
   const [cases, setCases] = useState<Case[]>([]);
   const [selectedCase, setSelectedCase] = useState<string>(activeCaseId || "");
+  const [searchQuery, setSearchQuery] = useState("");
 
   useEffect(() => {
     fetchCases()
@@ -42,45 +46,68 @@ export const TopBar: React.FC<TopBarProps> = ({
   };
 
   return (
-    <header className="h-14 bg-cyber-card/80 backdrop-blur-md border-b border-cyber-border px-6 flex items-center justify-between shrink-0 sticky top-0 z-20">
-      {/* Left: Breadcrumbs & Page Title */}
-      <div className="flex items-center gap-2.5">
+    <header className="h-16 px-6 sm:px-8 flex items-center justify-between shrink-0 select-none border-b border-slate-200/70 bg-white/70 backdrop-blur-md sticky top-0 z-20">
+      {/* Left: Section Title & Breadcrumb */}
+      <div className="flex items-center gap-3">
         <div className="flex items-center gap-2">
-          <span className="w-2 h-2 rounded-full bg-emerald-400" />
-          <span className="text-xs font-mono font-bold tracking-wider text-sky-400">
+          <span className="w-2.5 h-2.5 rounded-full bg-lime-400 border border-lime-500 shadow-sm" />
+          <span className="text-sm font-bold tracking-tight text-slate-900 font-sans">
             TRACE
           </span>
         </div>
-        <span className="text-cyber-dim text-xs">/</span>
-        <h1 className="text-xs font-semibold text-cyber-text">
+        <span className="text-slate-300 font-mono text-sm">/</span>
+        <h1 className="text-sm font-semibold text-slate-700 capitalize">
           {currentTitle}
         </h1>
       </div>
 
-      {/* Right: Case Selector & Quick Actions */}
-      <div className="flex items-center gap-2.5">
-        {/* Active Case Selector */}
-        {cases.length > 0 && (
-          <div className="flex items-center gap-2 bg-cyber-surface/70 border border-cyber-border rounded-md px-2.5 py-1 text-xs">
-            <FolderOpen className="w-3.5 h-3.5 text-cyber-muted" />
-            <select
-              value={selectedCase}
-              onChange={(e) => handleCaseSelect(e.target.value)}
-              className="bg-transparent text-cyber-text text-xs focus:outline-none cursor-pointer max-w-[180px] truncate"
-            >
-              {cases.map((c) => (
-                <option key={c.id} value={c.id} className="bg-cyber-card text-cyber-text">
-                  {c.name}
-                </option>
-              ))}
-            </select>
-          </div>
-        )}
+      {/* Center: Search Pill (Inspired by Image 1, 2, 3) */}
+      <div className="hidden md:flex items-center flex-1 max-w-md mx-6">
+        <div className="relative w-full">
+          <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
+          <input
+            type="text"
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+            placeholder="Search processes, hashes, MITRE techniques..."
+            className="w-full pl-10 pr-4 py-2 text-xs rounded-full bg-slate-100/80 border border-slate-200/80 focus:bg-white focus:border-slate-400 focus:outline-none transition-all placeholder:text-slate-400 text-slate-700 shadow-inner"
+          />
+        </div>
+      </div>
 
-        {/* New Investigation Button */}
+      {/* Right: Actions, Case Switcher & New Case Button */}
+      <div className="flex items-center gap-3">
+        {/* Active Case Dropdown Pill */}
+        <div className="relative flex items-center">
+          <FolderOpen className="absolute left-3 w-3.5 h-3.5 text-slate-400 pointer-events-none" />
+          <select
+            value={selectedCase}
+            onChange={(e) => handleCaseSelect(e.target.value)}
+            className="pl-8 pr-7 py-1.5 text-xs font-medium rounded-full bg-slate-100/90 border border-slate-200/80 text-slate-700 hover:border-slate-300 focus:outline-none focus:ring-1 focus:ring-slate-400 transition-all cursor-pointer appearance-none shadow-sm"
+          >
+            {cases.length === 0 ? (
+              <option value="">No Active Cases</option>
+            ) : (
+              cases.map((c) => (
+                <option key={c.id} value={c.id}>
+                  {c.name} ({c.event_count || 0} events)
+                </option>
+              ))
+            )}
+          </select>
+          <ChevronDown className="absolute right-2.5 w-3 h-3 text-slate-400 pointer-events-none" />
+        </div>
+
+        {/* Engine Badge */}
+        <div className="hidden lg:flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-lime-50 border border-lime-200/80 text-[11px] font-medium text-lime-900 shadow-sm">
+          <Sparkles className="w-3.5 h-3.5 text-lime-600" />
+          <span>Nemotron 120B Ready</span>
+        </div>
+
+        {/* + Start New Case Pill Button */}
         <Link
           href="/investigations"
-          className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-md bg-sky-500 hover:bg-sky-400 text-black font-semibold text-xs transition-colors shadow-sm"
+          className="flex items-center gap-1.5 px-4 py-2 rounded-full bg-[#111317] text-white text-xs font-semibold hover:bg-black hover:scale-105 active:scale-95 transition-all duration-200 shadow-md shadow-slate-900/10"
         >
           <Plus className="w-3.5 h-3.5" />
           <span>New Case</span>
@@ -89,3 +116,5 @@ export const TopBar: React.FC<TopBarProps> = ({
     </header>
   );
 };
+
+export default TopBar;
